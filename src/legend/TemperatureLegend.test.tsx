@@ -52,10 +52,19 @@ describe('TemperatureLegend interaction', () => {
     const user = userEvent.setup(); const onLock = vi.fn();
     render(<TemperatureLegend {...props} onHover={vi.fn()} onLock={onLock} />);
     await user.selectOptions(screen.getByRole('combobox', { name: /highlight band/i }), '2.5');
-    await user.click(screen.getByRole('button', { name: /select weekly mean low/i }));
-    expect(onLock).toHaveBeenLastCalledWith({ value: -47, minimum: -49.5, maximum: -44.5, locked: true });
-    await user.click(screen.getByRole('button', { name: /select weekly mean high/i }));
-    expect(onLock).toHaveBeenLastCalledWith({ value: 36.14, minimum: 33.64, maximum: 38.64, locked: true });
+    await user.click(screen.getByRole('button', { name: /track weekly mean low/i }));
+    expect(onLock).toHaveBeenLastCalledWith({ value: -47, minimum: -49.5, maximum: -44.5, locked: true, trackedExtreme: 'minimum', bandHalfWidthC: 2.5 });
+    await user.click(screen.getByRole('button', { name: /track weekly mean high/i }));
+    expect(onLock).toHaveBeenLastCalledWith({ value: 36.14, minimum: 33.64, maximum: 38.64, locked: true, trackedExtreme: 'maximum', bandHalfWidthC: 2.5 });
+  });
+  it('preserves extreme tracking when its highlight band changes', async () => {
+    const user = userEvent.setup(); const onLock = vi.fn();
+    const locked = { value: -47, minimum: -47.5, maximum: -46.5, locked: true, trackedExtreme: 'minimum', bandHalfWidthC: 0.5 } satisfies LegendSelection;
+    render(<TemperatureLegend {...props} locked={locked} onHover={vi.fn()} onLock={onLock} />);
+    expect(screen.getByRole('button', { name: /track weekly mean low/i })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByText('±0.5°C · WEEKLY LOW')).toBeInTheDocument();
+    await user.selectOptions(screen.getByRole('combobox', { name: /highlight band/i }), '5');
+    expect(onLock).toHaveBeenLastCalledWith({ value: -47, minimum: -52, maximum: -42, locked: true, trackedExtreme: 'minimum', bandHalfWidthC: 5 });
   });
   it('exposes Fahrenheit slider values and a globe-hover marker', () => {
     render(<TemperatureLegend {...props} unit="F" globeValue={20} onHover={vi.fn()} onLock={vi.fn()} />);

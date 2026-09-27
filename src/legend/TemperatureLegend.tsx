@@ -1,6 +1,6 @@
 import { useMemo, useState, type ChangeEvent, type KeyboardEvent, type PointerEvent } from 'react';
 import { area, curveBasis } from 'd3-shape';
-import type { DisplayMode, Extrema, FrameHistograms, LegendSelection, TemperatureUnit } from '../climate/types';
+import type { DisplayMode, Extrema, FrameHistograms, LegendSelection, TemperatureUnit, TrackedExtreme } from '../climate/types';
 import { ANNUAL_SCALE } from '../climate/constants';
 import { celsiusToDisplay } from '../climate/temperature';
 import { formatLegendValue, HIGHLIGHT_BAND_HALF_WIDTHS_C, legendScale, rangeAround, temperatureColor, temperatureFromClientX } from './legendScale';
@@ -32,13 +32,21 @@ export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, 
   const weeklyMeanLow = extremeForMode(minimums, mode);
   const weeklyMeanHigh = extremeForMode(maximums, mode);
 
-  const selectionAt = (value: number, isLocked: boolean): LegendSelection => ({ ...rangeAround(value, bandHalfWidthC), locked: isLocked });
+  const selectionAt = (value: number, isLocked: boolean, trackedExtreme?: TrackedExtreme): LegendSelection => ({
+    ...rangeAround(value, bandHalfWidthC),
+    locked: isLocked,
+    ...(trackedExtreme ? { trackedExtreme, bandHalfWidthC } : {}),
+  });
   const displayBand = (valueC: number) => unit === 'F' ? valueC * 9 / 5 : valueC;
   const formatBand = (valueC: number) => `±${displayBand(valueC).toFixed(1)}°${unit}`;
   const handleBandChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const nextBand = Number(event.target.value);
     setBandHalfWidthC(nextBand);
-    if (locked) onLock({ ...rangeAround(locked.value, nextBand), locked: true });
+    if (locked) onLock({
+      ...rangeAround(locked.value, nextBand),
+      locked: true,
+      ...(locked.trackedExtreme ? { trackedExtreme: locked.trackedExtreme, bandHalfWidthC: nextBand } : {}),
+    });
   };
   const pointerValue = (event: PointerEvent<SVGSVGElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -68,11 +76,11 @@ export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, 
     <div className="legend-heading"><div><span className="eyebrow">TEMPERATURE DISTRIBUTION</span>
       <p>{mode === 'air' ? 'Air temperature over land' : mode === 'sst' ? 'Sea-surface temperature over ocean' : 'Land air + ocean surface composite'}</p>
       <div className="legend-extremes" role="group" aria-label="Weekly mean extremes">
-        <button type="button" onClick={() => onLock(selectionAt(weeklyMeanLow, true))} aria-label={`Select weekly mean low ${formatLegendValue(weeklyMeanLow, unit)}`}><span>LOW</span><strong>{formatLegendValue(weeklyMeanLow, unit)}</strong></button>
-        <button type="button" onClick={() => onLock(selectionAt(weeklyMeanHigh, true))} aria-label={`Select weekly mean high ${formatLegendValue(weeklyMeanHigh, unit)}`}><span>HIGH</span><strong>{formatLegendValue(weeklyMeanHigh, unit)}</strong></button>
+        <button type="button" onClick={() => onLock(selectionAt(weeklyMeanLow, true, 'minimum'))} aria-pressed={locked?.trackedExtreme === 'minimum'} aria-label={`Track weekly mean low ${formatLegendValue(weeklyMeanLow, unit)}`}><span>LOW</span><strong>{formatLegendValue(weeklyMeanLow, unit)}</strong></button>
+        <button type="button" onClick={() => onLock(selectionAt(weeklyMeanHigh, true, 'maximum'))} aria-pressed={locked?.trackedExtreme === 'maximum'} aria-label={`Track weekly mean high ${formatLegendValue(weeklyMeanHigh, unit)}`}><span>HIGH</span><strong>{formatLegendValue(weeklyMeanHigh, unit)}</strong></button>
       </div></div>
       <div className="legend-actions"><div className={`legend-readout ${selection ? 'active' : ''}`} aria-live="polite">
-        {selection ? <><strong>{formatLegendValue(selection.value, unit)}</strong><span>{formatBand(bandHalfWidthC)} · {selection.locked ? 'LOCKED' : 'HOVER'}</span></> : <><strong>—</strong><span>SELECT RANGE</span></>}
+        {selection ? <><strong>{formatLegendValue(selection.value, unit)}</strong><span>{formatBand(bandHalfWidthC)} · {selection.trackedExtreme === 'minimum' ? 'WEEKLY LOW' : selection.trackedExtreme === 'maximum' ? 'WEEKLY HIGH' : selection.locked ? 'LOCKED' : 'HOVER'}</span></> : <><strong>—</strong><span>SELECT RANGE</span></>}
       </div><label className="legend-band"><span>Highlight band</span><select aria-label="Highlight band" value={bandHalfWidthC} onChange={handleBandChange}>
         {HIGHLIGHT_BAND_HALF_WIDTHS_C.map((halfWidth) => <option key={halfWidth} value={halfWidth}>{formatBand(halfWidth)}</option>)}
       </select></label></div></div>

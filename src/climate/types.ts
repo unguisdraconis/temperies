@@ -15,7 +15,12 @@ export interface HoveredCell extends GridCell, LatLon {
 }
 
 export interface TemperatureRange { value: number; minimum: number; maximum: number }
-export interface LegendSelection extends TemperatureRange { locked: boolean }
+export type TrackedExtreme = 'minimum' | 'maximum';
+export interface LegendSelection extends TemperatureRange {
+  locked: boolean;
+  trackedExtreme?: TrackedExtreme;
+  bandHalfWidthC?: number;
+}
 export interface VectorLayerVisibility { countries: boolean; coastlines: boolean }
 export type FrameLoadState =
   | { status: 'idle' }

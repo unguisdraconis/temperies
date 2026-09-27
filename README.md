@@ -22,7 +22,7 @@ Temperies is an interactive globe and flat-map explorer for weekly 2025 land-air
   ![Choose a highlight band](image-2.png)
 - Switch between the land-air and ocean-SST composite, land-air only, and ocean-SST only.
   ![Display layer](image-3.png)
-- Jump to the spatial low or high of the selected week's mean field. These are extrema of weekly means, not instantaneous weather records.
+- Track the spatial low or high as the selected period changes. These controls follow each period's weekly-mean extreme; they are not instantaneous weather records.
   ![Weekly mean low](image-4.png)
 - Move through 52 periods covering all 365 days of 2025, with a loading indicator while a requested field is prepared.
   ![Weekly period selector](image-5.png)

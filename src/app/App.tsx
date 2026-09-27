@@ -67,7 +67,7 @@ export default function App() {
           <li>Drag the globe to rotate it or drag the map to pan, then scroll or pinch to zoom.</li>
           <li>Hover either view to inspect a cell's coordinates, source, and weekly mean temperature.</li>
           <li>Hover the legend to preview a temperature band; click it to keep that band selected while changing weeks.</li>
-          <li>Use LOW or HIGH to locate the selected week's spatial extreme, and use Highlight band to widen the selected range.</li>
+          <li>Use LOW or HIGH to track that spatial extreme as the selected week changes, and use Highlight band to widen the selected range.</li>
           <li>Use the arrows or period slider to request another week. The current view remains visible while the next field loads.</li>
         </ul></>}
     </aside>}

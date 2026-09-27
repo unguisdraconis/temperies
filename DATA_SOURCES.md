@@ -40,7 +40,7 @@ The year is divided into 52 consecutive periods:
 - The final period, December 24–31, contains eight daily fields so all 365 days are represented exactly once.
 - There are no temporal gaps or overlaps.
 
-The LOW and HIGH controls identify spatial extrema in the selected period's weekly mean field. They are not instantaneous observed weather records.
+The LOW and HIGH controls identify spatial extrema in the selected period's weekly mean field. When one is selected, it follows the corresponding extreme as the period or display layer changes. These values are not instantaneous observed weather records.
 
 ## Spatial grid and projection
 

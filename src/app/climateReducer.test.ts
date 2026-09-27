@@ -31,6 +31,40 @@ describe('climate state transitions', () => {
     expect(ready.legendLocked).toBe(locked);
     expect(effectiveLegendSelection(ready)).toBe(locked);
   });
+  it('updates a tracked weekly extreme when a new frame or display mode becomes active', () => {
+    const tracked = {
+      value: -47,
+      minimum: -49.5,
+      maximum: -44.5,
+      locked: true,
+      trackedExtreme: 'minimum',
+      bandHalfWidthC: 2.5,
+    } satisfies LegendSelection;
+    const pairWithExtrema = {
+      ...pair,
+      currentMeta: {
+        minimums: { combined: -12, land: -15, ocean: -1.5 },
+        maximums: { combined: 38, land: 38, ocean: 31 },
+      },
+    } as FramePair;
+    const selected = climateReducer(initialClimateState, { type: 'SET_LEGEND_LOCK', selection: tracked });
+    const loading = climateReducer(selected, { type: 'FRAME_REQUEST', week: 4, requestId: 9 });
+    const ready = climateReducer(loading, { type: 'FRAME_SUCCESS', week: 4, requestId: 9, pair: pairWithExtrema });
+    expect(ready.legendLocked).toEqual({
+      value: -12,
+      minimum: -14.5,
+      maximum: -9.5,
+      locked: true,
+      trackedExtreme: 'minimum',
+      bandHalfWidthC: 2.5,
+    });
+    expect(climateReducer(ready, { type: 'SET_MODE', mode: 'sst' }).legendLocked).toMatchObject({
+      value: -1.5,
+      minimum: -4,
+      maximum: 1,
+      trackedExtreme: 'minimum',
+    });
+  });
   it('rejects stale responses', () => {
     const loading = climateReducer(initialClimateState, { type: 'FRAME_REQUEST', week: 8, requestId: 4 });
     expect(climateReducer(loading, { type: 'FRAME_SUCCESS', week: 7, requestId: 3, pair })).toBe(loading);

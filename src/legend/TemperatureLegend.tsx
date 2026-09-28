@@ -1,22 +1,23 @@
 import { useMemo, useState, type ChangeEvent, type KeyboardEvent, type PointerEvent } from 'react';
 import { area, curveBasis } from 'd3-shape';
-import type { DisplayMode, Extrema, FrameHistograms, LegendSelection, TemperatureUnit, TrackedExtreme } from '../climate/types';
-import { ANNUAL_SCALE } from '../climate/constants';
+import type { DisplayMode, Extrema, FrameHistograms, LegendSelection, TemperaturePalette, TemperatureUnit, TrackedExtreme } from '../climate/types';
+import { ANNUAL_COMPOSITE_MEDIAN_C, ANNUAL_SCALE } from '../climate/constants';
 import { celsiusToDisplay } from '../climate/temperature';
-import { formatLegendValue, HIGHLIGHT_BAND_HALF_WIDTHS_C, legendScale, rangeAround, temperatureColor, temperatureFromClientX } from './legendScale';
+import { formatLegendValue, HIGHLIGHT_BAND_HALF_WIDTHS_C, legendScale, rangeAround, temperatureFromClientX } from './legendScale';
 import { extremeForMode, histogramForMode, percentageInRange } from './legendStatistics';
+import { paletteGradientStops } from './palettes';
 
 const WIDTH = 760; const HEIGHT = 108; const PADDING = 10;
 const TICKS = [-80, -60, -40, -20, 0, 20, 40, 60];
 
 interface Props {
   histograms: FrameHistograms; minimums: Extrema; maximums: Extrema;
-  mode: DisplayMode; unit: TemperatureUnit; globeValue: number | null;
+  mode: DisplayMode; unit: TemperatureUnit; palette: TemperaturePalette; globeValue: number | null;
   hover: LegendSelection | null; locked: LegendSelection | null;
   onHover: (selection: LegendSelection | null) => void; onLock: (selection: LegendSelection | null) => void;
 }
 
-export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, globeValue, hover, locked, onHover, onLock }: Props) {
+export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, palette, globeValue, hover, locked, onHover, onLock }: Props) {
   const [keyboardValue, setKeyboardValue] = useState(0);
   const [bandHalfWidthC, setBandHalfWidthC] = useState<number>(HIGHLIGHT_BAND_HALF_WIDTHS_C[0]);
   const x = useMemo(() => legendScale(WIDTH, PADDING), []);
@@ -26,6 +27,7 @@ export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, 
     .x((_, index) => x(histograms.binMinimum + (index + 0.5) * histograms.binWidth))
     .y0(68).y1((value) => 68 - value / maxBin * 28).curve(curveBasis)(population.bins),
   [histograms.binMinimum, histograms.binWidth, maxBin, population.bins, x]);
+  const gradientStops = useMemo(() => paletteGradientStops(palette), [palette]);
   const selection = locked ?? hover;
   const marker = selection?.value ?? globeValue;
   const percentage = selection ? percentageInRange(histograms, mode, selection) : null;
@@ -88,10 +90,11 @@ export function TemperatureLegend({ histograms, minimums, maximums, mode, unit, 
       aria-label="Temperature range selector" aria-valuemin={celsiusToDisplay(ANNUAL_SCALE.minimum, unit)} aria-valuemax={celsiusToDisplay(ANNUAL_SCALE.maximum, unit)}
       aria-valuenow={celsiusToDisplay(selection?.value ?? keyboardValue, unit)} aria-valuetext={formatLegendValue(selection?.value ?? keyboardValue, unit)}
       onPointerMove={handlePointerMove} onPointerLeave={() => { if (!locked) onHover(null); }} onClick={handleClick} onKeyDown={handleKeyDown}>
-      <defs><linearGradient id="temp-gradient">{Array.from({ length: 15 }, (_, index) => <stop key={index} offset={`${index / 14 * 100}%`} stopColor={temperatureColor(ANNUAL_SCALE.minimum + index / 14 * (ANNUAL_SCALE.maximum - ANNUAL_SCALE.minimum))} />)}</linearGradient>
+      <defs><linearGradient id={`temp-gradient-${palette}`}>{gradientStops.map((stop) => <stop key={stop.offset} offset={`${stop.offset * 100}%`} stopColor={stop.color} />)}</linearGradient>
         <linearGradient id="hist-gradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#d8f5ed" stopOpacity=".4" /><stop offset="1" stopColor="#d8f5ed" stopOpacity=".02" /></linearGradient></defs>
       {histogramPath && <path d={histogramPath} fill="url(#hist-gradient)" stroke="#d8f5ed" strokeOpacity=".32" strokeWidth="1" />}
-      <rect x={PADDING} y="72" width={WIDTH - PADDING * 2} height="14" rx="7" fill="url(#temp-gradient)" />
+      <rect x={PADDING} y="72" width={WIDTH - PADDING * 2} height="14" rx="7" fill={`url(#temp-gradient-${palette})`} />
+      {palette === 'diverging' && <line data-testid="palette-reference" x1={x(ANNUAL_COMPOSITE_MEDIAN_C)} x2={x(ANNUAL_COMPOSITE_MEDIAN_C)} y1="69" y2="89" stroke="#fff" strokeWidth="1.5" />}
       {TICKS.map((tick) => <g key={tick} transform={`translate(${x(tick)}, 0)`}><line y1="89" y2="94" stroke="#7d929d" /><text y="105" textAnchor="middle">{Math.round(celsiusToDisplay(tick, unit))}°</text></g>)}
       {selection && <rect x={x(selection.minimum)} y="70" width={Math.max(2, x(selection.maximum) - x(selection.minimum))} height="18" rx="4" fill="none" stroke="#fff" strokeWidth="1.5" />}
       {marker !== null && <g data-testid="temperature-marker" transform={`translate(${x(marker)}, 0)`}><path d="M0 66 L-5 58 L5 58 Z" fill="#fff" /><line y1="15" y2="58" stroke="#fff" strokeOpacity=".55" strokeDasharray="2 3" /></g>}

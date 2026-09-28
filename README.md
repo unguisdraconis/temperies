@@ -18,6 +18,7 @@ Temperies is an interactive globe and flat-map explorer for weekly 2025 land-air
   ![Hover a cell](image.png)
 - Hover or select the legend to highlight matching temperatures globally without scanning the raster in JavaScript.
   ![Hover the legend](image-1.png)
+- Switch between the default color-vision-friendly blue–green–vermillion divergence and the original sequential temperature palette. The globe or map and coordinated legend change together without requesting climate data.
 - Choose a highlight band of ±0.5 °C, ±1.0 °C, ±2.5 °C, or ±5.0 °C. A locked selection remains active when the period changes.
   ![Choose a highlight band](image-2.png)
 - Switch between the land-air and ocean-SST composite, land-air only, and ocean-SST only.
@@ -35,13 +36,13 @@ Temperies is an interactive globe and flat-map explorer for weekly 2025 land-air
 - **Air · land:** ERA5 2 m air temperature over the air-routed surface mask; ocean cells are intentionally unsupported.
 - **Sea:** OISST sea-surface temperature over supported ocean cells; all other cells are intentionally unsupported.
 
-The composite is a surface overview assembled from two physically different variables. It should not be treated as a single homogeneous observational record or as a climate-change attribution product. All modes use the same fixed −80 °C to +60 °C annual color scale so colors remain comparable between weeks.
+The composite is a surface overview assembled from two physically different variables. It should not be treated as a single homogeneous observational record or as a climate-change attribution product. Both palettes use the same fixed −80 °C to +60 °C domain so colors remain comparable between weeks. The default diverging palette places green at 21.08 °C, the cosine-of-latitude area-weighted and period-duration-weighted median of the checked-in 2025 composite fields. This is a descriptive reference for this dataset, not a climate anomaly baseline, comfort threshold, or physical phase boundary. The original sequential palette remains available for viewing the range as a continuous cold-to-hot progression.
 
 The canonical raster is a 1440 × 720 regular latitude–longitude grid with 0.25° cell spacing. Canonical UV coordinates sample the same raster while a vertex shader morphs between spherical positions and the native Plate Carrée plane. Borders and coastlines carry corresponding sphere and map positions and split at the antimeridian. Plate Carrée enlarges polar screen area; legend populations and percentages remain cosine-of-latitude area weighted.
 
 ### Globe and map views
 
-The **View** control changes only the geometry used to display the current field. The loaded temperature textures, surface-routing mask, fixed color scale, selected period, display layer, and locked temperature highlight are shared by both views, so switching projections does not request or decode another raster.
+The **View** control changes only the geometry used to display the current field. The loaded temperature textures, surface-routing mask, selected color scale, selected period, display layer, and locked temperature highlight are shared by both views, so switching projections does not request or decode another raster.
 
 - **Globe** is the default view. Drag to rotate it and scroll or pinch to zoom.
 - **Map** unfolds the same raster into its native 2:1 Plate Carrée layout. Drag to pan and scroll or pinch to zoom.
@@ -56,7 +57,7 @@ See [Data sources and methodology](DATA_SOURCES.md) for citations, source terms,
 
 - `src/climate` owns the canonical grid, temperature encoding, runtime manifest validation, explicit little-endian binary parsing, URL construction, frame loading, in-flight deduplication, and five-frame LRU cache.
 - `src/globe` owns React Three Fiber rendering, numeric data textures, the globe-to-Plate-Carrée projection morph, endpoint-specific picking, shader filtering, tooltips, and independent vector overlays.
-- `src/legend` owns the shared annual palette, D3 scale and histogram path, pointer inversion, keyboard interaction, and mode-consistent area calculations.
+- `src/legend` owns the shared selectable palettes, fixed temperature domain, D3 scale and histogram path, pointer inversion, keyboard interaction, and mode-consistent area calculations.
 - `src/app` owns semantic application state and atomic frame transitions. Per-frame rendering values do not flow through React state.
 - `scripts/real_data` owns source acquisition, canonical-grid alignment, weekly aggregation, encoding, and validation.
 - `scripts/generate-data.ts` regenerates a separate deterministic synthetic test dataset. It is never run by install, test, or build.

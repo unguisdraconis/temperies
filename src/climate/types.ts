@@ -1,5 +1,6 @@
 export type DisplayMode = 'composite' | 'air' | 'sst';
 export type TemperatureRenderStyle = 'heatmap' | 'smooth';
+export type TemperaturePalette = 'diverging' | 'sequential';
 export type ProjectionMode = 'globe' | 'map';
 export type TemperatureUnit = 'C' | 'F';
 export type SurfaceType = 'land' | 'ocean';

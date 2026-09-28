@@ -2,13 +2,13 @@ import { useEffect, useLayoutEffect, useRef, useState, type ComponentRef } from 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
-import type { DisplayMode, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperatureRenderStyle, VectorLayerVisibility } from '../climate/types';
+import type { DisplayMode, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperaturePalette, TemperatureRenderStyle, VectorLayerVisibility } from '../climate/types';
 import { TemperatureSphere } from './TemperatureSphere';
 import { VectorLayers } from './VectorLayers';
 import { advanceProjectionMix, easeProjectionMix, GLOBE_INITIAL_ROTATION, PROJECTION_TRANSITION_SECONDS, projectionTarget } from './projection';
 
 interface Props {
-  frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; highlight: LegendSelection | null;
+  frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
   projectionMode: ProjectionMode; vectorLayers: VectorLayerVisibility; reducedMotion: boolean;
   onHover: (cell: HoveredCell) => void; onLeave: () => void;
 }
@@ -19,7 +19,7 @@ interface SceneProps extends Props { controlsRef: { current: OrbitControlsInstan
 const CAMERA_HOME = new THREE.Vector3(0, 0.18, 2.55);
 const TARGET_HOME = new THREE.Vector3(0, 0, 0);
 
-function ProjectionScene({ frames, mask, mode, renderStyle, highlight, projectionMode, vectorLayers, reducedMotion, onHover, onLeave, controlsRef }: SceneProps) {
+function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, vectorLayers, reducedMotion, onHover, onLeave, controlsRef }: SceneProps) {
   const groupRef = useRef<THREE.Group>(null);
   const initialProjection = useRef(projectionTarget(projectionMode));
   const projectionMix = useRef(initialProjection.current);
@@ -67,7 +67,7 @@ function ProjectionScene({ frames, mask, mode, renderStyle, highlight, projectio
     GLOBE_INITIAL_ROTATION.y * (1 - initialProjection.current),
     0,
   ]}>
-    <TemperatureSphere frames={frames} mask={mask} mode={mode} renderStyle={renderStyle} highlight={highlight}
+    <TemperatureSphere frames={frames} mask={mask} mode={mode} renderStyle={renderStyle} palette={palette} highlight={highlight}
       projectionMode={projectionMode} projectionMix={projectionMix} onHover={onHover} onLeave={onLeave} />
     <VectorLayers {...vectorLayers} projectionMix={projectionMix} />
   </group>;

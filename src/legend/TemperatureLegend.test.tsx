@@ -10,7 +10,7 @@ const props = {
   histograms,
   minimums: { combined: -47, land: -47, ocean: -1.8 },
   maximums: { combined: 36.14, land: 36.14, ocean: 32.59 },
-  mode: 'composite' as const, unit: 'C' as const, globeValue: 12, hover: null, locked: null,
+  mode: 'composite' as const, unit: 'C' as const, palette: 'diverging' as const, globeValue: 12, hover: null, locked: null,
 };
 
 describe('TemperatureLegend interaction', () => {
@@ -71,5 +71,11 @@ describe('TemperatureLegend interaction', () => {
     expect(screen.getByRole('slider')).toHaveAttribute('aria-valuemin', '-112');
     expect(screen.getByRole('option', { name: '±0.9°F' })).toBeInTheDocument();
     expect(screen.getByTestId('temperature-marker')).toBeInTheDocument();
+  });
+  it('marks the annual composite median only on the diverging scale', () => {
+    const { rerender } = render(<TemperatureLegend {...props} onHover={vi.fn()} onLock={vi.fn()} />);
+    expect(screen.getByTestId('palette-reference')).toBeInTheDocument();
+    rerender(<TemperatureLegend {...props} palette="sequential" onHover={vi.fn()} onLock={vi.fn()} />);
+    expect(screen.queryByTestId('palette-reference')).not.toBeInTheDocument();
   });
 });

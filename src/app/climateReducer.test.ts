@@ -4,6 +4,12 @@ import type { FramePair, LegendSelection } from '../climate/types';
 
 const pair = { current: { id: 'a', air: new Uint16Array(), sst: new Uint16Array() }, next: { id: 'b', air: new Uint16Array(), sst: new Uint16Array() } } as FramePair;
 describe('climate state transitions', () => {
+  it('defaults to the diverging palette and switches palettes without changing climate frames', () => {
+    expect(initialClimateState.palette).toBe('diverging');
+    const state = { ...initialClimateState, framePair: pair };
+    const sequential = climateReducer(state, { type: 'SET_PALETTE', palette: 'sequential' });
+    expect(sequential.palette).toBe('sequential'); expect(sequential.framePair).toBe(pair);
+  });
   it('defaults to the globe and changes projection without changing climate frames', () => {
     expect(initialClimateState.projectionMode).toBe('globe');
     const state = { ...initialClimateState, framePair: pair };

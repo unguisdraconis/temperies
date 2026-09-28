@@ -10,6 +10,7 @@ import { TimelineControl } from '../controls/TimelineControl';
 import { UnitControl } from '../controls/UnitControl';
 import { LayerControl } from '../controls/LayerControl';
 import { ProjectionControl } from '../controls/ProjectionControl';
+import { PaletteControl } from '../controls/PaletteControl';
 import { formatDateRange } from '../shared/formatting';
 import { TemperiesMark } from '../shared/TemperiesMark';
 import { classifyClimateManifest } from '../climate/dataset';
@@ -67,12 +68,13 @@ export default function App() {
           <li>Drag the globe to rotate it or drag the map to pan, then scroll or pinch to zoom.</li>
           <li>Hover either view to inspect a cell's coordinates, source, and weekly mean temperature.</li>
           <li>Hover the legend to preview a temperature band; click it to keep that band selected while changing weeks.</li>
+          <li>Switch between the default blue–green–vermillion divergence, referenced to the 2025 composite median of 21.08°C, and the original sequential color scale.</li>
           <li>Use LOW or HIGH to track that spatial extreme as the selected week changes, and use Highlight band to widen the selected range.</li>
           <li>Use the arrows or period slider to request another week. The current view remains visible while the next field loads.</li>
         </ul></>}
     </aside>}
     <section className="workspace"><div className="scene-panel"><div className="scene-glow" />
-      <Globe frames={framePair} mask={state.mask} mode={state.mode} renderStyle={state.renderStyle} highlight={highlight} vectorLayers={state.vectorLayers}
+      <Globe frames={framePair} mask={state.mask} mode={state.mode} renderStyle={state.renderStyle} palette={state.palette} highlight={highlight} vectorLayers={state.vectorLayers}
         projectionMode={state.projectionMode} reducedMotion={reducedMotion} onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} />
       {transitioning && loadingWeek !== null && <div className="field-loading-notice" role="status" aria-live="polite">
         <span className="field-loading-spinner" aria-hidden="true" />
@@ -88,12 +90,13 @@ export default function App() {
     </div>
       <aside className="control-panel"><ProjectionControl value={state.projectionMode} onChange={actions.setProjectionMode} />
         <DisplayModeControl value={state.mode} onChange={actions.setMode} />
+        <PaletteControl value={state.palette} onChange={actions.setPalette} />
         <RenderStyleControl value={state.renderStyle} onChange={actions.setRenderStyle} />
         <section className="date-section"><div><span className="eyebrow">CURRENT PERIOD</span><h2>{dateRange}</h2><p>Week {String(state.week + 1).padStart(2, '0')} of {manifest.frames.length} <b>·</b> {modeLabel}</p></div><CalendarDays size={21} /></section>
         <TimelineControl week={state.week} frameCount={manifest.frames.length} loading={transitioning} onWeek={actions.requestWeek} />
         <div className="fact-row"><div><span>GRID</span><strong>{manifest.grid.resolution}°</strong></div><div><span>FRAME</span><strong>{String(state.week + 1).padStart(2, '0')} / {manifest.frames.length}</strong></div><div><span>UNITS</span><UnitControl unit={state.unit} onChange={actions.setUnit} /></div></div>
       </aside></section>
-    <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} globeValue={state.hoveredCell?.temperatureC ?? null}
+    <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}
       hover={state.legendHover} locked={state.legendLocked} onHover={actions.setLegendHover} onLock={actions.setLegendLock} />
     <footer><span><i /> {footerLabel}</span><p>Land: {manifest.sources.land.dataset} · Ocean: {manifest.sources.ocean.dataset} · Local static binaries</p>
       <nav aria-label="Project links"><a href="https://github.com/unguisdraconis/temperies/blob/main/DATA_SOURCES.md" target="_blank" rel="noreferrer">Methodology</a><a href="https://github.com/unguisdraconis/temperies" target="_blank" rel="noreferrer">Source code</a></nav><p>TEMPERIES TELLURIS</p></footer>

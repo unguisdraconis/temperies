@@ -64,6 +64,12 @@ The Composite layer places two different physical variables into one geographic 
 
 It is useful for visual exploration, but it is not a single homogeneous measurement product. Temperies does not present these values as direct point observations, temperature anomalies, climate normals, forecasts, or evidence of attribution.
 
+## Color scales
+
+Both selectable palettes map the fixed −80 °C to +60 °C display domain and are applied identically to the raster and coordinated legend. Changing the palette updates only the color lookup; it does not reload, transform, or alter the climate fields.
+
+The default blue–green–vermillion divergence places green at 21.08 °C. That reference is the median of the checked-in 2025 composite weekly-mean fields, calculated with cosine-of-latitude cell-area weighting and weighting each period by its number of days. It describes this particular composite dataset and is not a temperature anomaly baseline, climatological normal, biological comfort threshold, or physical phase boundary. The original sequential palette is retained as an alternative continuous cold-to-hot encoding.
+
 ## Processing and reproducibility
 
 The acquisition and processing scripts are under `scripts/real_data`. The complete workflow is documented in [`docs/real-data-pipeline.md`](docs/real-data-pipeline.md). Original NetCDF downloads and full local validation artifacts are intentionally excluded because of their size. A compact checked-in record of coverage, counts, and checksums is available in [`docs/data-provenance-2025.md`](docs/data-provenance-2025.md).

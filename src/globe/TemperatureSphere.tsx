@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, type ThreeEvent } from '@react-three/fiber';
 import * as THREE from 'three';
-import type { DisplayMode, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperatureRenderStyle } from '../climate/types';
+import type { DisplayMode, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperaturePalette, TemperatureRenderStyle } from '../climate/types';
 import { uvToGridCell, uvToLatLon } from '../climate/grid';
-import { createPaletteTexture } from './textures';
+import { createPaletteTexture, updatePaletteTexture } from './textures';
 import { DisplayTextureCache } from './displayTextureCache';
 import { canonicalGridUniformSize, HEATMAP_GRID_PRESENTATION, heatmapGridActive, replaceTemperatureFieldTexture } from './rendering';
 import { lookupTemperatureAtIndex } from './temperatureLookup';
@@ -14,17 +14,18 @@ import fragmentShader from './shaders/temperature.frag.glsl?raw';
 const displayTextureCache = new DisplayTextureCache();
 
 interface Props {
-  frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; highlight: LegendSelection | null;
+  frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
   projectionMode: ProjectionMode; projectionMix: ProjectionMixRef;
   onHover: (cell: HoveredCell) => void; onLeave: () => void;
 }
 
-export function TemperatureSphere({ frames, mask, mode, renderStyle, highlight, projectionMode, projectionMix, onHover, onLeave }: Props) {
+export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, projectionMix, onHover, onLeave }: Props) {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
   const initialRenderStyle = useRef(renderStyle);
   const fieldTexture = useMemo(() => displayTextureCache.get(frames.current, mask, mode), [frames, mask, mode]);
   const initialFieldTexture = useRef(fieldTexture);
-  const paletteTexture = useMemo(() => createPaletteTexture(), []);
+  const initialPalette = useRef(palette);
+  const paletteTexture = useMemo(() => createPaletteTexture(initialPalette.current), []);
   const geometry = useMemo(() => createProjectionGeometry(), []);
   const uniforms = useMemo(() => ({
     uField: { value: initialFieldTexture.current }, uLut: { value: paletteTexture },
@@ -49,6 +50,7 @@ export function TemperatureSphere({ frames, mask, mode, renderStyle, highlight, 
   useEffect(() => {
     if (materialRef.current) materialRef.current.uniforms.uHeatmapGridActive!.value = heatmapGridActive(renderStyle);
   }, [renderStyle]);
+  useEffect(() => updatePaletteTexture(paletteTexture, palette), [palette, paletteTexture]);
   useEffect(() => {
     const uniformsNow = materialRef.current?.uniforms;
     if (!uniformsNow) return;

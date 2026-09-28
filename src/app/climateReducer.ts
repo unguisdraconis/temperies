@@ -1,5 +1,5 @@
 import { ANNUAL_SCALE } from '../climate/constants';
-import type { ClimateManifest, DisplayMode, Extrema, FrameLoadState, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperatureRenderStyle, TemperatureUnit, VectorLayerVisibility } from '../climate/types';
+import type { ClimateManifest, DisplayMode, Extrema, FrameLoadState, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperaturePalette, TemperatureRenderStyle, TemperatureUnit, VectorLayerVisibility } from '../climate/types';
 
 export interface ClimateState {
   manifest: ClimateManifest | null;
@@ -12,6 +12,7 @@ export interface ClimateState {
   mode: DisplayMode;
   projectionMode: ProjectionMode;
   renderStyle: TemperatureRenderStyle;
+  palette: TemperaturePalette;
   unit: TemperatureUnit;
   hoveredCell: HoveredCell | null;
   legendHover: LegendSelection | null;
@@ -21,7 +22,7 @@ export interface ClimateState {
 
 export const initialClimateState: ClimateState = {
   manifest: null, mask: null, framePair: null, week: 0, activeRequestId: 0,
-  loadState: { status: 'idle' }, fatalError: null, mode: 'composite', projectionMode: 'globe', renderStyle: 'heatmap', unit: 'C',
+  loadState: { status: 'idle' }, fatalError: null, mode: 'composite', projectionMode: 'globe', renderStyle: 'heatmap', palette: 'diverging', unit: 'C',
   hoveredCell: null, legendHover: null, legendLocked: null,
   vectorLayers: { countries: true, coastlines: true },
 };
@@ -35,6 +36,7 @@ export type ClimateAction =
   | { type: 'SET_MODE'; mode: DisplayMode }
   | { type: 'SET_PROJECTION_MODE'; projectionMode: ProjectionMode }
   | { type: 'SET_RENDER_STYLE'; renderStyle: TemperatureRenderStyle }
+  | { type: 'SET_PALETTE'; palette: TemperaturePalette }
   | { type: 'SET_UNIT'; unit: TemperatureUnit }
   | { type: 'SET_HOVERED_CELL'; cell: HoveredCell | null }
   | { type: 'SET_LEGEND_HOVER'; selection: LegendSelection | null }
@@ -89,6 +91,7 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
     };
     case 'SET_PROJECTION_MODE': return { ...state, projectionMode: action.projectionMode, hoveredCell: null };
     case 'SET_RENDER_STYLE': return { ...state, renderStyle: action.renderStyle };
+    case 'SET_PALETTE': return { ...state, palette: action.palette };
     case 'SET_UNIT': return { ...state, unit: action.unit };
     case 'SET_HOVERED_CELL': return { ...state, hoveredCell: action.cell };
     case 'SET_LEGEND_HOVER': return { ...state, legendHover: action.selection };

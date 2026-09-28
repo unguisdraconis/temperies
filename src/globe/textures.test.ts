@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import * as THREE from 'three';
 import { GRID } from '../climate/constants';
-import { createClimateTexture, createPackedClimateTexture, packTemperatureTextureData } from './textures';
+import { createClimateTexture, createPackedClimateTexture, createPaletteTexture, packTemperatureTextureData, updatePaletteTexture } from './textures';
 
 describe('climate texture sampling', () => {
   it('keeps the native raster nearest-sampled without mipmaps', () => {
@@ -25,6 +25,17 @@ describe('climate texture sampling', () => {
     const packed = new Uint8Array(GRID.cellCount * 2);
     const texture = createPackedClimateTexture(packed);
     expect(texture.image.data).toBe(packed);
+    texture.dispose();
+  });
+  it('updates the palette lookup in place without replacing the GPU texture', () => {
+    const texture = createPaletteTexture('diverging');
+    const data = texture.image.data as Uint8Array;
+    const before = data.slice();
+    const versionBefore = texture.version;
+    updatePaletteTexture(texture, 'sequential');
+    expect(texture.image.data).toBe(data);
+    expect(data).not.toEqual(before);
+    expect(texture.version).toBeGreaterThan(versionBefore);
     texture.dispose();
   });
 });

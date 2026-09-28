@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GRID } from '../climate/constants';
+import type { TemperaturePalette } from '../climate/types';
 import { createLutData } from '../legend/legendScale';
 
 export function packTemperatureTextureData(data: Uint16Array): Uint8Array {
@@ -39,10 +40,16 @@ export function createMaskTexture(data: Uint8Array): THREE.DataTexture {
   return texture;
 }
 
-export function createPaletteTexture(): THREE.DataTexture {
-  const texture = new THREE.DataTexture(createLutData(), 512, 1, THREE.RGBAFormat, THREE.UnsignedByteType);
+export function createPaletteTexture(palette: TemperaturePalette = 'diverging'): THREE.DataTexture {
+  const texture = new THREE.DataTexture(createLutData(palette), 512, 1, THREE.RGBAFormat, THREE.UnsignedByteType);
   texture.needsUpdate = true; texture.minFilter = THREE.LinearFilter; texture.magFilter = THREE.LinearFilter;
   texture.generateMipmaps = false;
   texture.colorSpace = THREE.NoColorSpace;
   return texture;
+}
+
+export function updatePaletteTexture(texture: THREE.DataTexture, palette: TemperaturePalette): void {
+  const image = texture.image as { data: Uint8Array };
+  image.data.set(createLutData(palette));
+  texture.needsUpdate = true;
 }

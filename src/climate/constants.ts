@@ -24,6 +24,10 @@ export const ANNUAL_SCALE = Object.freeze({
   histogramBinCount: 280,
 } as const);
 
+// Cosine-of-latitude area-weighted and period-duration-weighted median of the
+// checked-in 2025 composite weekly-mean fields.
+export const ANNUAL_COMPOSITE_MEDIAN_C = 21.08;
+
 export const FRAME_COUNT = 52;
 export const DATA_YEAR = 2025;
 export const FRAME_CACHE_SIZE = 5;

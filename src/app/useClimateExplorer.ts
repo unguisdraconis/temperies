@@ -49,6 +49,7 @@ export function useClimateExplorer() {
     setPalette: (palette: TemperaturePalette) => dispatch({ type: 'SET_PALETTE', palette }),
     setUnit: (unit: TemperatureUnit) => dispatch({ type: 'SET_UNIT', unit }),
     setHoveredCell: (cell: HoveredCell | null) => dispatch({ type: 'SET_HOVERED_CELL', cell }),
+    toggleCellTooltip: (cell: HoveredCell) => dispatch({ type: 'TOGGLE_CELL_TOOLTIP', cell }),
     setLegendHover: (selection: LegendSelection | null) => dispatch({ type: 'SET_LEGEND_HOVER', selection }),
     setLegendLock: (selection: LegendSelection | null) => dispatch({ type: 'SET_LEGEND_LOCK', selection }),
     toggleVectorLayer: (layer: keyof VectorLayerVisibility) => dispatch({ type: 'TOGGLE_VECTOR_LAYER', layer }),

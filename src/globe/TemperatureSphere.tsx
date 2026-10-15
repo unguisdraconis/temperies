@@ -16,10 +16,10 @@ const displayTextureCache = new DisplayTextureCache();
 interface Props {
   frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
   projectionMode: ProjectionMode; projectionMix: ProjectionMixRef;
-  onHover: (cell: HoveredCell) => void; onLeave: () => void;
+  onHover: (cell: HoveredCell) => void; onLeave: () => void; onSelect: (cell: HoveredCell) => void;
 }
 
-export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, projectionMix, onHover, onLeave }: Props) {
+export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, projectionMix, onHover, onLeave, onSelect }: Props) {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
   const initialRenderStyle = useRef(renderStyle);
   const fieldTexture = useMemo(() => displayTextureCache.get(frames.current, mask, mode), [frames, mask, mode]);
@@ -58,14 +58,23 @@ export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, hi
     if (highlight) { uniformsNow.uHighlightMin!.value = highlight.minimum; uniformsNow.uHighlightMax!.value = highlight.maximum; }
   }, [highlight]);
 
-  const emitHover = (event: ThreeEvent<PointerEvent>) => {
-    if (!event.uv) return;
+  const cellAtEvent = <TEvent extends PointerEvent | MouseEvent>(event: ThreeEvent<TEvent>): HoveredCell | null => {
+    if (!event.uv) return null;
     event.stopPropagation();
     const coordinates = uvToLatLon(event.uv.x, event.uv.y);
     const cell = uvToGridCell(event.uv.x, event.uv.y);
     const { surface, temperatureC } = lookupTemperatureAtIndex(frames, mask, mode, cell.index, 0);
-    onHover({ ...cell, ...coordinates, surface, temperatureC,
-      clientX: event.nativeEvent.clientX, clientY: event.nativeEvent.clientY, interpolation: 0 });
+    return { ...cell, ...coordinates, surface, temperatureC,
+      clientX: event.nativeEvent.clientX, clientY: event.nativeEvent.clientY, interpolation: 0 };
+  };
+
+  const emitHover = (event: ThreeEvent<PointerEvent>) => {
+    const cell = cellAtEvent(event);
+    if (cell) onHover(cell);
+  };
+  const emitSelection = (event: ThreeEvent<MouseEvent>) => {
+    const cell = cellAtEvent(event);
+    if (cell) onSelect(cell);
   };
 
   const handleGlobeMove = (event: ThreeEvent<PointerEvent>) => {
@@ -76,10 +85,10 @@ export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, hi
   };
 
   return <>
-    <mesh geometry={geometry} onPointerMove={handleGlobeMove} onPointerOut={onLeave}>
+    <mesh geometry={geometry} onPointerMove={handleGlobeMove} onPointerOut={onLeave} onClick={emitSelection}>
       <shaderMaterial ref={materialRef} uniforms={uniforms} vertexShader={vertexShader} fragmentShader={fragmentShader} glslVersion={THREE.GLSL3} />
     </mesh>
-    {projectionMode === 'map' && <mesh position={[0, 0, 0.012]} onPointerMove={handleMapMove} onPointerOut={onLeave}>
+    {projectionMode === 'map' && <mesh position={[0, 0, 0.012]} onPointerMove={handleMapMove} onPointerOut={onLeave} onClick={emitSelection}>
       <planeGeometry args={[2, 1]} />
       <meshBasicMaterial transparent opacity={0} depthWrite={false} colorWrite={false} />
     </mesh>}

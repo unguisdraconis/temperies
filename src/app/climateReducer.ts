@@ -15,6 +15,7 @@ export interface ClimateState {
   palette: TemperaturePalette;
   unit: TemperatureUnit;
   hoveredCell: HoveredCell | null;
+  tooltipPinned: boolean;
   legendHover: LegendSelection | null;
   legendLocked: LegendSelection | null;
   vectorLayers: VectorLayerVisibility;
@@ -23,7 +24,7 @@ export interface ClimateState {
 export const initialClimateState: ClimateState = {
   manifest: null, mask: null, framePair: null, week: 0, activeRequestId: 0,
   loadState: { status: 'idle' }, fatalError: null, mode: 'composite', projectionMode: 'globe', renderStyle: 'heatmap', palette: 'diverging', unit: 'C',
-  hoveredCell: null, legendHover: null, legendLocked: null,
+  hoveredCell: null, tooltipPinned: false, legendHover: null, legendLocked: null,
   vectorLayers: { countries: true, coastlines: true },
 };
 
@@ -39,6 +40,7 @@ export type ClimateAction =
   | { type: 'SET_PALETTE'; palette: TemperaturePalette }
   | { type: 'SET_UNIT'; unit: TemperatureUnit }
   | { type: 'SET_HOVERED_CELL'; cell: HoveredCell | null }
+  | { type: 'TOGGLE_CELL_TOOLTIP'; cell: HoveredCell }
   | { type: 'SET_LEGEND_HOVER'; selection: LegendSelection | null }
   | { type: 'SET_LEGEND_LOCK'; selection: LegendSelection | null }
   | { type: 'TOGGLE_VECTOR_LAYER'; layer: keyof VectorLayerVisibility };
@@ -78,6 +80,7 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
         framePair: action.pair,
         loadState: { status: 'ready', week: action.week },
         hoveredCell: null,
+        tooltipPinned: false,
         legendLocked: updateTrackedExtreme(state.legendLocked, action.pair, state.mode),
       };
     case 'FRAME_ERROR':
@@ -87,13 +90,17 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
       ...state,
       mode: action.mode,
       hoveredCell: null,
+      tooltipPinned: false,
       legendLocked: state.framePair ? updateTrackedExtreme(state.legendLocked, state.framePair, action.mode) : state.legendLocked,
     };
-    case 'SET_PROJECTION_MODE': return { ...state, projectionMode: action.projectionMode, hoveredCell: null };
+    case 'SET_PROJECTION_MODE': return { ...state, projectionMode: action.projectionMode, hoveredCell: null, tooltipPinned: false };
     case 'SET_RENDER_STYLE': return { ...state, renderStyle: action.renderStyle };
     case 'SET_PALETTE': return { ...state, palette: action.palette };
     case 'SET_UNIT': return { ...state, unit: action.unit };
-    case 'SET_HOVERED_CELL': return { ...state, hoveredCell: action.cell };
+    case 'SET_HOVERED_CELL': return state.tooltipPinned ? state : { ...state, hoveredCell: action.cell };
+    case 'TOGGLE_CELL_TOOLTIP': return state.tooltipPinned
+      ? { ...state, hoveredCell: null, tooltipPinned: false }
+      : { ...state, hoveredCell: action.cell, tooltipPinned: true };
     case 'SET_LEGEND_HOVER': return { ...state, legendHover: action.selection };
     case 'SET_LEGEND_LOCK': return { ...state, legendLocked: action.selection, legendHover: null };
     case 'TOGGLE_VECTOR_LAYER': return { ...state, vectorLayers: { ...state.vectorLayers, [action.layer]: !state.vectorLayers[action.layer] } };

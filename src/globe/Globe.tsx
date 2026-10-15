@@ -10,7 +10,7 @@ import { advanceProjectionMix, easeProjectionMix, GLOBE_INITIAL_ROTATION, PROJEC
 interface Props {
   frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
   projectionMode: ProjectionMode; vectorLayers: VectorLayerVisibility; reducedMotion: boolean;
-  onHover: (cell: HoveredCell) => void; onLeave: () => void;
+  onHover: (cell: HoveredCell) => void; onLeave: () => void; onSelect: (cell: HoveredCell) => void;
 }
 
 type OrbitControlsInstance = ComponentRef<typeof OrbitControls>;
@@ -19,7 +19,7 @@ interface SceneProps extends Props { controlsRef: { current: OrbitControlsInstan
 const CAMERA_HOME = new THREE.Vector3(0, 0.18, 2.55);
 const TARGET_HOME = new THREE.Vector3(0, 0, 0);
 
-function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, vectorLayers, reducedMotion, onHover, onLeave, controlsRef }: SceneProps) {
+function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, vectorLayers, reducedMotion, onHover, onLeave, onSelect, controlsRef }: SceneProps) {
   const groupRef = useRef<THREE.Group>(null);
   const initialProjection = useRef(projectionTarget(projectionMode));
   const projectionMix = useRef(initialProjection.current);
@@ -68,7 +68,7 @@ function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, 
     0,
   ]}>
     <TemperatureSphere frames={frames} mask={mask} mode={mode} renderStyle={renderStyle} palette={palette} highlight={highlight}
-      projectionMode={projectionMode} projectionMix={projectionMix} onHover={onHover} onLeave={onLeave} />
+      projectionMode={projectionMode} projectionMix={projectionMix} onHover={onHover} onLeave={onLeave} onSelect={onSelect} />
     <VectorLayers {...vectorLayers} projectionMix={projectionMix} />
   </group>;
 }

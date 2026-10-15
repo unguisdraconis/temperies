@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { climateReducer, effectiveLegendSelection, initialClimateState } from './climateReducer';
-import type { FramePair, LegendSelection } from '../climate/types';
+import type { FramePair, HoveredCell, LegendSelection } from '../climate/types';
 
 const pair = { current: { id: 'a', air: new Uint16Array(), sst: new Uint16Array() }, next: { id: 'b', air: new Uint16Array(), sst: new Uint16Array() } } as FramePair;
+const cell = { row: 1, column: 2, index: 1442, latitude: 42, longitude: -71, surface: 'land', temperatureC: 12, clientX: 100, clientY: 120, interpolation: 0 } satisfies HoveredCell;
 describe('climate state transitions', () => {
   it('defaults to the diverging palette and switches palettes without changing climate frames', () => {
     expect(initialClimateState.palette).toBe('diverging');
@@ -80,6 +81,14 @@ describe('climate state transitions', () => {
     const locked = { value: 5, minimum: 4.5, maximum: 5.5, locked: true } satisfies LegendSelection;
     const state = climateReducer(climateReducer(initialClimateState, { type: 'SET_LEGEND_HOVER', selection: hover }), { type: 'SET_LEGEND_LOCK', selection: locked });
     expect(state.legendHover).toBeNull(); expect(effectiveLegendSelection(state)).toBe(locked);
+  });
+  it('pins a selected globe cell until the globe is activated again', () => {
+    const hovered = climateReducer(initialClimateState, { type: 'SET_HOVERED_CELL', cell });
+    const pinned = climateReducer(hovered, { type: 'TOGGLE_CELL_TOOLTIP', cell });
+    expect(pinned).toMatchObject({ hoveredCell: cell, tooltipPinned: true });
+    expect(climateReducer(pinned, { type: 'SET_HOVERED_CELL', cell: null })).toBe(pinned);
+    expect(climateReducer(pinned, { type: 'SET_HOVERED_CELL', cell: { ...cell, index: 1443 } })).toBe(pinned);
+    expect(climateReducer(pinned, { type: 'TOGGLE_CELL_TOOLTIP', cell })).toMatchObject({ hoveredCell: null, tooltipPinned: false });
   });
   it('keeps the active frame after a recoverable frame error', () => {
     const state = { ...initialClimateState, framePair: pair, activeRequestId: 2 };

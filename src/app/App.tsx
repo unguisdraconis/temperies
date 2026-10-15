@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CalendarDays, CircleHelp, Move, RotateCcw } from 'lucide-react';
+import { CalendarDays, CircleHelp, Info, Move, RotateCcw } from 'lucide-react';
 import { useClimateExplorer } from './useClimateExplorer';
 import { Globe } from '../globe/Globe';
 import { GlobeTooltip } from '../globe/GlobeTooltip';
@@ -54,7 +54,7 @@ export default function App() {
   return <main className="app-shell">
     <header className="topbar"><div className="brand"><span className="brand-mark"><TemperiesMark size={37} /></span><div><strong>TEMPERIES</strong><small>GLOBAL CLIMATE OBSERVATORY</small></div></div>
       <nav aria-label="Primary"><button className="nav-active" aria-current="page">Explorer</button>
-        <button onClick={() => setInfoPanel((panel) => panel === 'about' ? null : 'about')} aria-controls="information-panel" aria-expanded={infoPanel === 'about'}>About the data</button>
+        <button className="about-nav" aria-label="About the data" onClick={() => setInfoPanel((panel) => panel === 'about' ? null : 'about')} aria-controls="information-panel" aria-expanded={infoPanel === 'about'}><span>About the data</span><Info className="mobile-nav-icon" size={19} aria-hidden="true" /></button>
         <button aria-label="How to use Temperies" aria-controls="information-panel" aria-expanded={infoPanel === 'help'} onClick={() => setInfoPanel((panel) => panel === 'help' ? null : 'help')}><CircleHelp size={19} /></button>
       </nav></header>
     {infoPanel && <aside id="information-panel" className="data-notice" role="note" aria-labelledby="information-panel-title">
@@ -66,7 +66,7 @@ export default function App() {
         : <><strong id="information-panel-title">How to explore Temperies</strong><ul>
           <li>Switch between the 3D globe and the native Plate Carrée map without changing the selected week or temperature range.</li>
           <li>Drag the globe to rotate it or drag the map to pan, then scroll or pinch to zoom.</li>
-          <li>Hover either view to inspect a cell's coordinates, source, and weekly mean temperature.</li>
+          <li>Hover either view to inspect a cell, or click or tap it to pin the details. Click or tap the globe again to close them.</li>
           <li>Hover the legend to preview a temperature band; click it to keep that band selected while changing weeks.</li>
           <li>Switch between the default blue–green–vermillion divergence, referenced to the 2025 composite median of 21.08°C, and the original sequential color scale.</li>
           <li>Use LOW or HIGH to track that spatial extreme as the selected week changes, and use Highlight band to widen the selected range.</li>
@@ -75,7 +75,7 @@ export default function App() {
     </aside>}
     <section className="workspace"><div className="scene-panel"><div className="scene-glow" />
       <Globe frames={framePair} mask={state.mask} mode={state.mode} renderStyle={state.renderStyle} palette={state.palette} highlight={highlight} vectorLayers={state.vectorLayers}
-        projectionMode={state.projectionMode} reducedMotion={reducedMotion} onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} />
+        projectionMode={state.projectionMode} reducedMotion={reducedMotion} onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} onSelect={actions.toggleCellTooltip} />
       {transitioning && loadingWeek !== null && <div className="field-loading-notice" role="status" aria-live="polite">
         <span className="field-loading-spinner" aria-hidden="true" />
         <span><strong>Loading temperature data</strong><small>Preparing week {String(loadingWeek + 1).padStart(2, '0')}</small></span>
@@ -85,7 +85,7 @@ export default function App() {
       <div className="globe-hint">{state.projectionMode === 'globe' ? <RotateCcw size={15} /> : <Move size={15} />}
         {state.projectionMode === 'globe' ? 'DRAG TO ROTATE · SCROLL TO ZOOM' : 'DRAG TO PAN · SCROLL TO ZOOM'}</div>
       <LayerControl layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
-      {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} />}
+      {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} pinned={state.tooltipPinned} />}
       {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={() => actions.requestWeek(state.week)}>Retry</button></div>}
     </div>
       <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}

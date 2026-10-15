@@ -32,6 +32,34 @@ OISST is a gridded analysis combining bias-adjusted satellite and in-situ inputs
 
 Temperies obtains 1:110m country and land topology from the [`world-atlas`](https://www.npmjs.com/package/world-atlas) package, derived from [Natural Earth](https://www.naturalearthdata.com/). Natural Earth states that its raster and vector map data are in the public domain. The overlay is visual context only and does not determine whether a climate cell uses ERA5 or OISST.
 
+## Geographic hover labels
+
+The hover and selection card resolves geographic names from a compact offline
+index aligned to the same 1440 × 720 grid as the temperature data. The index is
+generated from these public-domain sources:
+
+- Natural Earth v5.1.2 1:10m lakes and reservoirs;
+- Natural Earth v5.1.2 1:10m geographic-region polygons and points for named
+  islands and island groups;
+- Natural Earth v5.1.2 1:10m marine polygons for oceans, seas, gulfs, bays,
+  straits, channels, sounds, fjords, lagoons, and related marine regions;
+- the `world-atlas` 1:110m country topology already used by the border overlay.
+
+The acquisition is pinned to Natural Earth revision
+`f1890d9f152c896d250a77557a5751a93d494776`, and the generator rejects source
+files whose SHA-256 checksum differs from the recorded release files. Inland
+waters take precedence over islands and countries wherever their polygons
+contain a cell center. Named islands take precedence over countries. The most
+specific containing marine polygon is used for ocean cells, with conservative
+marine-region fallbacks for sea-ice and coastline differences in the climate
+surface-routing mask.
+
+Names describe the center of a displayed quarter-degree cell. They are
+orientation aids, not authoritative boundaries or a statement about disputed
+territory. Small features may be absent or generalized at the source scale and
+sampling resolution. Natural Earth's [terms of use](https://www.naturalearthdata.com/about/terms-of-use/)
+place its vector and raster data in the public domain.
+
 ## Temporal aggregation
 
 The year is divided into 52 consecutive periods:

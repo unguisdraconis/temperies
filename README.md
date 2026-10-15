@@ -14,7 +14,7 @@ Temperies is an interactive globe and flat-map explorer for weekly 2025 land-air
 
 - Morph between the 3D globe and the raster's native Plate Carrée map without reloading data or losing the selected week and temperature range.
   ![Plate Carrée map](image-7.png)
-- Hover either view to inspect a cell's coordinates, surface type, weekly mean temperature, source, and period.
+- Hover either view to inspect a cell's country, island, inland water body, ocean or sea, along with its coordinates, surface type, weekly mean temperature, source, and period. Click or tap to pin the card.
   ![Hover a cell](image.png)
 - Hover or select the legend to highlight matching temperatures globally without scanning the raster in JavaScript.
   ![Hover the legend](image-1.png)
@@ -59,7 +59,9 @@ See [Data sources and methodology](DATA_SOURCES.md) for citations, source terms,
 - `src/globe` owns React Three Fiber rendering, numeric data textures, the globe-to-Plate-Carrée projection morph, endpoint-specific picking, shader filtering, tooltips, and independent vector overlays.
 - `src/legend` owns the shared selectable palettes, fixed temperature domain, D3 scale and histogram path, pointer inversion, keyboard interaction, and mode-consistent area calculations.
 - `src/app` owns semantic application state and atomic frame transitions. Per-frame rendering values do not flow through React state.
+- `src/geography` loads and resolves a compact, grid-aligned offline place-name index generated from Natural Earth and `world-atlas`.
 - `scripts/real_data` owns source acquisition, canonical-grid alignment, weekly aggregation, encoding, and validation.
+- `scripts/geography` owns pinned Natural Earth acquisition, checksum validation, and place-name index generation.
 - `scripts/generate-data.ts` regenerates a separate deterministic synthetic test dataset. It is never run by install, test, or build.
 
 The CPU determines which cell or temperature the user requests. The GPU determines where the selected temperature occurs globally.
@@ -96,6 +98,8 @@ Additional commands:
 npm run build
 npm run preview
 npm run generate:data
+npm run acquire:geography
+npm run generate:geography
 npm run typecheck
 npm run lint
 npm test
@@ -103,6 +107,11 @@ npm run test:watch
 ```
 
 `npm run generate:data` recreates the isolated synthetic fixture under `public/synthetic/data/2025`; it does not overwrite the default real dataset. Open it with `?dataset=synthetic`. The checked-in default is the validated real dataset under `public/data/2025`.
+
+`npm run acquire:geography` downloads the pinned public-domain Natural Earth
+v5.1.2 GeoJSON sources into the ignored `untouched_data/natural-earth`
+directory. `npm run generate:geography` verifies their SHA-256 hashes and
+rebuilds the checked-in quarter-degree place-name index.
 
 The [real-data pipeline](docs/real-data-pipeline.md) documents a resumable acquisition and processing workflow for NOAA OISST and Copernicus ERA5. Reproducing the ERA5 acquisition requires a Climate Data Store account and acceptance of the applicable dataset terms.
 

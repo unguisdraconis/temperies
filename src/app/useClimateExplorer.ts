@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef } from 'react';
 import { FrameRepository, loadManifest, loadMask } from '../climate/frameLoader';
 import { resolveDatasetBaseUrl } from '../climate/dataset';
 import type { DisplayMode, HoveredCell, LegendSelection, ProjectionMode, TemperaturePalette, TemperatureRenderStyle, TemperatureUnit, VectorLayerVisibility } from '../climate/types';
+import { loadGeographicIndex } from '../geography/geographicIndex';
 import { climateReducer, effectiveLegendSelection, initialClimateState } from './climateReducer';
 
 export function useClimateExplorer() {
@@ -31,9 +32,12 @@ export function useClimateExplorer() {
   useEffect(() => {
     const controller = new AbortController();
     void loadManifest(dataBaseUrl, fetch, controller.signal).then(async (manifest) => {
-      const mask = await loadMask(manifest, dataBaseUrl, fetch, controller.signal);
+      const [mask, geography] = await Promise.all([
+        loadMask(manifest, dataBaseUrl, fetch, controller.signal),
+        loadGeographicIndex(import.meta.env.BASE_URL, fetch, controller.signal),
+      ]);
       repositoryRef.current = new FrameRepository(manifest, dataBaseUrl);
-      dispatch({ type: 'BOOT_READY', manifest, mask });
+      dispatch({ type: 'BOOT_READY', manifest, mask, geography });
       requestWeekRef.current(0);
     }).catch((error: unknown) => {
       if (!controller.signal.aborted) dispatch({ type: 'FATAL_ERROR', message: error instanceof Error ? error.message : 'Unable to initialize climate data' });

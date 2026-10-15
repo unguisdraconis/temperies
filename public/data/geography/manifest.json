@@ -1,0 +1,10005 @@
+{
+  "schemaVersion": "1.0.0",
+  "grid": {
+    "width": 1440,
+    "height": 720,
+    "cellCount": 1036800,
+    "resolution": 0.25,
+    "latitudeOrigin": 89.875,
+    "longitudeOrigin": -179.875
+  },
+  "encoding": {
+    "filename": "cells.bin",
+    "type": "Uint16",
+    "byteOrder": "little-endian",
+    "unknown": 0
+  },
+  "places": [
+    {
+      "id": 1,
+      "kind": "country",
+      "name": "Fiji",
+      "type": "Country"
+    },
+    {
+      "id": 2,
+      "kind": "country",
+      "name": "Tanzania",
+      "type": "Country"
+    },
+    {
+      "id": 3,
+      "kind": "country",
+      "name": "W. Sahara",
+      "type": "Country"
+    },
+    {
+      "id": 4,
+      "kind": "country",
+      "name": "Canada",
+      "type": "Country"
+    },
+    {
+      "id": 5,
+      "kind": "country",
+      "name": "United States of America",
+      "type": "Country"
+    },
+    {
+      "id": 6,
+      "kind": "country",
+      "name": "Kazakhstan",
+      "type": "Country"
+    },
+    {
+      "id": 7,
+      "kind": "country",
+      "name": "Uzbekistan",
+      "type": "Country"
+    },
+    {
+      "id": 8,
+      "kind": "country",
+      "name": "Papua New Guinea",
+      "type": "Country"
+    },
+    {
+      "id": 9,
+      "kind": "country",
+      "name": "Indonesia",
+      "type": "Country"
+    },
+    {
+      "id": 10,
+      "kind": "country",
+      "name": "Argentina",
+      "type": "Country"
+    },
+    {
+      "id": 11,
+      "kind": "country",
+      "name": "Chile",
+      "type": "Country"
+    },
+    {
+      "id": 12,
+      "kind": "country",
+      "name": "Dem. Rep. Congo",
+      "type": "Country"
+    },
+    {
+      "id": 13,
+      "kind": "country",
+      "name": "Somalia",
+      "type": "Country"
+    },
+    {
+      "id": 14,
+      "kind": "country",
+      "name": "Kenya",
+      "type": "Country"
+    },
+    {
+      "id": 15,
+      "kind": "country",
+      "name": "Sudan",
+      "type": "Country"
+    },
+    {
+      "id": 16,
+      "kind": "country",
+      "name": "Chad",
+      "type": "Country"
+    },
+    {
+      "id": 17,
+      "kind": "country",
+      "name": "Haiti",
+      "type": "Country"
+    },
+    {
+      "id": 18,
+      "kind": "country",
+      "name": "Dominican Rep.",
+      "type": "Country"
+    },
+    {
+      "id": 19,
+      "kind": "country",
+      "name": "Russia",
+      "type": "Country"
+    },
+    {
+      "id": 20,
+      "kind": "country",
+      "name": "Bahamas",
+      "type": "Country"
+    },
+    {
+      "id": 21,
+      "kind": "country",
+      "name": "Falkland Is.",
+      "type": "Country"
+    },
+    {
+      "id": 22,
+      "kind": "country",
+      "name": "Norway",
+      "type": "Country"
+    },
+    {
+      "id": 23,
+      "kind": "country",
+      "name": "Greenland",
+      "type": "Country"
+    },
+    {
+      "id": 24,
+      "kind": "country",
+      "name": "Fr. S. Antarctic Lands",
+      "type": "Country"
+    },
+    {
+      "id": 25,
+      "kind": "country",
+      "name": "Timor-Leste",
+      "type": "Country"
+    },
+    {
+      "id": 26,
+      "kind": "country",
+      "name": "South Africa",
+      "type": "Country"
+    },
+    {
+      "id": 27,
+      "kind": "country",
+      "name": "Lesotho",
+      "type": "Country"
+    },
+    {
+      "id": 28,
+      "kind": "country",
+      "name": "Mexico",
+      "type": "Country"
+    },
+    {
+      "id": 29,
+      "kind": "country",
+      "name": "Uruguay",
+      "type": "Country"
+    },
+    {
+      "id": 30,
+      "kind": "country",
+      "name": "Brazil",
+      "type": "Country"
+    },
+    {
+      "id": 31,
+      "kind": "country",
+      "name": "Bolivia",
+      "type": "Country"
+    },
+    {
+      "id": 32,
+      "kind": "country",
+      "name": "Peru",
+      "type": "Country"
+    },
+    {
+      "id": 33,
+      "kind": "country",
+      "name": "Colombia",
+      "type": "Country"
+    },
+    {
+      "id": 34,
+      "kind": "country",
+      "name": "Panama",
+      "type": "Country"
+    },
+    {
+      "id": 35,
+      "kind": "country",
+      "name": "Costa Rica",
+      "type": "Country"
+    },
+    {
+      "id": 36,
+      "kind": "country",
+      "name": "Nicaragua",
+      "type": "Country"
+    },
+    {
+      "id": 37,
+      "kind": "country",
+      "name": "Honduras",
+      "type": "Country"
+    },
+    {
+      "id": 38,
+      "kind": "country",
+      "name": "El Salvador",
+      "type": "Country"
+    },
+    {
+      "id": 39,
+      "kind": "country",
+      "name": "Guatemala",
+      "type": "Country"
+    },
+    {
+      "id": 40,
+      "kind": "country",
+      "name": "Belize",
+      "type": "Country"
+    },
+    {
+      "id": 41,
+      "kind": "country",
+      "name": "Venezuela",
+      "type": "Country"
+    },
+    {
+      "id": 42,
+      "kind": "country",
+      "name": "Guyana",
+      "type": "Country"
+    },
+    {
+      "id": 43,
+      "kind": "country",
+      "name": "Suriname",
+      "type": "Country"
+    },
+    {
+      "id": 44,
+      "kind": "country",
+      "name": "France",
+      "type": "Country"
+    },
+    {
+      "id": 45,
+      "kind": "country",
+      "name": "Ecuador",
+      "type": "Country"
+    },
+    {
+      "id": 46,
+      "kind": "country",
+      "name": "Puerto Rico",
+      "type": "Country"
+    },
+    {
+      "id": 47,
+      "kind": "country",
+      "name": "Jamaica",
+      "type": "Country"
+    },
+    {
+      "id": 48,
+      "kind": "country",
+      "name": "Cuba",
+      "type": "Country"
+    },
+    {
+      "id": 49,
+      "kind": "country",
+      "name": "Zimbabwe",
+      "type": "Country"
+    },
+    {
+      "id": 50,
+      "kind": "country",
+      "name": "Botswana",
+      "type": "Country"
+    },
+    {
+      "id": 51,
+      "kind": "country",
+      "name": "Namibia",
+      "type": "Country"
+    },
+    {
+      "id": 52,
+      "kind": "country",
+      "name": "Senegal",
+      "type": "Country"
+    },
+    {
+      "id": 53,
+      "kind": "country",
+      "name": "Mali",
+      "type": "Country"
+    },
+    {
+      "id": 54,
+      "kind": "country",
+      "name": "Mauritania",
+      "type": "Country"
+    },
+    {
+      "id": 55,
+      "kind": "country",
+      "name": "Benin",
+      "type": "Country"
+    },
+    {
+      "id": 56,
+      "kind": "country",
+      "name": "Niger",
+      "type": "Country"
+    },
+    {
+      "id": 57,
+      "kind": "country",
+      "name": "Nigeria",
+      "type": "Country"
+    },
+    {
+      "id": 58,
+      "kind": "country",
+      "name": "Cameroon",
+      "type": "Country"
+    },
+    {
+      "id": 59,
+      "kind": "country",
+      "name": "Togo",
+      "type": "Country"
+    },
+    {
+      "id": 60,
+      "kind": "country",
+      "name": "Ghana",
+      "type": "Country"
+    },
+    {
+      "id": 61,
+      "kind": "country",
+      "name": "Côte d'Ivoire",
+      "type": "Country"
+    },
+    {
+      "id": 62,
+      "kind": "country",
+      "name": "Guinea",
+      "type": "Country"
+    },
+    {
+      "id": 63,
+      "kind": "country",
+      "name": "Guinea-Bissau",
+      "type": "Country"
+    },
+    {
+      "id": 64,
+      "kind": "country",
+      "name": "Liberia",
+      "type": "Country"
+    },
+    {
+      "id": 65,
+      "kind": "country",
+      "name": "Sierra Leone",
+      "type": "Country"
+    },
+    {
+      "id": 66,
+      "kind": "country",
+      "name": "Burkina Faso",
+      "type": "Country"
+    },
+    {
+      "id": 67,
+      "kind": "country",
+      "name": "Central African Rep.",
+      "type": "Country"
+    },
+    {
+      "id": 68,
+      "kind": "country",
+      "name": "Congo",
+      "type": "Country"
+    },
+    {
+      "id": 69,
+      "kind": "country",
+      "name": "Gabon",
+      "type": "Country"
+    },
+    {
+      "id": 70,
+      "kind": "country",
+      "name": "Eq. Guinea",
+      "type": "Country"
+    },
+    {
+      "id": 71,
+      "kind": "country",
+      "name": "Zambia",
+      "type": "Country"
+    },
+    {
+      "id": 72,
+      "kind": "country",
+      "name": "Malawi",
+      "type": "Country"
+    },
+    {
+      "id": 73,
+      "kind": "country",
+      "name": "Mozambique",
+      "type": "Country"
+    },
+    {
+      "id": 74,
+      "kind": "country",
+      "name": "eSwatini",
+      "type": "Country"
+    },
+    {
+      "id": 75,
+      "kind": "country",
+      "name": "Angola",
+      "type": "Country"
+    },
+    {
+      "id": 76,
+      "kind": "country",
+      "name": "Burundi",
+      "type": "Country"
+    },
+    {
+      "id": 77,
+      "kind": "country",
+      "name": "Israel",
+      "type": "Country"
+    },
+    {
+      "id": 78,
+      "kind": "country",
+      "name": "Lebanon",
+      "type": "Country"
+    },
+    {
+      "id": 79,
+      "kind": "country",
+      "name": "Madagascar",
+      "type": "Country"
+    },
+    {
+      "id": 80,
+      "kind": "country",
+      "name": "Palestine",
+      "type": "Country"
+    },
+    {
+      "id": 81,
+      "kind": "country",
+      "name": "Gambia",
+      "type": "Country"
+    },
+    {
+      "id": 82,
+      "kind": "country",
+      "name": "Tunisia",
+      "type": "Country"
+    },
+    {
+      "id": 83,
+      "kind": "country",
+      "name": "Algeria",
+      "type": "Country"
+    },
+    {
+      "id": 84,
+      "kind": "country",
+      "name": "Jordan",
+      "type": "Country"
+    },
+    {
+      "id": 85,
+      "kind": "country",
+      "name": "United Arab Emirates",
+      "type": "Country"
+    },
+    {
+      "id": 86,
+      "kind": "country",
+      "name": "Qatar",
+      "type": "Country"
+    },
+    {
+      "id": 87,
+      "kind": "country",
+      "name": "Kuwait",
+      "type": "Country"
+    },
+    {
+      "id": 88,
+      "kind": "country",
+      "name": "Iraq",
+      "type": "Country"
+    },
+    {
+      "id": 89,
+      "kind": "country",
+      "name": "Oman",
+      "type": "Country"
+    },
+    {
+      "id": 90,
+      "kind": "country",
+      "name": "Vanuatu",
+      "type": "Country"
+    },
+    {
+      "id": 91,
+      "kind": "country",
+      "name": "Cambodia",
+      "type": "Country"
+    },
+    {
+      "id": 92,
+      "kind": "country",
+      "name": "Thailand",
+      "type": "Country"
+    },
+    {
+      "id": 93,
+      "kind": "country",
+      "name": "Laos",
+      "type": "Country"
+    },
+    {
+      "id": 94,
+      "kind": "country",
+      "name": "Myanmar",
+      "type": "Country"
+    },
+    {
+      "id": 95,
+      "kind": "country",
+      "name": "Vietnam",
+      "type": "Country"
+    },
+    {
+      "id": 96,
+      "kind": "country",
+      "name": "North Korea",
+      "type": "Country"
+    },
+    {
+      "id": 97,
+      "kind": "country",
+      "name": "South Korea",
+      "type": "Country"
+    },
+    {
+      "id": 98,
+      "kind": "country",
+      "name": "Mongolia",
+      "type": "Country"
+    },
+    {
+      "id": 99,
+      "kind": "country",
+      "name": "India",
+      "type": "Country"
+    },
+    {
+      "id": 100,
+      "kind": "country",
+      "name": "Bangladesh",
+      "type": "Country"
+    },
+    {
+      "id": 101,
+      "kind": "country",
+      "name": "Bhutan",
+      "type": "Country"
+    },
+    {
+      "id": 102,
+      "kind": "country",
+      "name": "Nepal",
+      "type": "Country"
+    },
+    {
+      "id": 103,
+      "kind": "country",
+      "name": "Pakistan",
+      "type": "Country"
+    },
+    {
+      "id": 104,
+      "kind": "country",
+      "name": "Afghanistan",
+      "type": "Country"
+    },
+    {
+      "id": 105,
+      "kind": "country",
+      "name": "Tajikistan",
+      "type": "Country"
+    },
+    {
+      "id": 106,
+      "kind": "country",
+      "name": "Kyrgyzstan",
+      "type": "Country"
+    },
+    {
+      "id": 107,
+      "kind": "country",
+      "name": "Turkmenistan",
+      "type": "Country"
+    },
+    {
+      "id": 108,
+      "kind": "country",
+      "name": "Iran",
+      "type": "Country"
+    },
+    {
+      "id": 109,
+      "kind": "country",
+      "name": "Syria",
+      "type": "Country"
+    },
+    {
+      "id": 110,
+      "kind": "country",
+      "name": "Armenia",
+      "type": "Country"
+    },
+    {
+      "id": 111,
+      "kind": "country",
+      "name": "Sweden",
+      "type": "Country"
+    },
+    {
+      "id": 112,
+      "kind": "country",
+      "name": "Belarus",
+      "type": "Country"
+    },
+    {
+      "id": 113,
+      "kind": "country",
+      "name": "Ukraine",
+      "type": "Country"
+    },
+    {
+      "id": 114,
+      "kind": "country",
+      "name": "Poland",
+      "type": "Country"
+    },
+    {
+      "id": 115,
+      "kind": "country",
+      "name": "Austria",
+      "type": "Country"
+    },
+    {
+      "id": 116,
+      "kind": "country",
+      "name": "Hungary",
+      "type": "Country"
+    },
+    {
+      "id": 117,
+      "kind": "country",
+      "name": "Moldova",
+      "type": "Country"
+    },
+    {
+      "id": 118,
+      "kind": "country",
+      "name": "Romania",
+      "type": "Country"
+    },
+    {
+      "id": 119,
+      "kind": "country",
+      "name": "Lithuania",
+      "type": "Country"
+    },
+    {
+      "id": 120,
+      "kind": "country",
+      "name": "Latvia",
+      "type": "Country"
+    },
+    {
+      "id": 121,
+      "kind": "country",
+      "name": "Estonia",
+      "type": "Country"
+    },
+    {
+      "id": 122,
+      "kind": "country",
+      "name": "Germany",
+      "type": "Country"
+    },
+    {
+      "id": 123,
+      "kind": "country",
+      "name": "Bulgaria",
+      "type": "Country"
+    },
+    {
+      "id": 124,
+      "kind": "country",
+      "name": "Greece",
+      "type": "Country"
+    },
+    {
+      "id": 125,
+      "kind": "country",
+      "name": "Turkey",
+      "type": "Country"
+    },
+    {
+      "id": 126,
+      "kind": "country",
+      "name": "Albania",
+      "type": "Country"
+    },
+    {
+      "id": 127,
+      "kind": "country",
+      "name": "Croatia",
+      "type": "Country"
+    },
+    {
+      "id": 128,
+      "kind": "country",
+      "name": "Switzerland",
+      "type": "Country"
+    },
+    {
+      "id": 129,
+      "kind": "country",
+      "name": "Luxembourg",
+      "type": "Country"
+    },
+    {
+      "id": 130,
+      "kind": "country",
+      "name": "Belgium",
+      "type": "Country"
+    },
+    {
+      "id": 131,
+      "kind": "country",
+      "name": "Netherlands",
+      "type": "Country"
+    },
+    {
+      "id": 132,
+      "kind": "country",
+      "name": "Portugal",
+      "type": "Country"
+    },
+    {
+      "id": 133,
+      "kind": "country",
+      "name": "Spain",
+      "type": "Country"
+    },
+    {
+      "id": 134,
+      "kind": "country",
+      "name": "Ireland",
+      "type": "Country"
+    },
+    {
+      "id": 135,
+      "kind": "country",
+      "name": "New Caledonia",
+      "type": "Country"
+    },
+    {
+      "id": 136,
+      "kind": "country",
+      "name": "Solomon Is.",
+      "type": "Country"
+    },
+    {
+      "id": 137,
+      "kind": "country",
+      "name": "New Zealand",
+      "type": "Country"
+    },
+    {
+      "id": 138,
+      "kind": "country",
+      "name": "Australia",
+      "type": "Country"
+    },
+    {
+      "id": 139,
+      "kind": "country",
+      "name": "Sri Lanka",
+      "type": "Country"
+    },
+    {
+      "id": 140,
+      "kind": "country",
+      "name": "China",
+      "type": "Country"
+    },
+    {
+      "id": 141,
+      "kind": "country",
+      "name": "Taiwan",
+      "type": "Country"
+    },
+    {
+      "id": 142,
+      "kind": "country",
+      "name": "Italy",
+      "type": "Country"
+    },
+    {
+      "id": 143,
+      "kind": "country",
+      "name": "Denmark",
+      "type": "Country"
+    },
+    {
+      "id": 144,
+      "kind": "country",
+      "name": "United Kingdom",
+      "type": "Country"
+    },
+    {
+      "id": 145,
+      "kind": "country",
+      "name": "Iceland",
+      "type": "Country"
+    },
+    {
+      "id": 146,
+      "kind": "country",
+      "name": "Azerbaijan",
+      "type": "Country"
+    },
+    {
+      "id": 147,
+      "kind": "country",
+      "name": "Georgia",
+      "type": "Country"
+    },
+    {
+      "id": 148,
+      "kind": "country",
+      "name": "Philippines",
+      "type": "Country"
+    },
+    {
+      "id": 149,
+      "kind": "country",
+      "name": "Malaysia",
+      "type": "Country"
+    },
+    {
+      "id": 150,
+      "kind": "country",
+      "name": "Brunei",
+      "type": "Country"
+    },
+    {
+      "id": 151,
+      "kind": "country",
+      "name": "Slovenia",
+      "type": "Country"
+    },
+    {
+      "id": 152,
+      "kind": "country",
+      "name": "Finland",
+      "type": "Country"
+    },
+    {
+      "id": 153,
+      "kind": "country",
+      "name": "Slovakia",
+      "type": "Country"
+    },
+    {
+      "id": 154,
+      "kind": "country",
+      "name": "Czechia",
+      "type": "Country"
+    },
+    {
+      "id": 155,
+      "kind": "country",
+      "name": "Eritrea",
+      "type": "Country"
+    },
+    {
+      "id": 156,
+      "kind": "country",
+      "name": "Japan",
+      "type": "Country"
+    },
+    {
+      "id": 157,
+      "kind": "country",
+      "name": "Paraguay",
+      "type": "Country"
+    },
+    {
+      "id": 158,
+      "kind": "country",
+      "name": "Yemen",
+      "type": "Country"
+    },
+    {
+      "id": 159,
+      "kind": "country",
+      "name": "Saudi Arabia",
+      "type": "Country"
+    },
+    {
+      "id": 160,
+      "kind": "country",
+      "name": "Antarctica",
+      "type": "Country"
+    },
+    {
+      "id": 161,
+      "kind": "country",
+      "name": "N. Cyprus",
+      "type": "Country"
+    },
+    {
+      "id": 162,
+      "kind": "country",
+      "name": "Cyprus",
+      "type": "Country"
+    },
+    {
+      "id": 163,
+      "kind": "country",
+      "name": "Morocco",
+      "type": "Country"
+    },
+    {
+      "id": 164,
+      "kind": "country",
+      "name": "Egypt",
+      "type": "Country"
+    },
+    {
+      "id": 165,
+      "kind": "country",
+      "name": "Libya",
+      "type": "Country"
+    },
+    {
+      "id": 166,
+      "kind": "country",
+      "name": "Ethiopia",
+      "type": "Country"
+    },
+    {
+      "id": 167,
+      "kind": "country",
+      "name": "Djibouti",
+      "type": "Country"
+    },
+    {
+      "id": 168,
+      "kind": "country",
+      "name": "Somaliland",
+      "type": "Country"
+    },
+    {
+      "id": 169,
+      "kind": "country",
+      "name": "Uganda",
+      "type": "Country"
+    },
+    {
+      "id": 170,
+      "kind": "country",
+      "name": "Rwanda",
+      "type": "Country"
+    },
+    {
+      "id": 171,
+      "kind": "country",
+      "name": "Bosnia and Herz.",
+      "type": "Country"
+    },
+    {
+      "id": 172,
+      "kind": "country",
+      "name": "Macedonia",
+      "type": "Country"
+    },
+    {
+      "id": 173,
+      "kind": "country",
+      "name": "Serbia",
+      "type": "Country"
+    },
+    {
+      "id": 174,
+      "kind": "country",
+      "name": "Montenegro",
+      "type": "Country"
+    },
+    {
+      "id": 175,
+      "kind": "country",
+      "name": "Kosovo",
+      "type": "Country"
+    },
+    {
+      "id": 176,
+      "kind": "country",
+      "name": "Trinidad and Tobago",
+      "type": "Country"
+    },
+    {
+      "id": 177,
+      "kind": "country",
+      "name": "S. Sudan",
+      "type": "Country"
+    },
+    {
+      "id": 178,
+      "kind": "island",
+      "name": "Pentecost",
+      "type": "Island"
+    },
+    {
+      "id": 179,
+      "kind": "island",
+      "name": "Anatom",
+      "type": "Island"
+    },
+    {
+      "id": 180,
+      "kind": "island",
+      "name": "Gaua",
+      "type": "Island"
+    },
+    {
+      "id": 181,
+      "kind": "island",
+      "name": "Vanikolo",
+      "type": "Island"
+    },
+    {
+      "id": 182,
+      "kind": "island",
+      "name": "Adak",
+      "type": "Island"
+    },
+    {
+      "id": 183,
+      "kind": "island",
+      "name": "Unimak I.",
+      "type": "Island"
+    },
+    {
+      "id": 184,
+      "kind": "island",
+      "name": "Lanzarote",
+      "type": "Island"
+    },
+    {
+      "id": 185,
+      "kind": "island",
+      "name": "Pemba I.",
+      "type": "Island"
+    },
+    {
+      "id": 186,
+      "kind": "island",
+      "name": "Mahé I.",
+      "type": "Island"
+    },
+    {
+      "id": 187,
+      "kind": "island",
+      "name": "Mohéli",
+      "type": "Island"
+    },
+    {
+      "id": 188,
+      "kind": "island",
+      "name": "Mayotte",
+      "type": "Island"
+    },
+    {
+      "id": 189,
+      "kind": "island",
+      "name": "Anjouan",
+      "type": "Island"
+    },
+    {
+      "id": 190,
+      "kind": "island",
+      "name": "Mafia I.",
+      "type": "Island"
+    },
+    {
+      "id": 191,
+      "kind": "island",
+      "name": "Flores",
+      "type": "Island"
+    },
+    {
+      "id": 192,
+      "kind": "island",
+      "name": "Pico",
+      "type": "Island"
+    },
+    {
+      "id": 193,
+      "kind": "island",
+      "name": "Terceira",
+      "type": "Island"
+    },
+    {
+      "id": 194,
+      "kind": "island",
+      "name": "Santa Maria",
+      "type": "Island"
+    },
+    {
+      "id": 195,
+      "kind": "island",
+      "name": "Fogo",
+      "type": "Island"
+    },
+    {
+      "id": 196,
+      "kind": "island",
+      "name": "São Nicolau",
+      "type": "Island"
+    },
+    {
+      "id": 197,
+      "kind": "island",
+      "name": "Santo Antão",
+      "type": "Island"
+    },
+    {
+      "id": 198,
+      "kind": "island",
+      "name": "Sal",
+      "type": "Island"
+    },
+    {
+      "id": 199,
+      "kind": "island",
+      "name": "Boa Vista",
+      "type": "Island"
+    },
+    {
+      "id": 200,
+      "kind": "island",
+      "name": "Fuerteventura",
+      "type": "Island"
+    },
+    {
+      "id": 201,
+      "kind": "island",
+      "name": "Reunion",
+      "type": "Island"
+    },
+    {
+      "id": 202,
+      "kind": "island",
+      "name": "Hierro",
+      "type": "Island"
+    },
+    {
+      "id": 203,
+      "kind": "island",
+      "name": "La Palma",
+      "type": "Island"
+    },
+    {
+      "id": 204,
+      "kind": "island",
+      "name": "St. Matthew I.",
+      "type": "Island"
+    },
+    {
+      "id": 205,
+      "kind": "island",
+      "name": "Atka",
+      "type": "Island"
+    },
+    {
+      "id": 206,
+      "kind": "island",
+      "name": "Pribilof Islands",
+      "type": "Island"
+    },
+    {
+      "id": 207,
+      "kind": "island",
+      "name": "Prince Patrick I.",
+      "type": "Island"
+    },
+    {
+      "id": 208,
+      "kind": "island",
+      "name": "Bathurst I.",
+      "type": "Island"
+    },
+    {
+      "id": 209,
+      "kind": "island",
+      "name": "Mansel I.",
+      "type": "Island"
+    },
+    {
+      "id": 210,
+      "kind": "island",
+      "name": "Coats I.",
+      "type": "Island"
+    },
+    {
+      "id": 211,
+      "kind": "island",
+      "name": "King William I.",
+      "type": "Island"
+    },
+    {
+      "id": 212,
+      "kind": "island",
+      "name": "Cornwallis I.",
+      "type": "Island"
+    },
+    {
+      "id": 213,
+      "kind": "island",
+      "name": "Somerset I.",
+      "type": "Island"
+    },
+    {
+      "id": 214,
+      "kind": "island",
+      "name": "Bylot Island",
+      "type": "Island"
+    },
+    {
+      "id": 215,
+      "kind": "island",
+      "name": "Akimiski I.",
+      "type": "Island"
+    },
+    {
+      "id": 216,
+      "kind": "island",
+      "name": "Andros",
+      "type": "Island"
+    },
+    {
+      "id": 217,
+      "kind": "island",
+      "name": "Tarawa",
+      "type": "Island"
+    },
+    {
+      "id": 218,
+      "kind": "island",
+      "name": "Banaba",
+      "type": "Island"
+    },
+    {
+      "id": 219,
+      "kind": "island",
+      "name": "Atafu",
+      "type": "Island"
+    },
+    {
+      "id": 220,
+      "kind": "island",
+      "name": "Île Futuna",
+      "type": "Island"
+    },
+    {
+      "id": 221,
+      "kind": "island",
+      "name": "Starbuck",
+      "type": "Island"
+    },
+    {
+      "id": 222,
+      "kind": "island",
+      "name": "Anatahan",
+      "type": "Island"
+    },
+    {
+      "id": 223,
+      "kind": "island",
+      "name": "Nukufetau",
+      "type": "Island"
+    },
+    {
+      "id": 224,
+      "kind": "island",
+      "name": "Butaritari",
+      "type": "Island"
+    },
+    {
+      "id": 225,
+      "kind": "island",
+      "name": "Mussau",
+      "type": "Island"
+    },
+    {
+      "id": 226,
+      "kind": "island",
+      "name": "Karkar",
+      "type": "Island"
+    },
+    {
+      "id": 227,
+      "kind": "island",
+      "name": "Nendö",
+      "type": "Island"
+    },
+    {
+      "id": 228,
+      "kind": "island",
+      "name": "Rennell",
+      "type": "Island"
+    },
+    {
+      "id": 229,
+      "kind": "island",
+      "name": "Île de Pins",
+      "type": "Island"
+    },
+    {
+      "id": 230,
+      "kind": "island",
+      "name": "Ambrym",
+      "type": "Island"
+    },
+    {
+      "id": 231,
+      "kind": "island",
+      "name": "Erromango",
+      "type": "Island"
+    },
+    {
+      "id": 232,
+      "kind": "island",
+      "name": "Vanua Lava",
+      "type": "Island"
+    },
+    {
+      "id": 233,
+      "kind": "island",
+      "name": "I. Guadalupe",
+      "type": "Island"
+    },
+    {
+      "id": 234,
+      "kind": "island",
+      "name": "Fatu Hiva",
+      "type": "Island"
+    },
+    {
+      "id": 235,
+      "kind": "island",
+      "name": "Simushir",
+      "type": "Island"
+    },
+    {
+      "id": 236,
+      "kind": "island",
+      "name": "Kunashir",
+      "type": "Island"
+    },
+    {
+      "id": 237,
+      "kind": "island",
+      "name": "Onekotan",
+      "type": "Island"
+    },
+    {
+      "id": 238,
+      "kind": "island",
+      "name": "Bering I.",
+      "type": "Island"
+    },
+    {
+      "id": 239,
+      "kind": "island",
+      "name": "Phuket I.",
+      "type": "Island"
+    },
+    {
+      "id": 240,
+      "kind": "island",
+      "name": "Isla Wellington",
+      "type": "Island"
+    },
+    {
+      "id": 241,
+      "kind": "island",
+      "name": "Darien Gap",
+      "type": "Island"
+    },
+    {
+      "id": 242,
+      "kind": "island",
+      "name": "Santiago",
+      "type": "Island"
+    },
+    {
+      "id": 243,
+      "kind": "island",
+      "name": "São Miguel",
+      "type": "Island"
+    },
+    {
+      "id": 244,
+      "kind": "island",
+      "name": "Grande Comore",
+      "type": "Island"
+    },
+    {
+      "id": 245,
+      "kind": "island",
+      "name": "Mauritius",
+      "type": "Island"
+    },
+    {
+      "id": 246,
+      "kind": "island",
+      "name": "Nunivak I.",
+      "type": "Island"
+    },
+    {
+      "id": 247,
+      "kind": "island",
+      "name": "St. Lawrence I.",
+      "type": "Island"
+    },
+    {
+      "id": 248,
+      "kind": "island",
+      "name": "Prince Charles I.",
+      "type": "Island"
+    },
+    {
+      "id": 249,
+      "kind": "island",
+      "name": "î. d’Anticosti",
+      "type": "Island"
+    },
+    {
+      "id": 250,
+      "kind": "island",
+      "name": "Manus",
+      "type": "Island"
+    },
+    {
+      "id": 251,
+      "kind": "island",
+      "name": "Malaita",
+      "type": "Island"
+    },
+    {
+      "id": 252,
+      "kind": "island",
+      "name": "Choiseul",
+      "type": "Island"
+    },
+    {
+      "id": 253,
+      "kind": "island",
+      "name": "Éfaté",
+      "type": "Island"
+    },
+    {
+      "id": 254,
+      "kind": "island",
+      "name": "Tanna",
+      "type": "Island"
+    },
+    {
+      "id": 255,
+      "kind": "island",
+      "name": "Pohnpei",
+      "type": "Island"
+    },
+    {
+      "id": 256,
+      "kind": "island",
+      "name": "Kadavu",
+      "type": "Island"
+    },
+    {
+      "id": 257,
+      "kind": "island",
+      "name": "Saipan",
+      "type": "Island"
+    },
+    {
+      "id": 258,
+      "kind": "island",
+      "name": "Rota",
+      "type": "Island"
+    },
+    {
+      "id": 259,
+      "kind": "island",
+      "name": "Moloka‘i",
+      "type": "Island"
+    },
+    {
+      "id": 260,
+      "kind": "island",
+      "name": "Moorea",
+      "type": "Island"
+    },
+    {
+      "id": 261,
+      "kind": "island",
+      "name": "Ua Pou",
+      "type": "Island"
+    },
+    {
+      "id": 262,
+      "kind": "island",
+      "name": "Läna‘i",
+      "type": "Island"
+    },
+    {
+      "id": 263,
+      "kind": "island",
+      "name": "Ni‘ihau",
+      "type": "Island"
+    },
+    {
+      "id": 264,
+      "kind": "island",
+      "name": "Upolu",
+      "type": "Island"
+    },
+    {
+      "id": 265,
+      "kind": "island",
+      "name": "Tutuila",
+      "type": "Island"
+    },
+    {
+      "id": 266,
+      "kind": "island",
+      "name": "Taveuni",
+      "type": "Island"
+    },
+    {
+      "id": 267,
+      "kind": "island",
+      "name": "Tongatapu",
+      "type": "Island"
+    },
+    {
+      "id": 268,
+      "kind": "island",
+      "name": "Niue",
+      "type": "Island"
+    },
+    {
+      "id": 269,
+      "kind": "island",
+      "name": "Ilha de Marajó",
+      "type": "Island"
+    },
+    {
+      "id": 270,
+      "kind": "island",
+      "name": "Vize I.",
+      "type": "Island"
+    },
+    {
+      "id": 271,
+      "kind": "island",
+      "name": "Ushakova I.",
+      "type": "Island"
+    },
+    {
+      "id": 272,
+      "kind": "island",
+      "name": "Belyy I.",
+      "type": "Island"
+    },
+    {
+      "id": 273,
+      "kind": "island",
+      "name": "Cheju I.",
+      "type": "Island"
+    },
+    {
+      "id": 274,
+      "kind": "island",
+      "name": "West Falkland",
+      "type": "Island"
+    },
+    {
+      "id": 275,
+      "kind": "island",
+      "name": "East Falkland",
+      "type": "Island"
+    },
+    {
+      "id": 276,
+      "kind": "island",
+      "name": "Groote Eylandt",
+      "type": "Island"
+    },
+    {
+      "id": 277,
+      "kind": "island",
+      "name": "Mornington I.",
+      "type": "Island"
+    },
+    {
+      "id": 278,
+      "kind": "island",
+      "name": "Karaginskiy I.",
+      "type": "Island"
+    },
+    {
+      "id": 279,
+      "kind": "island",
+      "name": "Wrangel I.",
+      "type": "Island"
+    },
+    {
+      "id": 280,
+      "kind": "island",
+      "name": "Ayon I.",
+      "type": "Island"
+    },
+    {
+      "id": 281,
+      "kind": "island",
+      "name": "Novaya Sibir’ I.",
+      "type": "Island"
+    },
+    {
+      "id": 282,
+      "kind": "island",
+      "name": "Kotel’nyy I.",
+      "type": "Island"
+    },
+    {
+      "id": 283,
+      "kind": "island",
+      "name": "King I.",
+      "type": "Island"
+    },
+    {
+      "id": 284,
+      "kind": "island",
+      "name": "Flinders I.",
+      "type": "Island"
+    },
+    {
+      "id": 285,
+      "kind": "island",
+      "name": "Kangaroo I.",
+      "type": "Island"
+    },
+    {
+      "id": 286,
+      "kind": "island",
+      "name": "Fraser I.",
+      "type": "Island"
+    },
+    {
+      "id": 287,
+      "kind": "island",
+      "name": "Melville I.",
+      "type": "Island"
+    },
+    {
+      "id": 288,
+      "kind": "island",
+      "name": "Biak",
+      "type": "Island"
+    },
+    {
+      "id": 289,
+      "kind": "island",
+      "name": "Yos Sudarso I.",
+      "type": "Island"
+    },
+    {
+      "id": 290,
+      "kind": "island",
+      "name": "Buru",
+      "type": "Island"
+    },
+    {
+      "id": 291,
+      "kind": "island",
+      "name": "Taliabu",
+      "type": "Island"
+    },
+    {
+      "id": 292,
+      "kind": "island",
+      "name": "Morotai",
+      "type": "Island"
+    },
+    {
+      "id": 293,
+      "kind": "island",
+      "name": "Alor",
+      "type": "Island"
+    },
+    {
+      "id": 294,
+      "kind": "island",
+      "name": "Wetar",
+      "type": "Island"
+    },
+    {
+      "id": 295,
+      "kind": "island",
+      "name": "Sumba",
+      "type": "Island"
+    },
+    {
+      "id": 296,
+      "kind": "island",
+      "name": "Sumbawa",
+      "type": "Island"
+    },
+    {
+      "id": 297,
+      "kind": "island",
+      "name": "Lombok",
+      "type": "Island"
+    },
+    {
+      "id": 298,
+      "kind": "island",
+      "name": "Bali",
+      "type": "Island"
+    },
+    {
+      "id": 299,
+      "kind": "island",
+      "name": "Madura I.",
+      "type": "Island"
+    },
+    {
+      "id": 300,
+      "kind": "island",
+      "name": "Belitung",
+      "type": "Island"
+    },
+    {
+      "id": 301,
+      "kind": "island",
+      "name": "Bangka",
+      "type": "Island"
+    },
+    {
+      "id": 302,
+      "kind": "island",
+      "name": "Natuna Basar",
+      "type": "Island"
+    },
+    {
+      "id": 303,
+      "kind": "island",
+      "name": "Enggano",
+      "type": "Island"
+    },
+    {
+      "id": 304,
+      "kind": "island",
+      "name": "South Pagai",
+      "type": "Island"
+    },
+    {
+      "id": 305,
+      "kind": "island",
+      "name": "Siberut",
+      "type": "Island"
+    },
+    {
+      "id": 306,
+      "kind": "island",
+      "name": "Nias",
+      "type": "Island"
+    },
+    {
+      "id": 307,
+      "kind": "island",
+      "name": "Simeulue",
+      "type": "Island"
+    },
+    {
+      "id": 308,
+      "kind": "island",
+      "name": "Saaremaa",
+      "type": "Island"
+    },
+    {
+      "id": 309,
+      "kind": "island",
+      "name": "Åland",
+      "type": "Island"
+    },
+    {
+      "id": 310,
+      "kind": "island",
+      "name": "Gotland",
+      "type": "Island"
+    },
+    {
+      "id": 311,
+      "kind": "island",
+      "name": "Zealand",
+      "type": "Island"
+    },
+    {
+      "id": 312,
+      "kind": "island",
+      "name": "Lofoten",
+      "type": "Island"
+    },
+    {
+      "id": 313,
+      "kind": "island",
+      "name": "Vesterålen",
+      "type": "Island"
+    },
+    {
+      "id": 314,
+      "kind": "island",
+      "name": "Pelopónnisos",
+      "type": "Island"
+    },
+    {
+      "id": 315,
+      "kind": "island",
+      "name": "Rhodes",
+      "type": "Island"
+    },
+    {
+      "id": 316,
+      "kind": "island",
+      "name": "Crete",
+      "type": "Island"
+    },
+    {
+      "id": 317,
+      "kind": "island",
+      "name": "Greem Bell I.",
+      "type": "Island"
+    },
+    {
+      "id": 318,
+      "kind": "island",
+      "name": "Zemlya Georga I.",
+      "type": "Island"
+    },
+    {
+      "id": 319,
+      "kind": "island",
+      "name": "Kvitøya",
+      "type": "Island"
+    },
+    {
+      "id": 320,
+      "kind": "island",
+      "name": "Malta",
+      "type": "Island"
+    },
+    {
+      "id": 321,
+      "kind": "island",
+      "name": "Menorca",
+      "type": "Island"
+    },
+    {
+      "id": 322,
+      "kind": "island",
+      "name": "Mallorca",
+      "type": "Island"
+    },
+    {
+      "id": 323,
+      "kind": "island",
+      "name": "Ibiza",
+      "type": "Island"
+    },
+    {
+      "id": 324,
+      "kind": "island",
+      "name": "Bjørnøya",
+      "type": "Island"
+    },
+    {
+      "id": 325,
+      "kind": "island",
+      "name": "Lesbos",
+      "type": "Island"
+    },
+    {
+      "id": 326,
+      "kind": "island",
+      "name": "Edgeøya",
+      "type": "Island"
+    },
+    {
+      "id": 327,
+      "kind": "island",
+      "name": "Spitsbergen",
+      "type": "Island"
+    },
+    {
+      "id": 328,
+      "kind": "island",
+      "name": "Nordaustlandet",
+      "type": "Island"
+    },
+    {
+      "id": 329,
+      "kind": "island",
+      "name": "Vaygach I.",
+      "type": "Island"
+    },
+    {
+      "id": 330,
+      "kind": "island",
+      "name": "Kolguyev I.",
+      "type": "Island"
+    },
+    {
+      "id": 331,
+      "kind": "island",
+      "name": "Jan Mayen",
+      "type": "Island"
+    },
+    {
+      "id": 332,
+      "kind": "island",
+      "name": "São Tomé",
+      "type": "Island"
+    },
+    {
+      "id": 333,
+      "kind": "island",
+      "name": "Príncipe",
+      "type": "Island"
+    },
+    {
+      "id": 334,
+      "kind": "island",
+      "name": "Zanzibar I.",
+      "type": "Island"
+    },
+    {
+      "id": 335,
+      "kind": "island",
+      "name": "Socotra",
+      "type": "Island"
+    },
+    {
+      "id": 336,
+      "kind": "island",
+      "name": "Bioko",
+      "type": "Island"
+    },
+    {
+      "id": 337,
+      "kind": "island",
+      "name": "Tenerife",
+      "type": "Island"
+    },
+    {
+      "id": 338,
+      "kind": "island",
+      "name": "Gran Canaria",
+      "type": "Island"
+    },
+    {
+      "id": 339,
+      "kind": "island",
+      "name": "Madeira",
+      "type": "Island"
+    },
+    {
+      "id": 340,
+      "kind": "island",
+      "name": "Long I.",
+      "type": "Island"
+    },
+    {
+      "id": 341,
+      "kind": "island",
+      "name": "Grand Bahama",
+      "type": "Island"
+    },
+    {
+      "id": 342,
+      "kind": "island",
+      "name": "Qeqertarsuaq",
+      "type": "Island"
+    },
+    {
+      "id": 343,
+      "kind": "island",
+      "name": "Melville Island",
+      "type": "Island"
+    },
+    {
+      "id": 344,
+      "kind": "island",
+      "name": "Southampton I.",
+      "type": "Island"
+    },
+    {
+      "id": 345,
+      "kind": "island",
+      "name": "Prince of Wales I.",
+      "type": "Island"
+    },
+    {
+      "id": 346,
+      "kind": "island",
+      "name": "Axel Heiberg I.",
+      "type": "Island"
+    },
+    {
+      "id": 347,
+      "kind": "island",
+      "name": "Devon Island",
+      "type": "Island"
+    },
+    {
+      "id": 348,
+      "kind": "island",
+      "name": "Kodiak Island",
+      "type": "Island"
+    },
+    {
+      "id": 349,
+      "kind": "island",
+      "name": "Hainan Island",
+      "type": "Island"
+    },
+    {
+      "id": 350,
+      "kind": "island",
+      "name": "Komsomolets I.",
+      "type": "Island"
+    },
+    {
+      "id": 351,
+      "kind": "island",
+      "name": "Bol’shevik I.",
+      "type": "Island"
+    },
+    {
+      "id": 352,
+      "kind": "island",
+      "name": "October Revolution I.",
+      "type": "Island"
+    },
+    {
+      "id": 353,
+      "kind": "island",
+      "name": "Arctic Institute I.",
+      "type": "Island"
+    },
+    {
+      "id": 354,
+      "kind": "island",
+      "name": "Shmidta I.",
+      "type": "Island"
+    },
+    {
+      "id": 355,
+      "kind": "island",
+      "name": "Isla de Chiloé",
+      "type": "Island"
+    },
+    {
+      "id": 356,
+      "kind": "island",
+      "name": "Ceram",
+      "type": "Island"
+    },
+    {
+      "id": 357,
+      "kind": "island",
+      "name": "Halmahera",
+      "type": "Island"
+    },
+    {
+      "id": 358,
+      "kind": "island",
+      "name": "Timor",
+      "type": "Island"
+    },
+    {
+      "id": 359,
+      "kind": "island",
+      "name": "Palawan",
+      "type": "Island"
+    },
+    {
+      "id": 360,
+      "kind": "island",
+      "name": "Bohol",
+      "type": "Island"
+    },
+    {
+      "id": 361,
+      "kind": "island",
+      "name": "Negros",
+      "type": "Island"
+    },
+    {
+      "id": 362,
+      "kind": "island",
+      "name": "Leyte",
+      "type": "Island"
+    },
+    {
+      "id": 363,
+      "kind": "island",
+      "name": "Samar",
+      "type": "Island"
+    },
+    {
+      "id": 364,
+      "kind": "island",
+      "name": "Panay",
+      "type": "Island"
+    },
+    {
+      "id": 365,
+      "kind": "island",
+      "name": "Mindoro",
+      "type": "Island"
+    },
+    {
+      "id": 366,
+      "kind": "island",
+      "name": "Cyprus",
+      "type": "Island"
+    },
+    {
+      "id": 367,
+      "kind": "island",
+      "name": "Banks Island",
+      "type": "Island"
+    },
+    {
+      "id": 368,
+      "kind": "island",
+      "name": "Jamaica",
+      "type": "Island"
+    },
+    {
+      "id": 369,
+      "kind": "island",
+      "name": "Puerto Rico",
+      "type": "Island"
+    },
+    {
+      "id": 370,
+      "kind": "island",
+      "name": "Trinidad",
+      "type": "Island"
+    },
+    {
+      "id": 371,
+      "kind": "island",
+      "name": "Prince Edward I.",
+      "type": "Island"
+    },
+    {
+      "id": 372,
+      "kind": "island",
+      "name": "Cape Breton Island",
+      "type": "Island"
+    },
+    {
+      "id": 373,
+      "kind": "island",
+      "name": "Hispaniola",
+      "type": "Island"
+    },
+    {
+      "id": 374,
+      "kind": "island",
+      "name": "Cuba",
+      "type": "Island"
+    },
+    {
+      "id": 375,
+      "kind": "island",
+      "name": "Bol’shoy Begichev I.",
+      "type": "Island"
+    },
+    {
+      "id": 376,
+      "kind": "island",
+      "name": "Great Nicobar",
+      "type": "Island"
+    },
+    {
+      "id": 377,
+      "kind": "island",
+      "name": "S. Andaman",
+      "type": "Island"
+    },
+    {
+      "id": 378,
+      "kind": "island",
+      "name": "Middle Andaman",
+      "type": "Island"
+    },
+    {
+      "id": 379,
+      "kind": "island",
+      "name": "N. Andaman",
+      "type": "Island"
+    },
+    {
+      "id": 380,
+      "kind": "island",
+      "name": "Tierra del Fuego",
+      "type": "Island"
+    },
+    {
+      "id": 381,
+      "kind": "island",
+      "name": "Nova Scotia",
+      "type": "Island"
+    },
+    {
+      "id": 382,
+      "kind": "island",
+      "name": "Vancouver Island",
+      "type": "Island"
+    },
+    {
+      "id": 383,
+      "kind": "island",
+      "name": "Victoria Island",
+      "type": "Island"
+    },
+    {
+      "id": 384,
+      "kind": "island",
+      "name": "Labrador",
+      "type": "Island"
+    },
+    {
+      "id": 385,
+      "kind": "island",
+      "name": "Ellesmere Island",
+      "type": "Island"
+    },
+    {
+      "id": 386,
+      "kind": "island",
+      "name": "Baffin Island",
+      "type": "Island"
+    },
+    {
+      "id": 387,
+      "kind": "island",
+      "name": "Newfoundland",
+      "type": "Island"
+    },
+    {
+      "id": 388,
+      "kind": "island",
+      "name": "Sulawesi",
+      "type": "Island"
+    },
+    {
+      "id": 389,
+      "kind": "island",
+      "name": "Java",
+      "type": "Island"
+    },
+    {
+      "id": 390,
+      "kind": "island",
+      "name": "Mindanao",
+      "type": "Island"
+    },
+    {
+      "id": 391,
+      "kind": "island",
+      "name": "Luzon",
+      "type": "Island"
+    },
+    {
+      "id": 392,
+      "kind": "island",
+      "name": "Taiwan",
+      "type": "Island"
+    },
+    {
+      "id": 393,
+      "kind": "island",
+      "name": "Kyushu",
+      "type": "Island"
+    },
+    {
+      "id": 394,
+      "kind": "island",
+      "name": "Shikoku",
+      "type": "Island"
+    },
+    {
+      "id": 395,
+      "kind": "island",
+      "name": "Hokkaidō",
+      "type": "Island"
+    },
+    {
+      "id": 396,
+      "kind": "island",
+      "name": "Sakhalin",
+      "type": "Island"
+    },
+    {
+      "id": 397,
+      "kind": "island",
+      "name": "Sardegna",
+      "type": "Island"
+    },
+    {
+      "id": 398,
+      "kind": "island",
+      "name": "Corse",
+      "type": "Island"
+    },
+    {
+      "id": 399,
+      "kind": "island",
+      "name": "Sicilia",
+      "type": "Island"
+    },
+    {
+      "id": 400,
+      "kind": "island",
+      "name": "Sri Lanka",
+      "type": "Island"
+    },
+    {
+      "id": 401,
+      "kind": "island",
+      "name": "Mainland Tasmania",
+      "type": "Island"
+    },
+    {
+      "id": 402,
+      "kind": "island",
+      "name": "New Guinea",
+      "type": "Island"
+    },
+    {
+      "id": 403,
+      "kind": "island",
+      "name": "Borneo",
+      "type": "Island"
+    },
+    {
+      "id": 404,
+      "kind": "island",
+      "name": "Sumatra",
+      "type": "Island"
+    },
+    {
+      "id": 405,
+      "kind": "island",
+      "name": "Honshu",
+      "type": "Island"
+    },
+    {
+      "id": 406,
+      "kind": "island",
+      "name": "Ireland",
+      "type": "Island"
+    },
+    {
+      "id": 407,
+      "kind": "island",
+      "name": "Great Britain",
+      "type": "Island"
+    },
+    {
+      "id": 408,
+      "kind": "island",
+      "name": "Iceland",
+      "type": "Island"
+    },
+    {
+      "id": 409,
+      "kind": "island",
+      "name": "Greenland",
+      "type": "Island"
+    },
+    {
+      "id": 410,
+      "kind": "island",
+      "name": "Madagascar",
+      "type": "Island"
+    },
+    {
+      "id": 411,
+      "kind": "island",
+      "name": "Ross Island",
+      "type": "Island"
+    },
+    {
+      "id": 412,
+      "kind": "island",
+      "name": "Mill Island",
+      "type": "Island"
+    },
+    {
+      "id": 413,
+      "kind": "island",
+      "name": "Berkner Island",
+      "type": "Island"
+    },
+    {
+      "id": 414,
+      "kind": "island",
+      "name": "Hearst Island",
+      "type": "Island"
+    },
+    {
+      "id": 415,
+      "kind": "island",
+      "name": "James Ross Island",
+      "type": "Island"
+    },
+    {
+      "id": 416,
+      "kind": "island",
+      "name": "Joinville Island",
+      "type": "Island"
+    },
+    {
+      "id": 417,
+      "kind": "island",
+      "name": "Elephant Island",
+      "type": "Island"
+    },
+    {
+      "id": 418,
+      "kind": "island",
+      "name": "King George Island",
+      "type": "Island"
+    },
+    {
+      "id": 419,
+      "kind": "island",
+      "name": "Livingston Island",
+      "type": "Island"
+    },
+    {
+      "id": 420,
+      "kind": "island",
+      "name": "Brabant Island",
+      "type": "Island"
+    },
+    {
+      "id": 421,
+      "kind": "island",
+      "name": "Anvers Island",
+      "type": "Island"
+    },
+    {
+      "id": 422,
+      "kind": "island",
+      "name": "Adelaide Island",
+      "type": "Island"
+    },
+    {
+      "id": 423,
+      "kind": "island",
+      "name": "Charcot Island",
+      "type": "Island"
+    },
+    {
+      "id": 424,
+      "kind": "island",
+      "name": "Alexander Island",
+      "type": "Island"
+    },
+    {
+      "id": 425,
+      "kind": "island",
+      "name": "Latady Island",
+      "type": "Island"
+    },
+    {
+      "id": 426,
+      "kind": "island",
+      "name": "Spaatz Island",
+      "type": "Island"
+    },
+    {
+      "id": 427,
+      "kind": "island",
+      "name": "Thurston Island",
+      "type": "Island"
+    },
+    {
+      "id": 428,
+      "kind": "island",
+      "name": "Siple Island",
+      "type": "Island"
+    },
+    {
+      "id": 429,
+      "kind": "island",
+      "name": "Carney Island",
+      "type": "Island"
+    },
+    {
+      "id": 430,
+      "kind": "island",
+      "name": "Roosevelt Island",
+      "type": "Island"
+    },
+    {
+      "id": 431,
+      "kind": "island",
+      "name": "Heard Island",
+      "type": "Island"
+    },
+    {
+      "id": 432,
+      "kind": "island",
+      "name": "South Georgia",
+      "type": "Island"
+    },
+    {
+      "id": 433,
+      "kind": "island",
+      "name": "Burke Island",
+      "type": "Island"
+    },
+    {
+      "id": 434,
+      "kind": "island",
+      "name": "Farwell Island",
+      "type": "Island"
+    },
+    {
+      "id": 435,
+      "kind": "island",
+      "name": "Stewart I.",
+      "type": "Island"
+    },
+    {
+      "id": 436,
+      "kind": "island",
+      "name": "South Island",
+      "type": "Island"
+    },
+    {
+      "id": 437,
+      "kind": "island",
+      "name": "North Island",
+      "type": "Island"
+    },
+    {
+      "id": 438,
+      "kind": "island",
+      "name": "Utupua",
+      "type": "Island"
+    },
+    {
+      "id": 439,
+      "kind": "island",
+      "name": "Gardner Pinnacles",
+      "type": "Island"
+    },
+    {
+      "id": 440,
+      "kind": "island",
+      "name": "Manihiki",
+      "type": "Island"
+    },
+    {
+      "id": 441,
+      "kind": "island",
+      "name": "Tubuaï",
+      "type": "Island"
+    },
+    {
+      "id": 442,
+      "kind": "island",
+      "name": "Niau",
+      "type": "Island"
+    },
+    {
+      "id": 443,
+      "kind": "island",
+      "name": "Pitcairn I.",
+      "type": "Island"
+    },
+    {
+      "id": 444,
+      "kind": "island",
+      "name": "I. Clarión",
+      "type": "Island"
+    },
+    {
+      "id": 445,
+      "kind": "island",
+      "name": "Nihoa",
+      "type": "Island"
+    },
+    {
+      "id": 446,
+      "kind": "island",
+      "name": "Lisianski",
+      "type": "Island"
+    },
+    {
+      "id": 447,
+      "kind": "island",
+      "name": "Johnston Atoll",
+      "type": "Island"
+    },
+    {
+      "id": 448,
+      "kind": "island",
+      "name": "Niuafo‘ou",
+      "type": "Island"
+    },
+    {
+      "id": 449,
+      "kind": "island",
+      "name": "Baker I.",
+      "type": "Island"
+    },
+    {
+      "id": 450,
+      "kind": "island",
+      "name": "Suwarrow",
+      "type": "Island"
+    },
+    {
+      "id": 451,
+      "kind": "island",
+      "name": "Pukapuka",
+      "type": "Island"
+    },
+    {
+      "id": 452,
+      "kind": "island",
+      "name": "Penrhyn",
+      "type": "Island"
+    },
+    {
+      "id": 453,
+      "kind": "island",
+      "name": "Mangaia",
+      "type": "Island"
+    },
+    {
+      "id": 454,
+      "kind": "island",
+      "name": "Aitutaki",
+      "type": "Island"
+    },
+    {
+      "id": 455,
+      "kind": "island",
+      "name": "Palmerston",
+      "type": "Island"
+    },
+    {
+      "id": 456,
+      "kind": "island",
+      "name": "Tematagi",
+      "type": "Island"
+    },
+    {
+      "id": 457,
+      "kind": "island",
+      "name": "I. Sala y Gómez",
+      "type": "Island"
+    },
+    {
+      "id": 458,
+      "kind": "island",
+      "name": "I. San Félix",
+      "type": "Island"
+    },
+    {
+      "id": 459,
+      "kind": "island",
+      "name": "Anaa",
+      "type": "Island"
+    },
+    {
+      "id": 460,
+      "kind": "island",
+      "name": "Tatakoto",
+      "type": "Island"
+    },
+    {
+      "id": 461,
+      "kind": "island",
+      "name": "Vostok",
+      "type": "Island"
+    },
+    {
+      "id": 462,
+      "kind": "island",
+      "name": "Iwo Jima",
+      "type": "Island"
+    },
+    {
+      "id": 463,
+      "kind": "island",
+      "name": "Nukuroro",
+      "type": "Island"
+    },
+    {
+      "id": 464,
+      "kind": "island",
+      "name": "Oroluk",
+      "type": "Island"
+    },
+    {
+      "id": 465,
+      "kind": "island",
+      "name": "Utirik",
+      "type": "Island"
+    },
+    {
+      "id": 466,
+      "kind": "island",
+      "name": "Eniwetok",
+      "type": "Island"
+    },
+    {
+      "id": 467,
+      "kind": "island",
+      "name": "Huahine",
+      "type": "Island"
+    },
+    {
+      "id": 468,
+      "kind": "island",
+      "name": "Eiao",
+      "type": "Island"
+    },
+    {
+      "id": 469,
+      "kind": "island",
+      "name": "Aldabra I.",
+      "type": "Island"
+    },
+    {
+      "id": 470,
+      "kind": "island",
+      "name": "Bora Bora",
+      "type": "Island"
+    },
+    {
+      "id": 471,
+      "kind": "island",
+      "name": "Rowley Shoals",
+      "type": "Island"
+    },
+    {
+      "id": 472,
+      "kind": "island",
+      "name": "Dahlak Arch.",
+      "type": "Island group"
+    },
+    {
+      "id": 473,
+      "kind": "island",
+      "name": "Arquipélago dos Bijagós",
+      "type": "Island group"
+    },
+    {
+      "id": 474,
+      "kind": "island",
+      "name": "Midway Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 475,
+      "kind": "island",
+      "name": "Islas Desventuradas",
+      "type": "Island group"
+    },
+    {
+      "id": 476,
+      "kind": "island",
+      "name": "Islas Juan Fernandez",
+      "type": "Island group"
+    },
+    {
+      "id": 477,
+      "kind": "island",
+      "name": "Chatham Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 478,
+      "kind": "island",
+      "name": "îles Wallis",
+      "type": "Island group"
+    },
+    {
+      "id": 479,
+      "kind": "island",
+      "name": "Kermadec Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 480,
+      "kind": "island",
+      "name": "Tokelau",
+      "type": "Island group"
+    },
+    {
+      "id": 481,
+      "kind": "island",
+      "name": "Truk",
+      "type": "Island group"
+    },
+    {
+      "id": 482,
+      "kind": "island",
+      "name": "Lau Group",
+      "type": "Island group"
+    },
+    {
+      "id": 483,
+      "kind": "island",
+      "name": "Yap Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 484,
+      "kind": "island",
+      "name": "New Georgia Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 485,
+      "kind": "island",
+      "name": "Louisiade Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 486,
+      "kind": "island",
+      "name": "D’Entrecasteaux Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 487,
+      "kind": "island",
+      "name": "Îles Loyauté",
+      "type": "Island group"
+    },
+    {
+      "id": 488,
+      "kind": "island",
+      "name": "Sakishima Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 489,
+      "kind": "island",
+      "name": "Daitö Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 490,
+      "kind": "island",
+      "name": "Paracel Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 491,
+      "kind": "island",
+      "name": "Palau",
+      "type": "Island group"
+    },
+    {
+      "id": 492,
+      "kind": "island",
+      "name": "Santa Cruz Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 493,
+      "kind": "island",
+      "name": "Izu Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 494,
+      "kind": "island",
+      "name": "Phoenix Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 495,
+      "kind": "island",
+      "name": "Tubuai Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 496,
+      "kind": "island",
+      "name": "Vanuatu",
+      "type": "Island group"
+    },
+    {
+      "id": 497,
+      "kind": "island",
+      "name": "New Caledonia",
+      "type": "Island group"
+    },
+    {
+      "id": 498,
+      "kind": "island",
+      "name": "Tuvalu",
+      "type": "Island group"
+    },
+    {
+      "id": 499,
+      "kind": "island",
+      "name": "Mariana Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 500,
+      "kind": "island",
+      "name": "Gambier Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 501,
+      "kind": "island",
+      "name": "Society Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 502,
+      "kind": "island",
+      "name": "Marquesas Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 503,
+      "kind": "island",
+      "name": "Galapagos Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 504,
+      "kind": "island",
+      "name": "Urup",
+      "type": "Island group"
+    },
+    {
+      "id": 505,
+      "kind": "island",
+      "name": "Iturup",
+      "type": "Island group"
+    },
+    {
+      "id": 506,
+      "kind": "island",
+      "name": "Samoan Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 507,
+      "kind": "island",
+      "name": "Bonaparte",
+      "type": "Island group"
+    },
+    {
+      "id": 508,
+      "kind": "island",
+      "name": "Whitsunday Group",
+      "type": "Island group"
+    },
+    {
+      "id": 509,
+      "kind": "island",
+      "name": "Aru Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 510,
+      "kind": "island",
+      "name": "Tanimbar Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 511,
+      "kind": "island",
+      "name": "Sangihe Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 512,
+      "kind": "island",
+      "name": "Riau Arch.",
+      "type": "Island group"
+    },
+    {
+      "id": 513,
+      "kind": "island",
+      "name": "Batu Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 514,
+      "kind": "island",
+      "name": "Calamian Group",
+      "type": "Island group"
+    },
+    {
+      "id": 515,
+      "kind": "island",
+      "name": "Babuyan Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 516,
+      "kind": "island",
+      "name": "Oki Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 517,
+      "kind": "island",
+      "name": "Shantar Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 518,
+      "kind": "island",
+      "name": "Commander Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 519,
+      "kind": "island",
+      "name": "Bear Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 520,
+      "kind": "island",
+      "name": "Lyakhov Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 521,
+      "kind": "island",
+      "name": "Auckland Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 522,
+      "kind": "island",
+      "name": "Ionian Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 523,
+      "kind": "island",
+      "name": "Outer Hebrides",
+      "type": "Island group"
+    },
+    {
+      "id": 524,
+      "kind": "island",
+      "name": "Orkney Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 525,
+      "kind": "island",
+      "name": "Føroyar",
+      "type": "Island group"
+    },
+    {
+      "id": 526,
+      "kind": "island",
+      "name": "Shetland Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 527,
+      "kind": "island",
+      "name": "Cyclades",
+      "type": "Island group"
+    },
+    {
+      "id": 528,
+      "kind": "island",
+      "name": "Frisian Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 529,
+      "kind": "island",
+      "name": "Belcher Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 530,
+      "kind": "island",
+      "name": "Kuril Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 531,
+      "kind": "island",
+      "name": "Fiji",
+      "type": "Island group"
+    },
+    {
+      "id": 532,
+      "kind": "island",
+      "name": "Tonga",
+      "type": "Island group"
+    },
+    {
+      "id": 533,
+      "kind": "island",
+      "name": "Ratak Chain",
+      "type": "Island group"
+    },
+    {
+      "id": 534,
+      "kind": "island",
+      "name": "Ralik Chain",
+      "type": "Island group"
+    },
+    {
+      "id": 535,
+      "kind": "island",
+      "name": "Nanpō Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 536,
+      "kind": "island",
+      "name": "Southern Cook Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 537,
+      "kind": "island",
+      "name": "Northern Cook Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 538,
+      "kind": "island",
+      "name": "New Ireland",
+      "type": "Island group"
+    },
+    {
+      "id": 539,
+      "kind": "island",
+      "name": "San Cristobal",
+      "type": "Island group"
+    },
+    {
+      "id": 540,
+      "kind": "island",
+      "name": "Santa Isabel",
+      "type": "Island group"
+    },
+    {
+      "id": 541,
+      "kind": "island",
+      "name": "Malakula",
+      "type": "Island group"
+    },
+    {
+      "id": 542,
+      "kind": "island",
+      "name": "Santa Cruz",
+      "type": "Island group"
+    },
+    {
+      "id": 543,
+      "kind": "island",
+      "name": "Savai‘i",
+      "type": "Island group"
+    },
+    {
+      "id": 544,
+      "kind": "island",
+      "name": "Raiatea",
+      "type": "Island group"
+    },
+    {
+      "id": 545,
+      "kind": "island",
+      "name": "Hiva Oa",
+      "type": "Island group"
+    },
+    {
+      "id": 546,
+      "kind": "island",
+      "name": "Nuku Hiva",
+      "type": "Island group"
+    },
+    {
+      "id": 547,
+      "kind": "island",
+      "name": "Kiritimati",
+      "type": "Island group"
+    },
+    {
+      "id": 548,
+      "kind": "island",
+      "name": "O‘ahu",
+      "type": "Island group"
+    },
+    {
+      "id": 549,
+      "kind": "island",
+      "name": "Kaua‘i",
+      "type": "Island group"
+    },
+    {
+      "id": 550,
+      "kind": "island",
+      "name": "Vanua Levu",
+      "type": "Island group"
+    },
+    {
+      "id": 551,
+      "kind": "island",
+      "name": "Guam",
+      "type": "Island group"
+    },
+    {
+      "id": 552,
+      "kind": "island",
+      "name": "Paramushir",
+      "type": "Island group"
+    },
+    {
+      "id": 553,
+      "kind": "island",
+      "name": "Okinawa",
+      "type": "Island group"
+    },
+    {
+      "id": 554,
+      "kind": "island",
+      "name": "Amami",
+      "type": "Island group"
+    },
+    {
+      "id": 555,
+      "kind": "island",
+      "name": "Sulu Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 556,
+      "kind": "island",
+      "name": "Cape Verde",
+      "type": "Island group"
+    },
+    {
+      "id": 557,
+      "kind": "island",
+      "name": "Canary Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 558,
+      "kind": "island",
+      "name": "Haida Gwaii",
+      "type": "Island group"
+    },
+    {
+      "id": 559,
+      "kind": "island",
+      "name": "Alexander Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 560,
+      "kind": "island",
+      "name": "Channel Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 561,
+      "kind": "island",
+      "name": "Virgin Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 562,
+      "kind": "island",
+      "name": "Espiritu Santo",
+      "type": "Island group"
+    },
+    {
+      "id": 563,
+      "kind": "island",
+      "name": "Solomon Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 564,
+      "kind": "island",
+      "name": "Marshall Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 565,
+      "kind": "island",
+      "name": "Ryukyu Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 566,
+      "kind": "island",
+      "name": "Tuamotus",
+      "type": "Island group"
+    },
+    {
+      "id": 567,
+      "kind": "island",
+      "name": "Bismarck Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 568,
+      "kind": "island",
+      "name": "Bougainville",
+      "type": "Island group"
+    },
+    {
+      "id": 569,
+      "kind": "island",
+      "name": "Guadalcanal",
+      "type": "Island group"
+    },
+    {
+      "id": 570,
+      "kind": "island",
+      "name": "Isabela",
+      "type": "Island group"
+    },
+    {
+      "id": 571,
+      "kind": "island",
+      "name": "Tahiti",
+      "type": "Island group"
+    },
+    {
+      "id": 572,
+      "kind": "island",
+      "name": "Maui",
+      "type": "Island group"
+    },
+    {
+      "id": 573,
+      "kind": "island",
+      "name": "Viti Levu",
+      "type": "Island group"
+    },
+    {
+      "id": 574,
+      "kind": "island",
+      "name": "Mascarene Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 575,
+      "kind": "island",
+      "name": "Comoros",
+      "type": "Island group"
+    },
+    {
+      "id": 576,
+      "kind": "island",
+      "name": "Seychelles",
+      "type": "Island group"
+    },
+    {
+      "id": 577,
+      "kind": "island",
+      "name": "Myeik Arch.",
+      "type": "Island group"
+    },
+    {
+      "id": 578,
+      "kind": "island",
+      "name": "Severnaya Zemlya",
+      "type": "Island group"
+    },
+    {
+      "id": 579,
+      "kind": "island",
+      "name": "Falkland Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 580,
+      "kind": "island",
+      "name": "Svalbard",
+      "type": "Island group"
+    },
+    {
+      "id": 581,
+      "kind": "island",
+      "name": "Franz Josef Land",
+      "type": "Island group"
+    },
+    {
+      "id": 582,
+      "kind": "island",
+      "name": "Novaya Zemlya",
+      "type": "Island group"
+    },
+    {
+      "id": 583,
+      "kind": "island",
+      "name": "Balearic Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 584,
+      "kind": "island",
+      "name": "Lesser Sunda Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 585,
+      "kind": "island",
+      "name": "Spratly Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 586,
+      "kind": "island",
+      "name": "New Siberian Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 587,
+      "kind": "island",
+      "name": "Greater Antilles",
+      "type": "Island group"
+    },
+    {
+      "id": 588,
+      "kind": "island",
+      "name": "Bahama Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 589,
+      "kind": "island",
+      "name": "Lesser Antilles",
+      "type": "Island group"
+    },
+    {
+      "id": 590,
+      "kind": "island",
+      "name": "Parry Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 591,
+      "kind": "island",
+      "name": "Andaman Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 592,
+      "kind": "island",
+      "name": "Nicobar Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 593,
+      "kind": "island",
+      "name": "Maluku Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 594,
+      "kind": "island",
+      "name": "Aleutian Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 595,
+      "kind": "island",
+      "name": "West Indies",
+      "type": "Island group"
+    },
+    {
+      "id": 596,
+      "kind": "island",
+      "name": "Queen Elizabeth Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 597,
+      "kind": "island",
+      "name": "Kiribati",
+      "type": "Island group"
+    },
+    {
+      "id": 598,
+      "kind": "island",
+      "name": "Hawaiian Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 599,
+      "kind": "island",
+      "name": "Line Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 600,
+      "kind": "island",
+      "name": "Caroline Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 601,
+      "kind": "island",
+      "name": "New Britain",
+      "type": "Island group"
+    },
+    {
+      "id": 602,
+      "kind": "island",
+      "name": "Hawai‘i",
+      "type": "Island group"
+    },
+    {
+      "id": 603,
+      "kind": "island",
+      "name": "Greater Sunda Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 604,
+      "kind": "island",
+      "name": "Philippines",
+      "type": "Island group"
+    },
+    {
+      "id": 605,
+      "kind": "island",
+      "name": "Japan",
+      "type": "Island group"
+    },
+    {
+      "id": 606,
+      "kind": "island",
+      "name": "Canadian Arctic Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 607,
+      "kind": "island",
+      "name": "Melanesia",
+      "type": "Island group"
+    },
+    {
+      "id": 608,
+      "kind": "island",
+      "name": "Micronesia",
+      "type": "Island group"
+    },
+    {
+      "id": 609,
+      "kind": "island",
+      "name": "Polynesia",
+      "type": "Island group"
+    },
+    {
+      "id": 610,
+      "kind": "island",
+      "name": "Balleny Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 611,
+      "kind": "island",
+      "name": "South Shetland Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 612,
+      "kind": "island",
+      "name": "Îles Kerguelen",
+      "type": "Island group"
+    },
+    {
+      "id": 613,
+      "kind": "island",
+      "name": "Chagos Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 614,
+      "kind": "island",
+      "name": "Maldive Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 615,
+      "kind": "island",
+      "name": "Îles Crozet",
+      "type": "Island group"
+    },
+    {
+      "id": 616,
+      "kind": "island",
+      "name": "Prince Edward Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 617,
+      "kind": "island",
+      "name": "South Orkney Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 618,
+      "kind": "island",
+      "name": "South Sandwich Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 619,
+      "kind": "island",
+      "name": "Marshall Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 620,
+      "kind": "island",
+      "name": "Biscoe Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 621,
+      "kind": "island",
+      "name": "Laccadive Islands",
+      "type": "Island group"
+    },
+    {
+      "id": 622,
+      "kind": "island",
+      "name": "Malay Archipelago",
+      "type": "Island group"
+    },
+    {
+      "id": 623,
+      "kind": "island",
+      "name": "British Isles",
+      "type": "Island group"
+    },
+    {
+      "id": 624,
+      "kind": "island",
+      "name": "New Zealand",
+      "type": "Island group"
+    },
+    {
+      "id": 625,
+      "kind": "island",
+      "name": "Is. Revillagigedo",
+      "type": "Island group"
+    },
+    {
+      "id": 626,
+      "kind": "island",
+      "name": "Ösumi Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 627,
+      "kind": "island",
+      "name": "Talaud Is.",
+      "type": "Island group"
+    },
+    {
+      "id": 628,
+      "kind": "island",
+      "name": "Azores",
+      "type": "Island group"
+    },
+    {
+      "id": 629,
+      "kind": "island",
+      "name": "Rifstangi",
+      "type": "Island"
+    },
+    {
+      "id": 630,
+      "kind": "island",
+      "name": "Margarita Island",
+      "type": "Island"
+    },
+    {
+      "id": 631,
+      "kind": "island",
+      "name": "Novyy Island",
+      "type": "Island"
+    },
+    {
+      "id": 632,
+      "kind": "island",
+      "name": "Lyddan Island",
+      "type": "Island"
+    },
+    {
+      "id": 633,
+      "kind": "island",
+      "name": "Verblyud Island",
+      "type": "Island"
+    },
+    {
+      "id": 634,
+      "kind": "island",
+      "name": "Dean Island",
+      "type": "Island"
+    },
+    {
+      "id": 635,
+      "kind": "marine",
+      "name": "Arctic Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 636,
+      "kind": "marine",
+      "name": "Southern Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 637,
+      "kind": "marine",
+      "name": "North Atlantic Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 638,
+      "kind": "marine",
+      "name": "North Pacific Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 639,
+      "kind": "marine",
+      "name": "South Pacific Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 640,
+      "kind": "marine",
+      "name": "Indian Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 641,
+      "kind": "marine",
+      "name": "South Atlantic Ocean",
+      "type": "Ocean"
+    },
+    {
+      "id": 642,
+      "kind": "marine",
+      "name": "Black Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 643,
+      "kind": "marine",
+      "name": "Philippine Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 644,
+      "kind": "marine",
+      "name": "Great Barrier Reef",
+      "type": "Reef"
+    },
+    {
+      "id": 645,
+      "kind": "marine",
+      "name": "Tasman Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 646,
+      "kind": "marine",
+      "name": "Bay of Bengal",
+      "type": "Bay"
+    },
+    {
+      "id": 647,
+      "kind": "marine",
+      "name": "South China Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 648,
+      "kind": "marine",
+      "name": "Arabian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 649,
+      "kind": "marine",
+      "name": "Beaufort Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 650,
+      "kind": "marine",
+      "name": "Caribbean Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 651,
+      "kind": "marine",
+      "name": "Gulf of Mexico",
+      "type": "Gulf"
+    },
+    {
+      "id": 652,
+      "kind": "marine",
+      "name": "Labrador Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 653,
+      "kind": "marine",
+      "name": "Hudson Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 654,
+      "kind": "marine",
+      "name": "Caspian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 655,
+      "kind": "marine",
+      "name": "Baffin Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 656,
+      "kind": "marine",
+      "name": "Gulf of Alaska",
+      "type": "Gulf"
+    },
+    {
+      "id": 657,
+      "kind": "marine",
+      "name": "Red Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 658,
+      "kind": "marine",
+      "name": "Sea of Okhotsk",
+      "type": "Sea"
+    },
+    {
+      "id": 659,
+      "kind": "marine",
+      "name": "Weddell Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 660,
+      "kind": "marine",
+      "name": "Persian Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 661,
+      "kind": "marine",
+      "name": "Celebes Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 662,
+      "kind": "marine",
+      "name": "Sulu Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 663,
+      "kind": "marine",
+      "name": "Norwegian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 664,
+      "kind": "marine",
+      "name": "Greenland Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 665,
+      "kind": "marine",
+      "name": "Banda Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 666,
+      "kind": "marine",
+      "name": "Luzon Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 667,
+      "kind": "marine",
+      "name": "Bay of Biscay",
+      "type": "Bay"
+    },
+    {
+      "id": 668,
+      "kind": "marine",
+      "name": "Mozambique Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 669,
+      "kind": "marine",
+      "name": "Gulf of Guinea",
+      "type": "Gulf"
+    },
+    {
+      "id": 670,
+      "kind": "marine",
+      "name": "Scotia Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 671,
+      "kind": "marine",
+      "name": "Baltic Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 672,
+      "kind": "marine",
+      "name": "Barents Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 673,
+      "kind": "marine",
+      "name": "North Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 674,
+      "kind": "marine",
+      "name": "Bristol Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 675,
+      "kind": "marine",
+      "name": "Inner Seas",
+      "type": "Sea"
+    },
+    {
+      "id": 676,
+      "kind": "marine",
+      "name": "Irish Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 677,
+      "kind": "marine",
+      "name": "Java Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 678,
+      "kind": "marine",
+      "name": "Andaman Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 679,
+      "kind": "marine",
+      "name": "Yellow Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 680,
+      "kind": "marine",
+      "name": "East China Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 681,
+      "kind": "marine",
+      "name": "Chukchi Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 682,
+      "kind": "marine",
+      "name": "Bahía de Campeche",
+      "type": "Bay"
+    },
+    {
+      "id": 683,
+      "kind": "marine",
+      "name": "Arafura Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 684,
+      "kind": "marine",
+      "name": "Timor Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 685,
+      "kind": "marine",
+      "name": "Gulf of Thailand",
+      "type": "Gulf"
+    },
+    {
+      "id": 686,
+      "kind": "marine",
+      "name": "Laccadive Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 687,
+      "kind": "marine",
+      "name": "Bellingshausen Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 688,
+      "kind": "marine",
+      "name": "Amundsen Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 689,
+      "kind": "marine",
+      "name": "Davis Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 690,
+      "kind": "marine",
+      "name": "Kara Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 691,
+      "kind": "marine",
+      "name": "Laptev Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 692,
+      "kind": "marine",
+      "name": "Drake Passage",
+      "type": "Channel"
+    },
+    {
+      "id": 693,
+      "kind": "marine",
+      "name": "Great Australian Bight",
+      "type": "Gulf"
+    },
+    {
+      "id": 694,
+      "kind": "marine",
+      "name": "Gulf of Aden",
+      "type": "Gulf"
+    },
+    {
+      "id": 695,
+      "kind": "marine",
+      "name": "Gulf of Oman",
+      "type": "Gulf"
+    },
+    {
+      "id": 696,
+      "kind": "marine",
+      "name": "Tyrrhenian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 697,
+      "kind": "marine",
+      "name": "White Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 698,
+      "kind": "marine",
+      "name": "Sea of Azov",
+      "type": "Sea"
+    },
+    {
+      "id": 699,
+      "kind": "marine",
+      "name": "James Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 700,
+      "kind": "marine",
+      "name": "Gulf of Carpentaria",
+      "type": "Gulf"
+    },
+    {
+      "id": 701,
+      "kind": "marine",
+      "name": "Golfo de California",
+      "type": "Gulf"
+    },
+    {
+      "id": 702,
+      "kind": "marine",
+      "name": "Hudson Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 703,
+      "kind": "marine",
+      "name": "Gulf of Finland",
+      "type": "Gulf"
+    },
+    {
+      "id": 704,
+      "kind": "marine",
+      "name": "English Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 705,
+      "kind": "marine",
+      "name": "Gulf of Honduras",
+      "type": "Gulf"
+    },
+    {
+      "id": 706,
+      "kind": "marine",
+      "name": "Golfe du Lion",
+      "type": "Gulf"
+    },
+    {
+      "id": 707,
+      "kind": "marine",
+      "name": "Gulf of Bothnia",
+      "type": "Gulf"
+    },
+    {
+      "id": 708,
+      "kind": "marine",
+      "name": "Adriatic Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 709,
+      "kind": "marine",
+      "name": "Straits of Florida",
+      "type": "Strait"
+    },
+    {
+      "id": 710,
+      "kind": "marine",
+      "name": "Bay of Plenty",
+      "type": "Bay"
+    },
+    {
+      "id": 711,
+      "kind": "marine",
+      "name": "The North Western Passages",
+      "type": "Channel"
+    },
+    {
+      "id": 712,
+      "kind": "marine",
+      "name": "Queen Charlotte Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 713,
+      "kind": "marine",
+      "name": "Ionian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 714,
+      "kind": "marine",
+      "name": "Gulf of Saint Lawrence",
+      "type": "Gulf"
+    },
+    {
+      "id": 715,
+      "kind": "marine",
+      "name": "Molucca Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 716,
+      "kind": "marine",
+      "name": "Bismarck Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 717,
+      "kind": "marine",
+      "name": "Solomon Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 718,
+      "kind": "marine",
+      "name": "Gulf of Tonkin",
+      "type": "Gulf"
+    },
+    {
+      "id": 719,
+      "kind": "marine",
+      "name": "Bay of Fundy",
+      "type": "Bay"
+    },
+    {
+      "id": 720,
+      "kind": "marine",
+      "name": "Río de la Plata",
+      "type": "Gulf"
+    },
+    {
+      "id": 721,
+      "kind": "marine",
+      "name": "Strait of Malacca",
+      "type": "Strait"
+    },
+    {
+      "id": 722,
+      "kind": "marine",
+      "name": "Strait of Singapore",
+      "type": "Strait"
+    },
+    {
+      "id": 723,
+      "kind": "marine",
+      "name": "Makassar Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 724,
+      "kind": "marine",
+      "name": "Ceram Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 725,
+      "kind": "marine",
+      "name": "Inner Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 726,
+      "kind": "marine",
+      "name": "Taiwan Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 727,
+      "kind": "marine",
+      "name": "Cook Inlet",
+      "type": "Bay"
+    },
+    {
+      "id": 728,
+      "kind": "marine",
+      "name": "Bristol Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 729,
+      "kind": "marine",
+      "name": "Melville Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 730,
+      "kind": "marine",
+      "name": "Gulf of Maine",
+      "type": "Gulf"
+    },
+    {
+      "id": 731,
+      "kind": "marine",
+      "name": "Chesapeake Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 732,
+      "kind": "marine",
+      "name": "Strait of Gibraltar",
+      "type": "Strait"
+    },
+    {
+      "id": 733,
+      "kind": "marine",
+      "name": "Golfo San Jorge",
+      "type": "Gulf"
+    },
+    {
+      "id": 734,
+      "kind": "marine",
+      "name": "Balearic Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 735,
+      "kind": "marine",
+      "name": "Aegean Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 736,
+      "kind": "marine",
+      "name": "Gulf of Mannar",
+      "type": "Gulf"
+    },
+    {
+      "id": 737,
+      "kind": "marine",
+      "name": "Shelikhova Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 738,
+      "kind": "marine",
+      "name": "Bo Hai",
+      "type": "Sea"
+    },
+    {
+      "id": 739,
+      "kind": "marine",
+      "name": "Gulf of Kutch",
+      "type": "Gulf"
+    },
+    {
+      "id": 740,
+      "kind": "marine",
+      "name": "Golfo de Panamá",
+      "type": "Gulf"
+    },
+    {
+      "id": 741,
+      "kind": "marine",
+      "name": "Amundsen Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 742,
+      "kind": "marine",
+      "name": "Viscount Melville Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 743,
+      "kind": "marine",
+      "name": "Ungava Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 744,
+      "kind": "marine",
+      "name": "Yucatan Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 745,
+      "kind": "marine",
+      "name": "Bering Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 746,
+      "kind": "marine",
+      "name": "East Siberian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 747,
+      "kind": "marine",
+      "name": "Lincoln Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 748,
+      "kind": "marine",
+      "name": "Bass Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 749,
+      "kind": "marine",
+      "name": "Franklin Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 750,
+      "kind": "marine",
+      "name": "Dixon Entrance",
+      "type": "Channel"
+    },
+    {
+      "id": 751,
+      "kind": "marine",
+      "name": "M'Clure Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 752,
+      "kind": "marine",
+      "name": "Boca Grande",
+      "type": "Bay"
+    },
+    {
+      "id": 753,
+      "kind": "marine",
+      "name": "Baía de Marajó",
+      "type": "Bay"
+    },
+    {
+      "id": 754,
+      "kind": "marine",
+      "name": "Golfo San Matías",
+      "type": "Gulf"
+    },
+    {
+      "id": 755,
+      "kind": "marine",
+      "name": "Golfo Corcovado",
+      "type": "Gulf"
+    },
+    {
+      "id": 756,
+      "kind": "marine",
+      "name": "Wrigley Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 757,
+      "kind": "marine",
+      "name": "Sulzberger Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 758,
+      "kind": "marine",
+      "name": "Ronne Entrance",
+      "type": "Channel"
+    },
+    {
+      "id": 759,
+      "kind": "marine",
+      "name": "Bransfield Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 760,
+      "kind": "marine",
+      "name": "McMurdo Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 761,
+      "kind": "marine",
+      "name": "Baía de São Marcos",
+      "type": "Bay"
+    },
+    {
+      "id": 762,
+      "kind": "marine",
+      "name": "Cumberland Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 763,
+      "kind": "marine",
+      "name": "Frobisher Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 764,
+      "kind": "marine",
+      "name": "Disko Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 765,
+      "kind": "marine",
+      "name": "Hamilton Inlet",
+      "type": "Bay"
+    },
+    {
+      "id": 766,
+      "kind": "marine",
+      "name": "Storfjorden",
+      "type": "Fjord"
+    },
+    {
+      "id": 767,
+      "kind": "marine",
+      "name": "Vestfjorden",
+      "type": "Fjord"
+    },
+    {
+      "id": 768,
+      "kind": "marine",
+      "name": "Skagerrak",
+      "type": "Fjord"
+    },
+    {
+      "id": 769,
+      "kind": "marine",
+      "name": "Karskiye Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 770,
+      "kind": "marine",
+      "name": "Vil'kitskogo Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 771,
+      "kind": "marine",
+      "name": "Sognefjorden",
+      "type": "Fjord"
+    },
+    {
+      "id": 772,
+      "kind": "marine",
+      "name": "Trondheimsfjorden",
+      "type": "Fjord"
+    },
+    {
+      "id": 773,
+      "kind": "marine",
+      "name": "Kattegat",
+      "type": "Sea"
+    },
+    {
+      "id": 774,
+      "kind": "marine",
+      "name": "Gulf of Khambhät",
+      "type": "Gulf"
+    },
+    {
+      "id": 775,
+      "kind": "marine",
+      "name": "Palk Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 776,
+      "kind": "marine",
+      "name": "Kronotskiy Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 777,
+      "kind": "marine",
+      "name": "Uda Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 778,
+      "kind": "marine",
+      "name": "Uchiura Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 779,
+      "kind": "marine",
+      "name": "Tsugaru Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 780,
+      "kind": "marine",
+      "name": "Tatar Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 781,
+      "kind": "marine",
+      "name": "Shark Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 782,
+      "kind": "marine",
+      "name": "Gulf of Gabès",
+      "type": "Gulf"
+    },
+    {
+      "id": 783,
+      "kind": "marine",
+      "name": "Mackenzie Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 784,
+      "kind": "marine",
+      "name": "Norton Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 785,
+      "kind": "marine",
+      "name": "Kotzebue Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 786,
+      "kind": "marine",
+      "name": "Gulf of Boothia",
+      "type": "Gulf"
+    },
+    {
+      "id": 787,
+      "kind": "marine",
+      "name": "Kane Basin",
+      "type": "Bay"
+    },
+    {
+      "id": 788,
+      "kind": "marine",
+      "name": "Foxe Basin",
+      "type": "Bay"
+    },
+    {
+      "id": 789,
+      "kind": "marine",
+      "name": "Golfo de Tehuantepec",
+      "type": "Gulf"
+    },
+    {
+      "id": 790,
+      "kind": "marine",
+      "name": "Golfo de Guayaquil",
+      "type": "Gulf"
+    },
+    {
+      "id": 791,
+      "kind": "marine",
+      "name": "Gulf of Masira",
+      "type": "Gulf"
+    },
+    {
+      "id": 792,
+      "kind": "marine",
+      "name": "Gulf of Yana",
+      "type": "Gulf"
+    },
+    {
+      "id": 793,
+      "kind": "marine",
+      "name": "Dmitriy Laptev Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 794,
+      "kind": "marine",
+      "name": "La Pérouse Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 795,
+      "kind": "marine",
+      "name": "East Korea Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 796,
+      "kind": "marine",
+      "name": "Qiongzhou Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 797,
+      "kind": "marine",
+      "name": "Cook Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 798,
+      "kind": "marine",
+      "name": "Torres Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 799,
+      "kind": "marine",
+      "name": "Geographe Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 800,
+      "kind": "marine",
+      "name": "Gulf of Papua",
+      "type": "Gulf"
+    },
+    {
+      "id": 801,
+      "kind": "marine",
+      "name": "Gulf of Olen‘k",
+      "type": "Gulf"
+    },
+    {
+      "id": 802,
+      "kind": "marine",
+      "name": "Gulf of Riga",
+      "type": "Gulf"
+    },
+    {
+      "id": 803,
+      "kind": "marine",
+      "name": "Waddenzee",
+      "type": "Lagoon"
+    },
+    {
+      "id": 804,
+      "kind": "marine",
+      "name": "Gulf of Sidra",
+      "type": "Gulf"
+    },
+    {
+      "id": 805,
+      "kind": "marine",
+      "name": "Sea of Crete",
+      "type": "Sea"
+    },
+    {
+      "id": 806,
+      "kind": "marine",
+      "name": "Ligurian Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 807,
+      "kind": "marine",
+      "name": "Alboran Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 808,
+      "kind": "marine",
+      "name": "Bight of Benin",
+      "type": "Bay"
+    },
+    {
+      "id": 809,
+      "kind": "marine",
+      "name": "Bight of Biafra",
+      "type": "Bay"
+    },
+    {
+      "id": 810,
+      "kind": "marine",
+      "name": "Strait of Belle Isle",
+      "type": "Strait"
+    },
+    {
+      "id": 811,
+      "kind": "marine",
+      "name": "Prince William Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 812,
+      "kind": "marine",
+      "name": "Estrecho de Magellanes",
+      "type": "Strait"
+    },
+    {
+      "id": 813,
+      "kind": "marine",
+      "name": "Bahía Blanca",
+      "type": "Bay"
+    },
+    {
+      "id": 814,
+      "kind": "marine",
+      "name": "Golfo de Penas",
+      "type": "Gulf"
+    },
+    {
+      "id": 815,
+      "kind": "marine",
+      "name": "Bahía Grande",
+      "type": "Bay"
+    },
+    {
+      "id": 816,
+      "kind": "marine",
+      "name": "Marguerite Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 817,
+      "kind": "marine",
+      "name": "Prydz Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 818,
+      "kind": "marine",
+      "name": "Vincennes Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 819,
+      "kind": "marine",
+      "name": "Porpoise Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 820,
+      "kind": "marine",
+      "name": "Davis Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 821,
+      "kind": "marine",
+      "name": "Lützow-Holm Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 822,
+      "kind": "marine",
+      "name": "Antongila Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 823,
+      "kind": "marine",
+      "name": "Hangzhou Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 824,
+      "kind": "marine",
+      "name": "Karaginskiy Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 825,
+      "kind": "marine",
+      "name": "Gulf of Kamchatka",
+      "type": "Gulf"
+    },
+    {
+      "id": 826,
+      "kind": "marine",
+      "name": "Bosporus",
+      "type": "Strait"
+    },
+    {
+      "id": 827,
+      "kind": "marine",
+      "name": "Bab el Mandeb",
+      "type": "Strait"
+    },
+    {
+      "id": 828,
+      "kind": "marine",
+      "name": "Gulf St. Vincent",
+      "type": "Gulf"
+    },
+    {
+      "id": 829,
+      "kind": "marine",
+      "name": "Golfo de Urabá",
+      "type": "Gulf"
+    },
+    {
+      "id": 830,
+      "kind": "marine",
+      "name": "Baia de Maputo",
+      "type": "Bay"
+    },
+    {
+      "id": 831,
+      "kind": "marine",
+      "name": "St. Helena Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 832,
+      "kind": "marine",
+      "name": "Boknafjorden",
+      "type": "Fjord"
+    },
+    {
+      "id": 833,
+      "kind": "marine",
+      "name": "Joseph Bonaparte Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 834,
+      "kind": "marine",
+      "name": "Gulf of Martaban",
+      "type": "Gulf"
+    },
+    {
+      "id": 835,
+      "kind": "marine",
+      "name": "Gulf of Sakhalin",
+      "type": "Gulf"
+    },
+    {
+      "id": 836,
+      "kind": "marine",
+      "name": "Kangertittivaq",
+      "type": "Fjord"
+    },
+    {
+      "id": 837,
+      "kind": "marine",
+      "name": "Saint Lawrence River",
+      "type": "Channel"
+    },
+    {
+      "id": 838,
+      "kind": "marine",
+      "name": "Chaun Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 839,
+      "kind": "marine",
+      "name": "Khatanga Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 840,
+      "kind": "marine",
+      "name": "Garabogaz Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 841,
+      "kind": "marine",
+      "name": "Gulf of Suez",
+      "type": "Gulf"
+    },
+    {
+      "id": 842,
+      "kind": "marine",
+      "name": "Gulf of Ob",
+      "type": "Gulf"
+    },
+    {
+      "id": 843,
+      "kind": "marine",
+      "name": "Yenisey Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 844,
+      "kind": "marine",
+      "name": "Dardanelles",
+      "type": "Channel"
+    },
+    {
+      "id": 845,
+      "kind": "marine",
+      "name": "Sea of Marmara",
+      "type": "Sea"
+    },
+    {
+      "id": 846,
+      "kind": "marine",
+      "name": "Gulf of Aqaba",
+      "type": "Gulf"
+    },
+    {
+      "id": 847,
+      "kind": "marine",
+      "name": "Lago de Maracaibo",
+      "type": "Lagoon"
+    },
+    {
+      "id": 848,
+      "kind": "marine",
+      "name": "Denmark Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 849,
+      "kind": "marine",
+      "name": "Massachusetts Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 850,
+      "kind": "marine",
+      "name": "Delaware Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 851,
+      "kind": "marine",
+      "name": "Long Island Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 852,
+      "kind": "marine",
+      "name": "Albemarle Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 853,
+      "kind": "marine",
+      "name": "Pamlico Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 854,
+      "kind": "marine",
+      "name": "Smith Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 855,
+      "kind": "marine",
+      "name": "Queen Charlotte Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 856,
+      "kind": "marine",
+      "name": "Baird Inlet",
+      "type": "Inlet"
+    },
+    {
+      "id": 857,
+      "kind": "marine",
+      "name": "Husky Lakes",
+      "type": "Lagoon"
+    },
+    {
+      "id": 858,
+      "kind": "marine",
+      "name": "Lake Pontchartrain",
+      "type": "Lagoon"
+    },
+    {
+      "id": 859,
+      "kind": "marine",
+      "name": "Stettiner Haff",
+      "type": "Lagoon"
+    },
+    {
+      "id": 860,
+      "kind": "marine",
+      "name": "Darnley Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 861,
+      "kind": "marine",
+      "name": "Prince of Wales Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 862,
+      "kind": "marine",
+      "name": "Minto Inlet",
+      "type": "Sound"
+    },
+    {
+      "id": 863,
+      "kind": "marine",
+      "name": "Richard Collinson Inlet",
+      "type": "Bay"
+    },
+    {
+      "id": 864,
+      "kind": "marine",
+      "name": "Prince ALbert Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 865,
+      "kind": "marine",
+      "name": "Liddon Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 866,
+      "kind": "marine",
+      "name": "Wynniatt Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 867,
+      "kind": "marine",
+      "name": "Hadley Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 868,
+      "kind": "marine",
+      "name": "Bathurst Inlet",
+      "type": "Bay"
+    },
+    {
+      "id": 869,
+      "kind": "marine",
+      "name": "Goldsmith Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 870,
+      "kind": "marine",
+      "name": "Sherman Basin",
+      "type": "Bay"
+    },
+    {
+      "id": 871,
+      "kind": "marine",
+      "name": "Wager Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 872,
+      "kind": "marine",
+      "name": "Fury and Hecla Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 873,
+      "kind": "marine",
+      "name": "Jones Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 874,
+      "kind": "marine",
+      "name": "Eclipse Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 875,
+      "kind": "marine",
+      "name": "Hall Basin",
+      "type": "Gulf"
+    },
+    {
+      "id": 876,
+      "kind": "marine",
+      "name": "Uummannaq Fjord",
+      "type": "Fjord"
+    },
+    {
+      "id": 877,
+      "kind": "marine",
+      "name": "Peacock Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 878,
+      "kind": "marine",
+      "name": "George VI Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 879,
+      "kind": "marine",
+      "name": "Seno de Skyring",
+      "type": "Sound"
+    },
+    {
+      "id": 880,
+      "kind": "marine",
+      "name": "Seno Otway",
+      "type": "Sound"
+    },
+    {
+      "id": 881,
+      "kind": "marine",
+      "name": "Bay Inútil",
+      "type": "Bay"
+    },
+    {
+      "id": 882,
+      "kind": "marine",
+      "name": "Lagoa dos Patos",
+      "type": "Lagoon"
+    },
+    {
+      "id": 883,
+      "kind": "marine",
+      "name": "Amazon River",
+      "type": "River"
+    },
+    {
+      "id": 884,
+      "kind": "marine",
+      "name": "Bras d'Or Lake",
+      "type": "Lagoon"
+    },
+    {
+      "id": 885,
+      "kind": "marine",
+      "name": "Kaliningrad",
+      "type": "Lagoon"
+    },
+    {
+      "id": 886,
+      "kind": "marine",
+      "name": "Matochkin Shar Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 887,
+      "kind": "marine",
+      "name": "Ozero Mogotoyevo",
+      "type": "Lagoon"
+    },
+    {
+      "id": 888,
+      "kind": "marine",
+      "name": "Guba Gusinaya",
+      "type": "Bay"
+    },
+    {
+      "id": 889,
+      "kind": "marine",
+      "name": "Bali Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 890,
+      "kind": "marine",
+      "name": "Davao Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 891,
+      "kind": "marine",
+      "name": "Halmahera Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 892,
+      "kind": "marine",
+      "name": "Selat Bali",
+      "type": "Strait"
+    },
+    {
+      "id": 893,
+      "kind": "marine",
+      "name": "Gulf of Tomini",
+      "type": "Gulf"
+    },
+    {
+      "id": 894,
+      "kind": "marine",
+      "name": "Flores Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 895,
+      "kind": "marine",
+      "name": "Sibuyan Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 896,
+      "kind": "marine",
+      "name": "Selat Dampier",
+      "type": "Strait"
+    },
+    {
+      "id": 897,
+      "kind": "marine",
+      "name": "Gulf of Buli",
+      "type": "Gulf"
+    },
+    {
+      "id": 898,
+      "kind": "marine",
+      "name": "Gulf of Kau",
+      "type": "Gulf"
+    },
+    {
+      "id": 899,
+      "kind": "marine",
+      "name": "Bohol Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 900,
+      "kind": "marine",
+      "name": "Surigao Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 901,
+      "kind": "marine",
+      "name": "Ragay Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 902,
+      "kind": "marine",
+      "name": "Samar Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 903,
+      "kind": "marine",
+      "name": "Tayabas Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 904,
+      "kind": "marine",
+      "name": "Leyte Gulf",
+      "type": "Gulf"
+    },
+    {
+      "id": 905,
+      "kind": "marine",
+      "name": "Visayan Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 906,
+      "kind": "marine",
+      "name": "Savu Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 907,
+      "kind": "marine",
+      "name": "Hecate Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 908,
+      "kind": "marine",
+      "name": "Cordova Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 909,
+      "kind": "marine",
+      "name": "Murchison Sound",
+      "type": "Sound"
+    },
+    {
+      "id": 910,
+      "kind": "marine",
+      "name": "Robeson Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 911,
+      "kind": "marine",
+      "name": "Kennedy Channel",
+      "type": "Channel"
+    },
+    {
+      "id": 912,
+      "kind": "marine",
+      "name": "Canal Perigoso",
+      "type": "Channel"
+    },
+    {
+      "id": 913,
+      "kind": "marine",
+      "name": "Canal do Sul",
+      "type": "Channel"
+    },
+    {
+      "id": 914,
+      "kind": "marine",
+      "name": "Canal do Norte",
+      "type": "Channel"
+    },
+    {
+      "id": 915,
+      "kind": "marine",
+      "name": "Øresund",
+      "type": "Sound"
+    },
+    {
+      "id": 916,
+      "kind": "marine",
+      "name": "Mecklenburger Bucht",
+      "type": "Bay"
+    },
+    {
+      "id": 917,
+      "kind": "marine",
+      "name": "Sargasso Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 918,
+      "kind": "marine",
+      "name": "San Francisco Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 919,
+      "kind": "marine",
+      "name": "Monterey Bay",
+      "type": "Bay"
+    },
+    {
+      "id": 920,
+      "kind": "marine",
+      "name": "Yangtze River",
+      "type": "River"
+    },
+    {
+      "id": 921,
+      "kind": "marine",
+      "name": "Columbia River",
+      "type": "River"
+    },
+    {
+      "id": 922,
+      "kind": "marine",
+      "name": "Salish Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 923,
+      "kind": "marine",
+      "name": "Gulf of Anadyr'",
+      "type": "Gulf"
+    },
+    {
+      "id": 924,
+      "kind": "marine",
+      "name": "Mediterranean Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 925,
+      "kind": "marine",
+      "name": "Ross Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 926,
+      "kind": "marine",
+      "name": "Coral Sea",
+      "type": "Sea"
+    },
+    {
+      "id": 927,
+      "kind": "marine",
+      "name": "Sea of Japan",
+      "type": "Sea"
+    },
+    {
+      "id": 928,
+      "kind": "marine",
+      "name": "Korea Strait",
+      "type": "Strait"
+    },
+    {
+      "id": 929,
+      "kind": "inland-water",
+      "name": "Eğirdir",
+      "type": "Lake"
+    },
+    {
+      "id": 930,
+      "kind": "inland-water",
+      "name": "Beyşehir",
+      "type": "Lake"
+    },
+    {
+      "id": 931,
+      "kind": "inland-water",
+      "name": "Engozero",
+      "type": "Lake"
+    },
+    {
+      "id": 932,
+      "kind": "inland-water",
+      "name": "Pääjärvi",
+      "type": "Lake"
+    },
+    {
+      "id": 933,
+      "kind": "inland-water",
+      "name": "Ozero Pitlyarskiy Sor",
+      "type": "Lake"
+    },
+    {
+      "id": 934,
+      "kind": "inland-water",
+      "name": "Great Bear Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 935,
+      "kind": "inland-water",
+      "name": "Great Slave Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 936,
+      "kind": "inland-water",
+      "name": "McLeod Bay",
+      "type": "Lake"
+    },
+    {
+      "id": 937,
+      "kind": "inland-water",
+      "name": "Lake Winnipeg",
+      "type": "Lake"
+    },
+    {
+      "id": 938,
+      "kind": "inland-water",
+      "name": "Lake Erie",
+      "type": "Lake"
+    },
+    {
+      "id": 939,
+      "kind": "inland-water",
+      "name": "Lake Ontario",
+      "type": "Lake"
+    },
+    {
+      "id": 940,
+      "kind": "inland-water",
+      "name": "Lake Saint Clair",
+      "type": "Lake"
+    },
+    {
+      "id": 941,
+      "kind": "inland-water",
+      "name": "Lake Okeechobee",
+      "type": "Lake"
+    },
+    {
+      "id": 942,
+      "kind": "inland-water",
+      "name": "Lago de Nicaragua",
+      "type": "Lake"
+    },
+    {
+      "id": 943,
+      "kind": "inland-water",
+      "name": "Wollaston Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 944,
+      "kind": "inland-water",
+      "name": "Reindeer Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 945,
+      "kind": "inland-water",
+      "name": "Lake of the Woods",
+      "type": "Lake"
+    },
+    {
+      "id": 946,
+      "kind": "inland-water",
+      "name": "Lake Nipigon",
+      "type": "Lake"
+    },
+    {
+      "id": 947,
+      "kind": "inland-water",
+      "name": "Lake Manitoba",
+      "type": "Lake"
+    },
+    {
+      "id": 948,
+      "kind": "inland-water",
+      "name": "Lake Winnipegosis",
+      "type": "Lake"
+    },
+    {
+      "id": 949,
+      "kind": "inland-water",
+      "name": "Lake Athabasca",
+      "type": "Lake"
+    },
+    {
+      "id": 950,
+      "kind": "inland-water",
+      "name": "Lake Mistassini",
+      "type": "Lake"
+    },
+    {
+      "id": 951,
+      "kind": "inland-water",
+      "name": "Oneida Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 952,
+      "kind": "inland-water",
+      "name": "Iliamna Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 953,
+      "kind": "inland-water",
+      "name": "Lake Tahoe",
+      "type": "Lake"
+    },
+    {
+      "id": 954,
+      "kind": "inland-water",
+      "name": "Lake Winnebago",
+      "type": "Lake"
+    },
+    {
+      "id": 955,
+      "kind": "inland-water",
+      "name": "Nettilling Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 956,
+      "kind": "inland-water",
+      "name": "Dubawnt Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 957,
+      "kind": "inland-water",
+      "name": "Baker Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 958,
+      "kind": "inland-water",
+      "name": "Lake Champlain",
+      "type": "Lake"
+    },
+    {
+      "id": 959,
+      "kind": "inland-water",
+      "name": "Churchill Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 960,
+      "kind": "inland-water",
+      "name": "Lac la Martre",
+      "type": "Lake"
+    },
+    {
+      "id": 961,
+      "kind": "inland-water",
+      "name": "Keuka Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 962,
+      "kind": "inland-water",
+      "name": "Seneca Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 963,
+      "kind": "inland-water",
+      "name": "Cayuga Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 964,
+      "kind": "inland-water",
+      "name": "Cree Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 965,
+      "kind": "inland-water",
+      "name": "Kasba Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 966,
+      "kind": "inland-water",
+      "name": "Lac-à-l'Eau-Claire",
+      "type": "Lake"
+    },
+    {
+      "id": 967,
+      "kind": "inland-water",
+      "name": "Lake Nipissing",
+      "type": "Lake"
+    },
+    {
+      "id": 968,
+      "kind": "inland-water",
+      "name": "Lake Sakami",
+      "type": "Lake"
+    },
+    {
+      "id": 969,
+      "kind": "inland-water",
+      "name": "Scott Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 970,
+      "kind": "inland-water",
+      "name": "Yellowstone Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 971,
+      "kind": "inland-water",
+      "name": "Teshekpuk Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 972,
+      "kind": "inland-water",
+      "name": "Flathead Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 973,
+      "kind": "inland-water",
+      "name": "Lake Claire",
+      "type": "Lake"
+    },
+    {
+      "id": 974,
+      "kind": "inland-water",
+      "name": "Lago de Izabal",
+      "type": "Lake"
+    },
+    {
+      "id": 975,
+      "kind": "inland-water",
+      "name": "Lago de Chapala",
+      "type": "Lake"
+    },
+    {
+      "id": 976,
+      "kind": "inland-water",
+      "name": "Lago de Managua",
+      "type": "Lake"
+    },
+    {
+      "id": 977,
+      "kind": "inland-water",
+      "name": "Rainy Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 978,
+      "kind": "inland-water",
+      "name": "Split Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 979,
+      "kind": "inland-water",
+      "name": "Lake St. Joseph",
+      "type": "Lake"
+    },
+    {
+      "id": 980,
+      "kind": "inland-water",
+      "name": "Amadjuak Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 981,
+      "kind": "inland-water",
+      "name": "Teslin Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 982,
+      "kind": "inland-water",
+      "name": "Lake Bienville",
+      "type": "Lake"
+    },
+    {
+      "id": 983,
+      "kind": "inland-water",
+      "name": "Lake Pend Oreille",
+      "type": "Lake"
+    },
+    {
+      "id": 984,
+      "kind": "inland-water",
+      "name": "Canandaigua Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 985,
+      "kind": "inland-water",
+      "name": "Owasco Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 986,
+      "kind": "inland-water",
+      "name": "Skaneateles Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 987,
+      "kind": "inland-water",
+      "name": "Bear Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 988,
+      "kind": "inland-water",
+      "name": "Utah Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 989,
+      "kind": "inland-water",
+      "name": "Leech Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 990,
+      "kind": "inland-water",
+      "name": "Lac des Mille Lacs",
+      "type": "Lake"
+    },
+    {
+      "id": 991,
+      "kind": "inland-water",
+      "name": "Trout Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 992,
+      "kind": "inland-water",
+      "name": "Lake Rossignol",
+      "type": "Lake"
+    },
+    {
+      "id": 993,
+      "kind": "inland-water",
+      "name": "Grand Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 994,
+      "kind": "inland-water",
+      "name": "Black Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 995,
+      "kind": "inland-water",
+      "name": "Lake Louise",
+      "type": "Lake"
+    },
+    {
+      "id": 996,
+      "kind": "inland-water",
+      "name": "Bluenose Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 997,
+      "kind": "inland-water",
+      "name": "Colville Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 998,
+      "kind": "inland-water",
+      "name": "Hottah Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 999,
+      "kind": "inland-water",
+      "name": "Big Trout Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1000,
+      "kind": "inland-water",
+      "name": "Island Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1001,
+      "kind": "inland-water",
+      "name": "Lake Naococane",
+      "type": "Lake"
+    },
+    {
+      "id": 1002,
+      "kind": "inland-water",
+      "name": "Lac la Ronge",
+      "type": "Lake"
+    },
+    {
+      "id": 1003,
+      "kind": "inland-water",
+      "name": "Mille Lacs Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1004,
+      "kind": "inland-water",
+      "name": "Lower Red Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1005,
+      "kind": "inland-water",
+      "name": "Upper Red Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1006,
+      "kind": "inland-water",
+      "name": "Lake Winnipesaukee",
+      "type": "Lake"
+    },
+    {
+      "id": 1007,
+      "kind": "inland-water",
+      "name": "Lake Simcoe",
+      "type": "Lake"
+    },
+    {
+      "id": 1008,
+      "kind": "inland-water",
+      "name": "Gods Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1009,
+      "kind": "inland-water",
+      "name": "Yathkyed Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1010,
+      "kind": "inland-water",
+      "name": "Aylmer Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1011,
+      "kind": "inland-water",
+      "name": "Clinton-Colden Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1012,
+      "kind": "inland-water",
+      "name": "Lac Île-à-la-Crosse",
+      "type": "Lake"
+    },
+    {
+      "id": 1013,
+      "kind": "inland-water",
+      "name": "Wholdaia Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1014,
+      "kind": "inland-water",
+      "name": "Tehek Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1015,
+      "kind": "inland-water",
+      "name": "Lake George",
+      "type": "Lake"
+    },
+    {
+      "id": 1016,
+      "kind": "inland-water",
+      "name": "Lake Havasu",
+      "type": "Lake"
+    },
+    {
+      "id": 1017,
+      "kind": "inland-water",
+      "name": "Point Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1018,
+      "kind": "inland-water",
+      "name": "Upper Klamath Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1019,
+      "kind": "inland-water",
+      "name": "Chiputneticook Lakes",
+      "type": "Lake"
+    },
+    {
+      "id": 1020,
+      "kind": "inland-water",
+      "name": "Aishihik Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1021,
+      "kind": "inland-water",
+      "name": "Lake Clark",
+      "type": "Lake"
+    },
+    {
+      "id": 1022,
+      "kind": "inland-water",
+      "name": "Canyon Ferry Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1023,
+      "kind": "inland-water",
+      "name": "Jackson Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1024,
+      "kind": "inland-water",
+      "name": "Cass Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1025,
+      "kind": "inland-water",
+      "name": "Lake Winnibigoshish",
+      "type": "Lake"
+    },
+    {
+      "id": 1026,
+      "kind": "inland-water",
+      "name": "Marmion Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1027,
+      "kind": "inland-water",
+      "name": "Lac du Bonnet",
+      "type": "Lake"
+    },
+    {
+      "id": 1028,
+      "kind": "inland-water",
+      "name": "Sandy Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1029,
+      "kind": "inland-water",
+      "name": "Kluane Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1030,
+      "kind": "inland-water",
+      "name": "Lynx Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1031,
+      "kind": "inland-water",
+      "name": "Lake Traverse",
+      "type": "Lake"
+    },
+    {
+      "id": 1032,
+      "kind": "inland-water",
+      "name": "Washburn Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1033,
+      "kind": "inland-water",
+      "name": "Napaktulik",
+      "type": "Lake"
+    },
+    {
+      "id": 1034,
+      "kind": "inland-water",
+      "name": "Sebago Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1035,
+      "kind": "inland-water",
+      "name": "Moosehead Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1036,
+      "kind": "inland-water",
+      "name": "Lake Kissimmee",
+      "type": "Lake"
+    },
+    {
+      "id": 1037,
+      "kind": "inland-water",
+      "name": "Keller Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1038,
+      "kind": "inland-water",
+      "name": "Tathlina Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1039,
+      "kind": "inland-water",
+      "name": "Selwyn Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1040,
+      "kind": "inland-water",
+      "name": "Nonacho Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1041,
+      "kind": "inland-water",
+      "name": "Aberdeen Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1042,
+      "kind": "inland-water",
+      "name": "Long Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1043,
+      "kind": "inland-water",
+      "name": "Sturgeon Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1044,
+      "kind": "inland-water",
+      "name": "Minnitaki Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1045,
+      "kind": "inland-water",
+      "name": "Contwoyto Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1046,
+      "kind": "inland-water",
+      "name": "Nueltin Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1047,
+      "kind": "inland-water",
+      "name": "Lesser Slave Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1048,
+      "kind": "inland-water",
+      "name": "Lake Payne",
+      "type": "Lake"
+    },
+    {
+      "id": 1049,
+      "kind": "inland-water",
+      "name": "Lac Minto",
+      "type": "Lake"
+    },
+    {
+      "id": 1050,
+      "kind": "inland-water",
+      "name": "Hebgen Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1051,
+      "kind": "inland-water",
+      "name": "Lake Walcott",
+      "type": "Lake"
+    },
+    {
+      "id": 1052,
+      "kind": "inland-water",
+      "name": "Lake Granby",
+      "type": "Lake"
+    },
+    {
+      "id": 1053,
+      "kind": "inland-water",
+      "name": "Garry Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1054,
+      "kind": "inland-water",
+      "name": "Lake Minchumina",
+      "type": "Lake"
+    },
+    {
+      "id": 1055,
+      "kind": "inland-water",
+      "name": "Travaillant Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1056,
+      "kind": "inland-water",
+      "name": "Lac Chavigny",
+      "type": "Lake"
+    },
+    {
+      "id": 1057,
+      "kind": "inland-water",
+      "name": "Presa Miguel Hidalgo",
+      "type": "Lake"
+    },
+    {
+      "id": 1058,
+      "kind": "inland-water",
+      "name": "Lake Apopka",
+      "type": "Lake"
+    },
+    {
+      "id": 1059,
+      "kind": "inland-water",
+      "name": "Lake Istokpoga",
+      "type": "Lake"
+    },
+    {
+      "id": 1060,
+      "kind": "inland-water",
+      "name": "Laguna de Pueblo Viejo",
+      "type": "Lake"
+    },
+    {
+      "id": 1061,
+      "kind": "inland-water",
+      "name": "Laguna Chil",
+      "type": "Lake"
+    },
+    {
+      "id": 1062,
+      "kind": "inland-water",
+      "name": "Zeta Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1063,
+      "kind": "inland-water",
+      "name": "Tetlin Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1064,
+      "kind": "inland-water",
+      "name": "North Caribou Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1065,
+      "kind": "inland-water",
+      "name": "Lake Plétipi",
+      "type": "Lake"
+    },
+    {
+      "id": 1066,
+      "kind": "inland-water",
+      "name": "Lake Kipawa",
+      "type": "Lake"
+    },
+    {
+      "id": 1067,
+      "kind": "inland-water",
+      "name": "Big Rideau Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1068,
+      "kind": "inland-water",
+      "name": "Chesuncook Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1069,
+      "kind": "inland-water",
+      "name": "Lake Superior",
+      "type": "Lake"
+    },
+    {
+      "id": 1070,
+      "kind": "inland-water",
+      "name": "Lake Michigan",
+      "type": "Lake"
+    },
+    {
+      "id": 1071,
+      "kind": "inland-water",
+      "name": "Lake Huron",
+      "type": "Lake"
+    },
+    {
+      "id": 1072,
+      "kind": "inland-water",
+      "name": "Whitefish Bay",
+      "type": "Lake"
+    },
+    {
+      "id": 1073,
+      "kind": "inland-water",
+      "name": "Saginaw Bay",
+      "type": "Lake"
+    },
+    {
+      "id": 1074,
+      "kind": "inland-water",
+      "name": "North Channel",
+      "type": "Lake"
+    },
+    {
+      "id": 1075,
+      "kind": "inland-water",
+      "name": "Georgian Bay",
+      "type": "Lake"
+    },
+    {
+      "id": 1076,
+      "kind": "inland-water",
+      "name": "Lake Ladoga",
+      "type": "Lake"
+    },
+    {
+      "id": 1077,
+      "kind": "inland-water",
+      "name": "Lake Balkhash",
+      "type": "Lake"
+    },
+    {
+      "id": 1078,
+      "kind": "inland-water",
+      "name": "Lake Baikal",
+      "type": "Lake"
+    },
+    {
+      "id": 1079,
+      "kind": "inland-water",
+      "name": "Lake Albert",
+      "type": "Lake"
+    },
+    {
+      "id": 1080,
+      "kind": "inland-water",
+      "name": "Lake Malawi",
+      "type": "Lake"
+    },
+    {
+      "id": 1081,
+      "kind": "inland-water",
+      "name": "Lake Tanganyika",
+      "type": "Lake"
+    },
+    {
+      "id": 1082,
+      "kind": "inland-water",
+      "name": "Lake Victoria",
+      "type": "Lake"
+    },
+    {
+      "id": 1083,
+      "kind": "inland-water",
+      "name": "Lake Chad",
+      "type": "Lake"
+    },
+    {
+      "id": 1084,
+      "kind": "inland-water",
+      "name": "Vänern",
+      "type": "Lake"
+    },
+    {
+      "id": 1085,
+      "kind": "inland-water",
+      "name": "Lake Onega",
+      "type": "Lake"
+    },
+    {
+      "id": 1086,
+      "kind": "inland-water",
+      "name": "Lake Tana",
+      "type": "Lake"
+    },
+    {
+      "id": 1087,
+      "kind": "inland-water",
+      "name": "Lago Titicaca",
+      "type": "Lake"
+    },
+    {
+      "id": 1088,
+      "kind": "inland-water",
+      "name": "Lake Saimaa",
+      "type": "Lake"
+    },
+    {
+      "id": 1089,
+      "kind": "inland-water",
+      "name": "Lago Buenos Aires",
+      "type": "Lake"
+    },
+    {
+      "id": 1090,
+      "kind": "inland-water",
+      "name": "Lago Llanquihue",
+      "type": "Lake"
+    },
+    {
+      "id": 1091,
+      "kind": "inland-water",
+      "name": "Hongze Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1092,
+      "kind": "inland-water",
+      "name": "Khövsgöl Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1093,
+      "kind": "inland-water",
+      "name": "Päijänne",
+      "type": "Lake"
+    },
+    {
+      "id": 1094,
+      "kind": "inland-water",
+      "name": "Lac Moeru",
+      "type": "Lake"
+    },
+    {
+      "id": 1095,
+      "kind": "inland-water",
+      "name": "Lake Khanka",
+      "type": "Lake"
+    },
+    {
+      "id": 1096,
+      "kind": "inland-water",
+      "name": "Tonlé Sap",
+      "type": "Lake"
+    },
+    {
+      "id": 1097,
+      "kind": "inland-water",
+      "name": "Lake Pskov",
+      "type": "Lake"
+    },
+    {
+      "id": 1098,
+      "kind": "inland-water",
+      "name": "Ozero Yarroto Vtoroye",
+      "type": "Lake"
+    },
+    {
+      "id": 1099,
+      "kind": "inland-water",
+      "name": "Lake Srednye Kuyto",
+      "type": "Lake"
+    },
+    {
+      "id": 1100,
+      "kind": "inland-water",
+      "name": "Lake Chany",
+      "type": "Lake"
+    },
+    {
+      "id": 1101,
+      "kind": "inland-water",
+      "name": "Hulun Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1102,
+      "kind": "inland-water",
+      "name": "Lake Bangweulu",
+      "type": "Lake"
+    },
+    {
+      "id": 1103,
+      "kind": "inland-water",
+      "name": "Inarijrvi",
+      "type": "Lake"
+    },
+    {
+      "id": 1104,
+      "kind": "inland-water",
+      "name": "Lake Peipus",
+      "type": "Lake"
+    },
+    {
+      "id": 1105,
+      "kind": "inland-water",
+      "name": "Lake Kivu",
+      "type": "Lake"
+    },
+    {
+      "id": 1106,
+      "kind": "inland-water",
+      "name": "Lake Edward",
+      "type": "Lake"
+    },
+    {
+      "id": 1107,
+      "kind": "inland-water",
+      "name": "Tai Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1108,
+      "kind": "inland-water",
+      "name": "Lago Argentino",
+      "type": "Lake"
+    },
+    {
+      "id": 1109,
+      "kind": "inland-water",
+      "name": "Nam Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1110,
+      "kind": "inland-water",
+      "name": "Ozero Nerpich'ye",
+      "type": "Lake"
+    },
+    {
+      "id": 1111,
+      "kind": "inland-water",
+      "name": "Ozero Yarroto Pervoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1112,
+      "kind": "inland-water",
+      "name": "Ozero Neyto",
+      "type": "Lake"
+    },
+    {
+      "id": 1113,
+      "kind": "inland-water",
+      "name": "Ozero Yambuto",
+      "type": "Lake"
+    },
+    {
+      "id": 1114,
+      "kind": "inland-water",
+      "name": "Lake Vygozero",
+      "type": "Lake"
+    },
+    {
+      "id": 1115,
+      "kind": "inland-water",
+      "name": "Lake Segozerskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1116,
+      "kind": "inland-water",
+      "name": "Pielinen",
+      "type": "Lake"
+    },
+    {
+      "id": 1117,
+      "kind": "inland-water",
+      "name": "Lake Topozero",
+      "type": "Lake"
+    },
+    {
+      "id": 1118,
+      "kind": "inland-water",
+      "name": "Bosten Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1119,
+      "kind": "inland-water",
+      "name": "Poyang Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1120,
+      "kind": "inland-water",
+      "name": "Daguan Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1121,
+      "kind": "inland-water",
+      "name": "Long Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1122,
+      "kind": "inland-water",
+      "name": "Liangzi Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1123,
+      "kind": "inland-water",
+      "name": "Siling Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1124,
+      "kind": "inland-water",
+      "name": "Har Us Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1125,
+      "kind": "inland-water",
+      "name": "Lake Geneva",
+      "type": "Lake"
+    },
+    {
+      "id": 1126,
+      "kind": "inland-water",
+      "name": "Lough Neagh",
+      "type": "Lake"
+    },
+    {
+      "id": 1127,
+      "kind": "inland-water",
+      "name": "Vättern",
+      "type": "Lake"
+    },
+    {
+      "id": 1128,
+      "kind": "inland-water",
+      "name": "Lake Taymyr",
+      "type": "Lake"
+    },
+    {
+      "id": 1129,
+      "kind": "inland-water",
+      "name": "Ozero Mogotoyevo",
+      "type": "Lake"
+    },
+    {
+      "id": 1130,
+      "kind": "inland-water",
+      "name": "Ayakkum Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1131,
+      "kind": "inland-water",
+      "name": "Storsjön",
+      "type": "Lake"
+    },
+    {
+      "id": 1132,
+      "kind": "inland-water",
+      "name": "Bodensee",
+      "type": "Lake"
+    },
+    {
+      "id": 1133,
+      "kind": "inland-water",
+      "name": "Lake Kyoga",
+      "type": "Lake"
+    },
+    {
+      "id": 1134,
+      "kind": "inland-water",
+      "name": "Lake Rukwa",
+      "type": "Lake"
+    },
+    {
+      "id": 1135,
+      "kind": "inland-water",
+      "name": "Ngoring Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1136,
+      "kind": "inland-water",
+      "name": "Gaoyou Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1137,
+      "kind": "inland-water",
+      "name": "Ozero Pyasino",
+      "type": "Lake"
+    },
+    {
+      "id": 1138,
+      "kind": "inland-water",
+      "name": "Danau Toba",
+      "type": "Lake"
+    },
+    {
+      "id": 1139,
+      "kind": "inland-water",
+      "name": "Hjälmaren",
+      "type": "Lake"
+    },
+    {
+      "id": 1140,
+      "kind": "inland-water",
+      "name": "Pyhäjärvi",
+      "type": "Lake"
+    },
+    {
+      "id": 1141,
+      "kind": "inland-water",
+      "name": "Gyaring Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1142,
+      "kind": "inland-water",
+      "name": "Langa Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1143,
+      "kind": "inland-water",
+      "name": "Mapam Yumco",
+      "type": "Lake"
+    },
+    {
+      "id": 1144,
+      "kind": "inland-water",
+      "name": "Lake Beloye",
+      "type": "Lake"
+    },
+    {
+      "id": 1145,
+      "kind": "inland-water",
+      "name": "Lake Manyara",
+      "type": "Lake"
+    },
+    {
+      "id": 1146,
+      "kind": "inland-water",
+      "name": "Lake Balaton",
+      "type": "Lake"
+    },
+    {
+      "id": 1147,
+      "kind": "inland-water",
+      "name": "Lago Ranco",
+      "type": "Lake"
+    },
+    {
+      "id": 1148,
+      "kind": "inland-water",
+      "name": "Lago Viedma",
+      "type": "Lake"
+    },
+    {
+      "id": 1149,
+      "kind": "inland-water",
+      "name": "Lac Tumba",
+      "type": "Lake"
+    },
+    {
+      "id": 1150,
+      "kind": "inland-water",
+      "name": "Po Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1151,
+      "kind": "inland-water",
+      "name": "Buyr Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1152,
+      "kind": "inland-water",
+      "name": "Ngangla Ringeo",
+      "type": "Lake"
+    },
+    {
+      "id": 1153,
+      "kind": "inland-water",
+      "name": "Tangra Yumco",
+      "type": "Lake"
+    },
+    {
+      "id": 1154,
+      "kind": "inland-water",
+      "name": "Ozero Kulundinskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1155,
+      "kind": "inland-water",
+      "name": "Siletitengiz Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1156,
+      "kind": "inland-water",
+      "name": "Ubinskoye Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1157,
+      "kind": "inland-water",
+      "name": "Ozero Bustakh",
+      "type": "Lake"
+    },
+    {
+      "id": 1158,
+      "kind": "inland-water",
+      "name": "Sea of Galilee",
+      "type": "Lake"
+    },
+    {
+      "id": 1159,
+      "kind": "inland-water",
+      "name": "Yamzho Yumco",
+      "type": "Lake"
+    },
+    {
+      "id": 1160,
+      "kind": "inland-water",
+      "name": "Ozero Tenis",
+      "type": "Lake"
+    },
+    {
+      "id": 1161,
+      "kind": "inland-water",
+      "name": "Ozero Chërnoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1162,
+      "kind": "inland-water",
+      "name": "Ozero Bol'šoe Morskoe",
+      "type": "Lake"
+    },
+    {
+      "id": 1163,
+      "kind": "inland-water",
+      "name": "Ozero Chukochye",
+      "type": "Lake"
+    },
+    {
+      "id": 1164,
+      "kind": "inland-water",
+      "name": "Shijiu Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1165,
+      "kind": "inland-water",
+      "name": "Hong Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1166,
+      "kind": "inland-water",
+      "name": "Võrtsjärv",
+      "type": "Lake"
+    },
+    {
+      "id": 1167,
+      "kind": "inland-water",
+      "name": "Chao Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1168,
+      "kind": "inland-water",
+      "name": "Lake Sevan",
+      "type": "Lake"
+    },
+    {
+      "id": 1169,
+      "kind": "inland-water",
+      "name": "Weishan Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1170,
+      "kind": "inland-water",
+      "name": "Huangtang Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1171,
+      "kind": "inland-water",
+      "name": "Hoh Xil Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1172,
+      "kind": "inland-water",
+      "name": "Ozero Khantayskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1173,
+      "kind": "inland-water",
+      "name": "Ozero Keta",
+      "type": "Lake"
+    },
+    {
+      "id": 1174,
+      "kind": "inland-water",
+      "name": "Ozero Lama",
+      "type": "Lake"
+    },
+    {
+      "id": 1175,
+      "kind": "inland-water",
+      "name": "Storavan",
+      "type": "Lake"
+    },
+    {
+      "id": 1176,
+      "kind": "inland-water",
+      "name": "Uddjaure",
+      "type": "Lake"
+    },
+    {
+      "id": 1177,
+      "kind": "inland-water",
+      "name": "Lake Skadar",
+      "type": "Lake"
+    },
+    {
+      "id": 1178,
+      "kind": "inland-water",
+      "name": "Lago Colhué Huapí",
+      "type": "Lake"
+    },
+    {
+      "id": 1179,
+      "kind": "inland-water",
+      "name": "Ozero Krasnoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1180,
+      "kind": "inland-water",
+      "name": "Biwa Ko",
+      "type": "Lake"
+    },
+    {
+      "id": 1181,
+      "kind": "inland-water",
+      "name": "Reg Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1182,
+      "kind": "inland-water",
+      "name": "Banggong Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1183,
+      "kind": "inland-water",
+      "name": "Femunden",
+      "type": "Lake"
+    },
+    {
+      "id": 1184,
+      "kind": "inland-water",
+      "name": "Loch Ness",
+      "type": "Lake"
+    },
+    {
+      "id": 1185,
+      "kind": "inland-water",
+      "name": "Dood-Tsagaan Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1186,
+      "kind": "inland-water",
+      "name": "Lake Débo",
+      "type": "Lake"
+    },
+    {
+      "id": 1187,
+      "kind": "inland-water",
+      "name": "Aursund",
+      "type": "Lake"
+    },
+    {
+      "id": 1188,
+      "kind": "inland-water",
+      "name": "Øyeren",
+      "type": "Lake"
+    },
+    {
+      "id": 1189,
+      "kind": "inland-water",
+      "name": "Lake Lembeni",
+      "type": "Lake"
+    },
+    {
+      "id": 1190,
+      "kind": "inland-water",
+      "name": "Siljan",
+      "type": "Lake"
+    },
+    {
+      "id": 1191,
+      "kind": "inland-water",
+      "name": "Torneträsk",
+      "type": "Lake"
+    },
+    {
+      "id": 1192,
+      "kind": "inland-water",
+      "name": "Lago de  Erepecu",
+      "type": "Lake"
+    },
+    {
+      "id": 1193,
+      "kind": "inland-water",
+      "name": "Ulansuhai Nur",
+      "type": "Lake"
+    },
+    {
+      "id": 1194,
+      "kind": "inland-water",
+      "name": "Dongting Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1195,
+      "kind": "inland-water",
+      "name": "Virihaure",
+      "type": "Lake"
+    },
+    {
+      "id": 1196,
+      "kind": "inland-water",
+      "name": "Ozero Teletskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1197,
+      "kind": "inland-water",
+      "name": "Ge Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1198,
+      "kind": "inland-water",
+      "name": "Lake Sasykkol",
+      "type": "Lake"
+    },
+    {
+      "id": 1199,
+      "kind": "inland-water",
+      "name": "Lago San Martín",
+      "type": "Lake"
+    },
+    {
+      "id": 1200,
+      "kind": "inland-water",
+      "name": "Lake Kwania",
+      "type": "Lake"
+    },
+    {
+      "id": 1201,
+      "kind": "inland-water",
+      "name": "Lago di Como",
+      "type": "Lake"
+    },
+    {
+      "id": 1202,
+      "kind": "inland-water",
+      "name": "Lago di Garda",
+      "type": "Lake"
+    },
+    {
+      "id": 1203,
+      "kind": "inland-water",
+      "name": "Hornavan",
+      "type": "Lake"
+    },
+    {
+      "id": 1204,
+      "kind": "inland-water",
+      "name": "Lago Nahuel Huapí",
+      "type": "Lake"
+    },
+    {
+      "id": 1205,
+      "kind": "inland-water",
+      "name": "Lago Grande",
+      "type": "Lake"
+    },
+    {
+      "id": 1206,
+      "kind": "inland-water",
+      "name": "Lake Xau",
+      "type": "Lake"
+    },
+    {
+      "id": 1207,
+      "kind": "inland-water",
+      "name": "Lake Adobed",
+      "type": "Lake"
+    },
+    {
+      "id": 1208,
+      "kind": "inland-water",
+      "name": "Koka Reservoir",
+      "type": "Lake"
+    },
+    {
+      "id": 1209,
+      "kind": "inland-water",
+      "name": "Lake Gemeri",
+      "type": "Lake"
+    },
+    {
+      "id": 1210,
+      "kind": "inland-water",
+      "name": "Laguna de Bay",
+      "type": "Lake"
+    },
+    {
+      "id": 1211,
+      "kind": "inland-water",
+      "name": "Lago La Plata",
+      "type": "Lake"
+    },
+    {
+      "id": 1212,
+      "kind": "inland-water",
+      "name": "Lago Fontana",
+      "type": "Lake"
+    },
+    {
+      "id": 1213,
+      "kind": "inland-water",
+      "name": "Ozero Dyupkun",
+      "type": "Lake"
+    },
+    {
+      "id": 1214,
+      "kind": "inland-water",
+      "name": "Lake Murray",
+      "type": "Lake"
+    },
+    {
+      "id": 1215,
+      "kind": "inland-water",
+      "name": "Elsen Nur",
+      "type": "Lake"
+    },
+    {
+      "id": 1216,
+      "kind": "inland-water",
+      "name": "Lac Onangué",
+      "type": "Lake"
+    },
+    {
+      "id": 1217,
+      "kind": "inland-water",
+      "name": "Lac Mai-Ndombe",
+      "type": "Lake"
+    },
+    {
+      "id": 1218,
+      "kind": "inland-water",
+      "name": "Lake Rentenue",
+      "type": "Lake"
+    },
+    {
+      "id": 1219,
+      "kind": "inland-water",
+      "name": "Lough Derg",
+      "type": "Lake"
+    },
+    {
+      "id": 1220,
+      "kind": "inland-water",
+      "name": "Lough Ree",
+      "type": "Lake"
+    },
+    {
+      "id": 1221,
+      "kind": "inland-water",
+      "name": "Lough Allen",
+      "type": "Lake"
+    },
+    {
+      "id": 1222,
+      "kind": "inland-water",
+      "name": "Loch Lochy",
+      "type": "Lake"
+    },
+    {
+      "id": 1223,
+      "kind": "inland-water",
+      "name": "Lago Concepción",
+      "type": "Lake"
+    },
+    {
+      "id": 1224,
+      "kind": "inland-water",
+      "name": "Masinga Res.",
+      "type": "Lake"
+    },
+    {
+      "id": 1225,
+      "kind": "inland-water",
+      "name": "Lake Bunyonyi",
+      "type": "Lake"
+    },
+    {
+      "id": 1226,
+      "kind": "inland-water",
+      "name": "Qagan Nur",
+      "type": "Lake"
+    },
+    {
+      "id": 1227,
+      "kind": "inland-water",
+      "name": "Ozero Labaz",
+      "type": "Lake"
+    },
+    {
+      "id": 1228,
+      "kind": "inland-water",
+      "name": "Dongping Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1229,
+      "kind": "inland-water",
+      "name": "Lake Kolozero",
+      "type": "Lake"
+    },
+    {
+      "id": 1230,
+      "kind": "inland-water",
+      "name": "Bolmen",
+      "type": "Lake"
+    },
+    {
+      "id": 1231,
+      "kind": "inland-water",
+      "name": "Åsnen",
+      "type": "Lake"
+    },
+    {
+      "id": 1232,
+      "kind": "inland-water",
+      "name": "Foxen",
+      "type": "Lake"
+    },
+    {
+      "id": 1233,
+      "kind": "inland-water",
+      "name": "Müritz",
+      "type": "Lake"
+    },
+    {
+      "id": 1234,
+      "kind": "inland-water",
+      "name": "Schweriner See",
+      "type": "Lake"
+    },
+    {
+      "id": 1235,
+      "kind": "inland-water",
+      "name": "Upper Lough Erne",
+      "type": "Lake"
+    },
+    {
+      "id": 1236,
+      "kind": "inland-water",
+      "name": "Lac Alaotra",
+      "type": "Lake"
+    },
+    {
+      "id": 1237,
+      "kind": "inland-water",
+      "name": "Lago de Valencia",
+      "type": "Lake"
+    },
+    {
+      "id": 1238,
+      "kind": "inland-water",
+      "name": "Laguna Iberá",
+      "type": "Lake"
+    },
+    {
+      "id": 1239,
+      "kind": "inland-water",
+      "name": "Laguna Huaitunas",
+      "type": "Lake"
+    },
+    {
+      "id": 1240,
+      "kind": "inland-water",
+      "name": "Laguna Ragaguado",
+      "type": "Lake"
+    },
+    {
+      "id": 1241,
+      "kind": "inland-water",
+      "name": "Lago Musters",
+      "type": "Lake"
+    },
+    {
+      "id": 1242,
+      "kind": "inland-water",
+      "name": "Lago Cardiel",
+      "type": "Lake"
+    },
+    {
+      "id": 1243,
+      "kind": "inland-water",
+      "name": "Lago Rupanco",
+      "type": "Lake"
+    },
+    {
+      "id": 1244,
+      "kind": "inland-water",
+      "name": "Lake Cheshi",
+      "type": "Lake"
+    },
+    {
+      "id": 1245,
+      "kind": "inland-water",
+      "name": "Ebinur Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1246,
+      "kind": "inland-water",
+      "name": "Lago di Bracciano",
+      "type": "Lake"
+    },
+    {
+      "id": 1247,
+      "kind": "inland-water",
+      "name": "Lac Upemba",
+      "type": "Lake"
+    },
+    {
+      "id": 1248,
+      "kind": "inland-water",
+      "name": "Lauwerszee",
+      "type": "Lake"
+    },
+    {
+      "id": 1249,
+      "kind": "inland-water",
+      "name": "Jezioro Dąbie",
+      "type": "Lake"
+    },
+    {
+      "id": 1250,
+      "kind": "inland-water",
+      "name": "Marqakol",
+      "type": "Lake"
+    },
+    {
+      "id": 1251,
+      "kind": "inland-water",
+      "name": "Ozero Beloye",
+      "type": "Lake"
+    },
+    {
+      "id": 1252,
+      "kind": "inland-water",
+      "name": "Achit Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1253,
+      "kind": "inland-water",
+      "name": "Ozero Ozhogino",
+      "type": "Lake"
+    },
+    {
+      "id": 1254,
+      "kind": "inland-water",
+      "name": "Ozero Sagarychye",
+      "type": "Lake"
+    },
+    {
+      "id": 1255,
+      "kind": "inland-water",
+      "name": "Ozero Bakul",
+      "type": "Lake"
+    },
+    {
+      "id": 1256,
+      "kind": "inland-water",
+      "name": "Ozero Soluntakh",
+      "type": "Lake"
+    },
+    {
+      "id": 1257,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoy Olr",
+      "type": "Lake"
+    },
+    {
+      "id": 1258,
+      "kind": "inland-water",
+      "name": "Ozero Krugovatoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1259,
+      "kind": "inland-water",
+      "name": "Ozero Ilirgytgyn",
+      "type": "Lake"
+    },
+    {
+      "id": 1260,
+      "kind": "inland-water",
+      "name": "Ozero Elgygytgyn",
+      "type": "Lake"
+    },
+    {
+      "id": 1261,
+      "kind": "inland-water",
+      "name": "Ozero Kronotskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1262,
+      "kind": "inland-water",
+      "name": "Luoma Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1263,
+      "kind": "inland-water",
+      "name": "Wuchang Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1264,
+      "kind": "inland-water",
+      "name": "Dalai Nur",
+      "type": "Lake"
+    },
+    {
+      "id": 1265,
+      "kind": "inland-water",
+      "name": "Kenohan Jempang",
+      "type": "Lake"
+    },
+    {
+      "id": 1266,
+      "kind": "inland-water",
+      "name": "Lake Taal",
+      "type": "Lake"
+    },
+    {
+      "id": 1267,
+      "kind": "inland-water",
+      "name": "Ozero Kiyeng-Kyuyel",
+      "type": "Lake"
+    },
+    {
+      "id": 1268,
+      "kind": "inland-water",
+      "name": "Ozero Gusinoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1269,
+      "kind": "inland-water",
+      "name": "Ozero Busani",
+      "type": "Lake"
+    },
+    {
+      "id": 1270,
+      "kind": "inland-water",
+      "name": "Ozero Baunt",
+      "type": "Lake"
+    },
+    {
+      "id": 1271,
+      "kind": "inland-water",
+      "name": "Ozero Kipylyushi",
+      "type": "Lake"
+    },
+    {
+      "id": 1272,
+      "kind": "inland-water",
+      "name": "Ozero Isinginskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1273,
+      "kind": "inland-water",
+      "name": "Ozero Bolshaya Kharga",
+      "type": "Lake"
+    },
+    {
+      "id": 1274,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoye Yeravnoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1275,
+      "kind": "inland-water",
+      "name": "Ozero Arakhley",
+      "type": "Lake"
+    },
+    {
+      "id": 1276,
+      "kind": "inland-water",
+      "name": "Ozero Irgen",
+      "type": "Lake"
+    },
+    {
+      "id": 1277,
+      "kind": "inland-water",
+      "name": "Telmen Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1278,
+      "kind": "inland-water",
+      "name": "Sangiyn Dalay Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1279,
+      "kind": "inland-water",
+      "name": "Hh Nuur",
+      "type": "Lake"
+    },
+    {
+      "id": 1280,
+      "kind": "inland-water",
+      "name": "Ulgain Gobi",
+      "type": "Lake"
+    },
+    {
+      "id": 1281,
+      "kind": "inland-water",
+      "name": "Ozero Tembenchi",
+      "type": "Lake"
+    },
+    {
+      "id": 1282,
+      "kind": "inland-water",
+      "name": "Ozero Vivi",
+      "type": "Lake"
+    },
+    {
+      "id": 1283,
+      "kind": "inland-water",
+      "name": "Ozero Agata",
+      "type": "Lake"
+    },
+    {
+      "id": 1284,
+      "kind": "inland-water",
+      "name": "Ozero Severnoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1285,
+      "kind": "inland-water",
+      "name": "Ozero Ayan",
+      "type": "Lake"
+    },
+    {
+      "id": 1286,
+      "kind": "inland-water",
+      "name": "Ozero Kokora",
+      "type": "Lake"
+    },
+    {
+      "id": 1287,
+      "kind": "inland-water",
+      "name": "Ozero Portnyagino",
+      "type": "Lake"
+    },
+    {
+      "id": 1288,
+      "kind": "inland-water",
+      "name": "Ozero Kungasalakh",
+      "type": "Lake"
+    },
+    {
+      "id": 1289,
+      "kind": "inland-water",
+      "name": "Aqqikkol Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1290,
+      "kind": "inland-water",
+      "name": "Gas Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1291,
+      "kind": "inland-water",
+      "name": "Hoh Sai Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1292,
+      "kind": "inland-water",
+      "name": "Huiten Nur",
+      "type": "Lake"
+    },
+    {
+      "id": 1293,
+      "kind": "inland-water",
+      "name": "Lumajangdong Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1294,
+      "kind": "inland-water",
+      "name": "Gozha Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1295,
+      "kind": "inland-water",
+      "name": "Gyaring Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1296,
+      "kind": "inland-water",
+      "name": "Ngangzi Co",
+      "type": "Lake"
+    },
+    {
+      "id": 1297,
+      "kind": "inland-water",
+      "name": "Alesayqin Ha",
+      "type": "Lake"
+    },
+    {
+      "id": 1298,
+      "kind": "inland-water",
+      "name": "Ozero Samotlor",
+      "type": "Lake"
+    },
+    {
+      "id": 1299,
+      "kind": "inland-water",
+      "name": "Ozero Tormemtor",
+      "type": "Lake"
+    },
+    {
+      "id": 1300,
+      "kind": "inland-water",
+      "name": "Ozero Chrtovo",
+      "type": "Lake"
+    },
+    {
+      "id": 1301,
+      "kind": "inland-water",
+      "name": "Ozero Chaselskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1302,
+      "kind": "inland-water",
+      "name": "Ozero Untor",
+      "type": "Lake"
+    },
+    {
+      "id": 1303,
+      "kind": "inland-water",
+      "name": "Munduyskoye Ozero",
+      "type": "Lake"
+    },
+    {
+      "id": 1304,
+      "kind": "inland-water",
+      "name": "Ozero Sobachye",
+      "type": "Lake"
+    },
+    {
+      "id": 1305,
+      "kind": "inland-water",
+      "name": "Ozero Glubokoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1306,
+      "kind": "inland-water",
+      "name": "Ozero Purinskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1307,
+      "kind": "inland-water",
+      "name": "Ozero Ayaturku",
+      "type": "Lake"
+    },
+    {
+      "id": 1308,
+      "kind": "inland-water",
+      "name": "Ozero Bol'shoye Topol'noye",
+      "type": "Lake"
+    },
+    {
+      "id": 1309,
+      "kind": "inland-water",
+      "name": "Ozero Kuchukskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1310,
+      "kind": "inland-water",
+      "name": "Ozero Maraldy",
+      "type": "Lake"
+    },
+    {
+      "id": 1311,
+      "kind": "inland-water",
+      "name": "Ozero Gorkoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1312,
+      "kind": "inland-water",
+      "name": "Ozero Tandovo",
+      "type": "Lake"
+    },
+    {
+      "id": 1313,
+      "kind": "inland-water",
+      "name": "Ebeyty Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1314,
+      "kind": "inland-water",
+      "name": "Ozero Ik",
+      "type": "Lake"
+    },
+    {
+      "id": 1315,
+      "kind": "inland-water",
+      "name": "Ozero Artevo",
+      "type": "Lake"
+    },
+    {
+      "id": 1316,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoy Uvat",
+      "type": "Lake"
+    },
+    {
+      "id": 1317,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoy Shishkarym",
+      "type": "Lake"
+    },
+    {
+      "id": 1318,
+      "kind": "inland-water",
+      "name": "Ozero Andreyevskoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1319,
+      "kind": "inland-water",
+      "name": "Ozero Tuman",
+      "type": "Lake"
+    },
+    {
+      "id": 1320,
+      "kind": "inland-water",
+      "name": "Ozero Yakh-Tur",
+      "type": "Lake"
+    },
+    {
+      "id": 1321,
+      "kind": "inland-water",
+      "name": "Ozero Leushinskiy Tuman",
+      "type": "Lake"
+    },
+    {
+      "id": 1322,
+      "kind": "inland-water",
+      "name": "Ozero Tursuntskiy Tuman",
+      "type": "Lake"
+    },
+    {
+      "id": 1323,
+      "kind": "inland-water",
+      "name": "Ozero Syrkovoye",
+      "type": "Lake"
+    },
+    {
+      "id": 1324,
+      "kind": "inland-water",
+      "name": "Ozero Enetor",
+      "type": "Lake"
+    },
+    {
+      "id": 1325,
+      "kind": "inland-water",
+      "name": "Ozero Ergipskiy Sor",
+      "type": "Lake"
+    },
+    {
+      "id": 1326,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoy Sor",
+      "type": "Lake"
+    },
+    {
+      "id": 1327,
+      "kind": "inland-water",
+      "name": "Ozero Vandmtor",
+      "type": "Lake"
+    },
+    {
+      "id": 1328,
+      "kind": "inland-water",
+      "name": "Ozero Bolshoy Kazymskiy Sor",
+      "type": "Lake"
+    },
+    {
+      "id": 1329,
+      "kind": "inland-water",
+      "name": "Ozero Shuryshkarskiy Sor",
+      "type": "Lake"
+    },
+    {
+      "id": 1330,
+      "kind": "inland-water",
+      "name": "Ozero Yasaveyto",
+      "type": "Lake"
+    },
+    {
+      "id": 1331,
+      "kind": "inland-water",
+      "name": "Ozero Teke",
+      "type": "Lake"
+    },
+    {
+      "id": 1332,
+      "kind": "inland-water",
+      "name": "Qyzylqaq Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1333,
+      "kind": "inland-water",
+      "name": "Žalauly Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1334,
+      "kind": "inland-water",
+      "name": "Shreksor Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1335,
+      "kind": "inland-water",
+      "name": "Qarasor Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1336,
+      "kind": "inland-water",
+      "name": "Ozero Sartlan",
+      "type": "Lake"
+    },
+    {
+      "id": 1337,
+      "kind": "inland-water",
+      "name": "Iken Zhbolat Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1338,
+      "kind": "inland-water",
+      "name": "Qiyakty Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1339,
+      "kind": "inland-water",
+      "name": "Kerey Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1340,
+      "kind": "inland-water",
+      "name": "Qozhakl",
+      "type": "Lake"
+    },
+    {
+      "id": 1341,
+      "kind": "inland-water",
+      "name": "Yke Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1342,
+      "kind": "inland-water",
+      "name": "Saryqopa Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1343,
+      "kind": "inland-water",
+      "name": "Shaghalalytengiz Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1344,
+      "kind": "inland-water",
+      "name": "Zharman Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1345,
+      "kind": "inland-water",
+      "name": "Iken Aqsuat Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1346,
+      "kind": "inland-water",
+      "name": "Koybaghar Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1347,
+      "kind": "inland-water",
+      "name": "Imantau Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1348,
+      "kind": "inland-water",
+      "name": "Qalybek Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1349,
+      "kind": "inland-water",
+      "name": "Kishi Qaraoy Kli",
+      "type": "Lake"
+    },
+    {
+      "id": 1350,
+      "kind": "inland-water",
+      "name": "Randijaure",
+      "type": "Lake"
+    },
+    {
+      "id": 1351,
+      "kind": "inland-water",
+      "name": "Storuman",
+      "type": "Lake"
+    },
+    {
+      "id": 1352,
+      "kind": "inland-water",
+      "name": "Tyrifjorden",
+      "type": "Lake"
+    },
+    {
+      "id": 1353,
+      "kind": "inland-water",
+      "name": "Snåsavatnet",
+      "type": "Lake"
+    },
+    {
+      "id": 1354,
+      "kind": "inland-water",
+      "name": "Røssvatnet",
+      "type": "Lake"
+    },
+    {
+      "id": 1355,
+      "kind": "inland-water",
+      "name": "Songhua Hu",
+      "type": "Lake"
+    },
+    {
+      "id": 1356,
+      "kind": "inland-water",
+      "name": "Yueliang Pao",
+      "type": "Lake"
+    },
+    {
+      "id": 1357,
+      "kind": "inland-water",
+      "name": "Puma Yumco",
+      "type": "Lake"
+    },
+    {
+      "id": 1358,
+      "kind": "inland-water",
+      "name": "Mälaren",
+      "type": "Lake"
+    },
+    {
+      "id": 1359,
+      "kind": "inland-water",
+      "name": "Rye Patch Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1360,
+      "kind": "inland-water",
+      "name": "Khashm el Girba Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1361,
+      "kind": "inland-water",
+      "name": "Mingevir Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1362,
+      "kind": "inland-water",
+      "name": "Ubolratna Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1363,
+      "kind": "inland-water",
+      "name": "Xinfengjiang Shuiku",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1364,
+      "kind": "inland-water",
+      "name": "Krishna Raja Sagar",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1365,
+      "kind": "inland-water",
+      "name": "Bhadra Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1366,
+      "kind": "inland-water",
+      "name": "Tungabhadra",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1367,
+      "kind": "inland-water",
+      "name": "Novosibirsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1368,
+      "kind": "inland-water",
+      "name": "Lake Zaysan",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1369,
+      "kind": "inland-water",
+      "name": "Lake Habbaniyah",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1370,
+      "kind": "inland-water",
+      "name": "Buhayrat ath Tharthar",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1371,
+      "kind": "inland-water",
+      "name": "Saksak Dagi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1372,
+      "kind": "inland-water",
+      "name": "Kiev Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1373,
+      "kind": "inland-water",
+      "name": "Lake Kovdozero",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1374,
+      "kind": "inland-water",
+      "name": "Lake Imandra",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1375,
+      "kind": "inland-water",
+      "name": "Ondozero",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1376,
+      "kind": "inland-water",
+      "name": "Koitere",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1377,
+      "kind": "inland-water",
+      "name": "Rikkavesi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1378,
+      "kind": "inland-water",
+      "name": "Lake Il'Men'",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1379,
+      "kind": "inland-water",
+      "name": "Cheboksary Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1380,
+      "kind": "inland-water",
+      "name": "Oulujärvi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1381,
+      "kind": "inland-water",
+      "name": "Kemijärvi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1382,
+      "kind": "inland-water",
+      "name": "Umbozero Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1383,
+      "kind": "inland-water",
+      "name": "Paduskoye More",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1384,
+      "kind": "inland-water",
+      "name": "Porttipahta Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1385,
+      "kind": "inland-water",
+      "name": "Lokan Tekojarvi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1386,
+      "kind": "inland-water",
+      "name": "Akkajaure",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1387,
+      "kind": "inland-water",
+      "name": "Stora Lulevatten",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1388,
+      "kind": "inland-water",
+      "name": "Mjøsa",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1389,
+      "kind": "inland-water",
+      "name": "M'Bakaou Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1390,
+      "kind": "inland-water",
+      "name": "Tiete",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1391,
+      "kind": "inland-water",
+      "name": "Barra Bonita",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1392,
+      "kind": "inland-water",
+      "name": "Bariri",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1393,
+      "kind": "inland-water",
+      "name": "Lake Novillo",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1394,
+      "kind": "inland-water",
+      "name": "Lake Mohave",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1395,
+      "kind": "inland-water",
+      "name": "Lac Low",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1396,
+      "kind": "inland-water",
+      "name": "Southern Indian Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1397,
+      "kind": "inland-water",
+      "name": "Tobin Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1398,
+      "kind": "inland-water",
+      "name": "Cedar Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1399,
+      "kind": "inland-water",
+      "name": "Sipiwesk Lac",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1400,
+      "kind": "inland-water",
+      "name": "Ogoki Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1401,
+      "kind": "inland-water",
+      "name": "Umfreville Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1402,
+      "kind": "inland-water",
+      "name": "Lac Seul",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1403,
+      "kind": "inland-water",
+      "name": "Cabonga Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1404,
+      "kind": "inland-water",
+      "name": "Lake Abitibi",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1405,
+      "kind": "inland-water",
+      "name": "Dozois Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1406,
+      "kind": "inland-water",
+      "name": "Lac Saint-Jean",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1407,
+      "kind": "inland-water",
+      "name": "Lake Péribonca",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1408,
+      "kind": "inland-water",
+      "name": "Réservoir de La Grande 2",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1409,
+      "kind": "inland-water",
+      "name": "Saratov Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1410,
+      "kind": "inland-water",
+      "name": "Nizhnekamsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1411,
+      "kind": "inland-water",
+      "name": "Serebryanskoe Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1412,
+      "kind": "inland-water",
+      "name": "Ataturk Barajt",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1413,
+      "kind": "inland-water",
+      "name": "Réservoir Manicouagan",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1414,
+      "kind": "inland-water",
+      "name": "Réservoir de La Grande 3",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1415,
+      "kind": "inland-water",
+      "name": "Lake Mead",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1416,
+      "kind": "inland-water",
+      "name": "Lake Powell",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1417,
+      "kind": "inland-water",
+      "name": "Williston Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1418,
+      "kind": "inland-water",
+      "name": "Fort Peck Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1419,
+      "kind": "inland-water",
+      "name": "Lake Sakakawea",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1420,
+      "kind": "inland-water",
+      "name": "Lake Oahe",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1421,
+      "kind": "inland-water",
+      "name": "Réservoir Gouin",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1422,
+      "kind": "inland-water",
+      "name": "Lower Arrow Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1423,
+      "kind": "inland-water",
+      "name": "Amistad Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1424,
+      "kind": "inland-water",
+      "name": "Réservoir Baskatong",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1425,
+      "kind": "inland-water",
+      "name": "Lake Chelan",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1426,
+      "kind": "inland-water",
+      "name": "Millerton Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1427,
+      "kind": "inland-water",
+      "name": "Réservoir Pipmuacan",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1428,
+      "kind": "inland-water",
+      "name": "Lake Francis Case",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1429,
+      "kind": "inland-water",
+      "name": "Falcon Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1430,
+      "kind": "inland-water",
+      "name": "Réservoir de Caniapiscau",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1431,
+      "kind": "inland-water",
+      "name": "Lac Bermen",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1432,
+      "kind": "inland-water",
+      "name": "Kentucky Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1433,
+      "kind": "inland-water",
+      "name": "J. Strom Thurmond Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1434,
+      "kind": "inland-water",
+      "name": "Kinbasket Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1435,
+      "kind": "inland-water",
+      "name": "Shasta Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1436,
+      "kind": "inland-water",
+      "name": "Wheeler Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1437,
+      "kind": "inland-water",
+      "name": "Franklin D. Roosevelt Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1438,
+      "kind": "inland-water",
+      "name": "Upper Arrow Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1439,
+      "kind": "inland-water",
+      "name": "Caballo Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1440,
+      "kind": "inland-water",
+      "name": "Elephant Butte Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1441,
+      "kind": "inland-water",
+      "name": "Lake Diefenbaker",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1442,
+      "kind": "inland-water",
+      "name": "Ossokmanuan Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1443,
+      "kind": "inland-water",
+      "name": "Red Bluff Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1444,
+      "kind": "inland-water",
+      "name": "Brantley Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1445,
+      "kind": "inland-water",
+      "name": "Lake C.W. McConaughy",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1446,
+      "kind": "inland-water",
+      "name": "Seminoe Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1447,
+      "kind": "inland-water",
+      "name": "Trinity Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1448,
+      "kind": "inland-water",
+      "name": "John H. Kerr Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1449,
+      "kind": "inland-water",
+      "name": "Lake Texoma",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1450,
+      "kind": "inland-water",
+      "name": "Flaming Gorge Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1451,
+      "kind": "inland-water",
+      "name": "American Falls Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1452,
+      "kind": "inland-water",
+      "name": "Presa de la Boquilla",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1453,
+      "kind": "inland-water",
+      "name": "Presa del Infiernillo",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1454,
+      "kind": "inland-water",
+      "name": "Presa de la Angostura",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1455,
+      "kind": "inland-water",
+      "name": "Petenwell Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1456,
+      "kind": "inland-water",
+      "name": "Lake Seminole",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1457,
+      "kind": "inland-water",
+      "name": "Lake Barkley",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1458,
+      "kind": "inland-water",
+      "name": "Presa Marte R. Gomez",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1459,
+      "kind": "inland-water",
+      "name": "Lake Moultrie",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1460,
+      "kind": "inland-water",
+      "name": "Lake Marion",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1461,
+      "kind": "inland-water",
+      "name": "Lake Meredith",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1462,
+      "kind": "inland-water",
+      "name": "Ute Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1463,
+      "kind": "inland-water",
+      "name": "Conchas Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1464,
+      "kind": "inland-water",
+      "name": "Toledo Bend Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1465,
+      "kind": "inland-water",
+      "name": "Palisades Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1466,
+      "kind": "inland-water",
+      "name": "Glendo Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1467,
+      "kind": "inland-water",
+      "name": "Pathfinder Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1468,
+      "kind": "inland-water",
+      "name": "Presa Nezahualcyotl",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1469,
+      "kind": "inland-water",
+      "name": "Presa Manuel vila Camacho",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1470,
+      "kind": "inland-water",
+      "name": "Presa Vicente Guerrero",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1471,
+      "kind": "inland-water",
+      "name": "Presa Alvaro Obregon",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1472,
+      "kind": "inland-water",
+      "name": "Lake Oroville",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1473,
+      "kind": "inland-water",
+      "name": "Boysen Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1474,
+      "kind": "inland-water",
+      "name": "Hartwell Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1475,
+      "kind": "inland-water",
+      "name": "Lake Sidney Lanier",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1476,
+      "kind": "inland-water",
+      "name": "Lake Gaston",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1477,
+      "kind": "inland-water",
+      "name": "Smith Mountain Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1478,
+      "kind": "inland-water",
+      "name": "Walter F. George Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1479,
+      "kind": "inland-water",
+      "name": "Réservoir Outardes Quatre",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1480,
+      "kind": "inland-water",
+      "name": "Logan Martin Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1481,
+      "kind": "inland-water",
+      "name": "Mitchell Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1482,
+      "kind": "inland-water",
+      "name": "Lake Murray",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1483,
+      "kind": "inland-water",
+      "name": "Rybinsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1484,
+      "kind": "inland-water",
+      "name": "Kainji Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1485,
+      "kind": "inland-water",
+      "name": "Kakhovka Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1486,
+      "kind": "inland-water",
+      "name": "Kremenchuk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1487,
+      "kind": "inland-water",
+      "name": "Samara Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1488,
+      "kind": "inland-water",
+      "name": "Represa de Sobradinho",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1489,
+      "kind": "inland-water",
+      "name": "Ozero Kubenskoye",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1490,
+      "kind": "inland-water",
+      "name": "Lake Kariba",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1491,
+      "kind": "inland-water",
+      "name": "Nam Ngum Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1492,
+      "kind": "inland-water",
+      "name": "Lake Argyle",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1493,
+      "kind": "inland-water",
+      "name": "Lake Nasser",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1494,
+      "kind": "inland-water",
+      "name": "Toktogul Suu Saktagychy",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1495,
+      "kind": "inland-water",
+      "name": "Professor Doctor Ingenieur W. J. Van Blommestein Meer",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1496,
+      "kind": "inland-water",
+      "name": "Represa Itaipu",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1497,
+      "kind": "inland-water",
+      "name": "Lake Volta",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1498,
+      "kind": "inland-water",
+      "name": "Bratsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1499,
+      "kind": "inland-water",
+      "name": "Represa de Tucuruí",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1500,
+      "kind": "inland-water",
+      "name": "Represa Três Marias",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1501,
+      "kind": "inland-water",
+      "name": "Repressa de Jupia",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1502,
+      "kind": "inland-water",
+      "name": "Shardara Bgeni",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1503,
+      "kind": "inland-water",
+      "name": "Vilyuy Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1504,
+      "kind": "inland-water",
+      "name": "Krasnoyarsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1505,
+      "kind": "inland-water",
+      "name": "Kostroma Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1506,
+      "kind": "inland-water",
+      "name": "Uglich Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1507,
+      "kind": "inland-water",
+      "name": "Ivankovo Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1508,
+      "kind": "inland-water",
+      "name": "Tarbela Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1509,
+      "kind": "inland-water",
+      "name": "Lago de Cahora Bassa",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1510,
+      "kind": "inland-water",
+      "name": "Roseires Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1511,
+      "kind": "inland-water",
+      "name": "Votkinsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1512,
+      "kind": "inland-water",
+      "name": "Kama Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1513,
+      "kind": "inland-water",
+      "name": "Buhayrat al-Assad",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1514,
+      "kind": "inland-water",
+      "name": "Keban Baraji",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1515,
+      "kind": "inland-water",
+      "name": "Volgograd Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1516,
+      "kind": "inland-water",
+      "name": "Gorky Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1517,
+      "kind": "inland-water",
+      "name": "Ust-Ilimsk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1518,
+      "kind": "inland-water",
+      "name": "Obanbori Qayroqum",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1519,
+      "kind": "inland-water",
+      "name": "Embalse de Entrepeas",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1520,
+      "kind": "inland-water",
+      "name": "Gobind Sagar Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1521,
+      "kind": "inland-water",
+      "name": "Hinakud Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1522,
+      "kind": "inland-water",
+      "name": "Nagarjuna Sagar Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1523,
+      "kind": "inland-water",
+      "name": "Danjiangkou Shuiku",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1524,
+      "kind": "inland-water",
+      "name": "Kapchagay Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1525,
+      "kind": "inland-water",
+      "name": "Bloemhof Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1526,
+      "kind": "inland-water",
+      "name": "Vaal Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1527,
+      "kind": "inland-water",
+      "name": "Wyangala Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1528,
+      "kind": "inland-water",
+      "name": "Lac de Kossou",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1529,
+      "kind": "inland-water",
+      "name": "Zeya Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1530,
+      "kind": "inland-water",
+      "name": "Embalse de García de Sola",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1531,
+      "kind": "inland-water",
+      "name": "Embalse de Orellana",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1532,
+      "kind": "inland-water",
+      "name": "Chao Nen Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1533,
+      "kind": "inland-water",
+      "name": "Xinanjiang Shuiku",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1534,
+      "kind": "inland-water",
+      "name": "Guanting Shuiku",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1535,
+      "kind": "inland-water",
+      "name": "Embalse de Cala",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1536,
+      "kind": "inland-water",
+      "name": "Represa Porto Primavera",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1537,
+      "kind": "inland-water",
+      "name": "Lake Mulwala",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1538,
+      "kind": "inland-water",
+      "name": "Lake Hume",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1539,
+      "kind": "inland-water",
+      "name": "Kaptai Lake",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1540,
+      "kind": "inland-water",
+      "name": "Lac de Buyo",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1541,
+      "kind": "inland-water",
+      "name": "Embalse de Guri",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1542,
+      "kind": "inland-water",
+      "name": "Lago Rincón del Bonete",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1543,
+      "kind": "inland-water",
+      "name": "Embalse Ezequiel Ramos Mexia",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1544,
+      "kind": "inland-water",
+      "name": "Tsimlyansk Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1545,
+      "kind": "inland-water",
+      "name": "Represa de São Simão",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1546,
+      "kind": "inland-water",
+      "name": "Camatague",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1547,
+      "kind": "inland-water",
+      "name": "Embalse de Guárico",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1548,
+      "kind": "inland-water",
+      "name": "Barragem Itumbiara",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1549,
+      "kind": "inland-water",
+      "name": "Burrendong Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1550,
+      "kind": "inland-water",
+      "name": "Vanderkloof Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1551,
+      "kind": "inland-water",
+      "name": "Gariep Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1552,
+      "kind": "inland-water",
+      "name": "Stanley Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1553,
+      "kind": "inland-water",
+      "name": "Gandhi Sagar Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1554,
+      "kind": "inland-water",
+      "name": "Bhumphol K. K. Nam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1555,
+      "kind": "inland-water",
+      "name": "Siri Kit Dam",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1556,
+      "kind": "inland-water",
+      "name": "Represa Agua Vermetha",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1557,
+      "kind": "inland-water",
+      "name": "Represa Furnas",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1558,
+      "kind": "inland-water",
+      "name": "Represa Itarare",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1559,
+      "kind": "inland-water",
+      "name": "Represa Iepe",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1560,
+      "kind": "inland-water",
+      "name": "Senanayake Samudra",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1561,
+      "kind": "inland-water",
+      "name": "Embalse de Buendía",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1562,
+      "kind": "inland-water",
+      "name": "Baidagang Shuiku",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1563,
+      "kind": "inland-water",
+      "name": "Khantayskoye Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1564,
+      "kind": "inland-water",
+      "name": "Kauno marios",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1565,
+      "kind": "inland-water",
+      "name": "Supung Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1566,
+      "kind": "inland-water",
+      "name": "Lake Eyre North",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1567,
+      "kind": "inland-water",
+      "name": "Lake Disappointment",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1568,
+      "kind": "inland-water",
+      "name": "Lake Mackay",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1569,
+      "kind": "inland-water",
+      "name": "Lake Gairdner",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1570,
+      "kind": "inland-water",
+      "name": "Lake Torrens",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1571,
+      "kind": "inland-water",
+      "name": "Lake Frome",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1572,
+      "kind": "inland-water",
+      "name": "Lake Barlee",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1573,
+      "kind": "inland-water",
+      "name": "Lake Eyre South",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1574,
+      "kind": "inland-water",
+      "name": "Lake Amadeus",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1575,
+      "kind": "inland-water",
+      "name": "Lake Carnegie",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1576,
+      "kind": "inland-water",
+      "name": "Lake Moore",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1577,
+      "kind": "inland-water",
+      "name": "Lake Carey",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1578,
+      "kind": "inland-water",
+      "name": "Lake Everard",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1579,
+      "kind": "inland-water",
+      "name": "Lake Neale",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1580,
+      "kind": "inland-water",
+      "name": "Lake Wells",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1581,
+      "kind": "inland-water",
+      "name": "Lake Ballard",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1582,
+      "kind": "inland-water",
+      "name": "Lake Goongarrie",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1583,
+      "kind": "inland-water",
+      "name": "Lake Cowan",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1584,
+      "kind": "inland-water",
+      "name": "Great Salt Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1585,
+      "kind": "inland-water",
+      "name": "Laguna Madre",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1586,
+      "kind": "inland-water",
+      "name": "Salton Sea",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1587,
+      "kind": "inland-water",
+      "name": "Lago Enriquillo",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1588,
+      "kind": "inland-water",
+      "name": "Goose Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1589,
+      "kind": "inland-water",
+      "name": "Pyramid Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1590,
+      "kind": "inland-water",
+      "name": "Malheur Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1591,
+      "kind": "inland-water",
+      "name": "Harney Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1592,
+      "kind": "inland-water",
+      "name": "Etang Saumâtre",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1593,
+      "kind": "inland-water",
+      "name": "Lagoa Mirim",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1594,
+      "kind": "inland-water",
+      "name": "IJsselmeer",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1595,
+      "kind": "inland-water",
+      "name": "Syvash",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1596,
+      "kind": "inland-water",
+      "name": "Issyk-Kul",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1597,
+      "kind": "inland-water",
+      "name": "Lake Turkana",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1598,
+      "kind": "inland-water",
+      "name": "Kaliningradskiy Zaliv",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1599,
+      "kind": "inland-water",
+      "name": "Zalew Wislany",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1600,
+      "kind": "inland-water",
+      "name": "Uvs Nuur",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1601,
+      "kind": "inland-water",
+      "name": "Qinghai Hu",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1602,
+      "kind": "inland-water",
+      "name": "Lake Razazah",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1603,
+      "kind": "inland-water",
+      "name": "Dead Sea",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1604,
+      "kind": "inland-water",
+      "name": "Lake Urmia",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1605,
+      "kind": "inland-water",
+      "name": "Sarygamysh Köli",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1606,
+      "kind": "inland-water",
+      "name": "Alakol",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1607,
+      "kind": "inland-water",
+      "name": "Mar Chiquita",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1608,
+      "kind": "inland-water",
+      "name": "Lake Tuz",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1609,
+      "kind": "inland-water",
+      "name": "Lake Van",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1610,
+      "kind": "inland-water",
+      "name": "Lake Abaya",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1611,
+      "kind": "inland-water",
+      "name": "Lake Hammar",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1612,
+      "kind": "inland-water",
+      "name": "Khyargas Nuur",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1613,
+      "kind": "inland-water",
+      "name": "Lake Assal",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1614,
+      "kind": "inland-water",
+      "name": "Tengiz Köli",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1615,
+      "kind": "inland-water",
+      "name": "Qusmuryn Köli",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1616,
+      "kind": "inland-water",
+      "name": "Har Nuur",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1617,
+      "kind": "inland-water",
+      "name": "Lago Poopó",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1618,
+      "kind": "inland-water",
+      "name": "Chew Bahir",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1619,
+      "kind": "inland-water",
+      "name": "Lake Chamo",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1620,
+      "kind": "inland-water",
+      "name": "Lake Abbe",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1621,
+      "kind": "inland-water",
+      "name": "Lake Eyasi",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1622,
+      "kind": "inland-water",
+      "name": "Lake Natron",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1623,
+      "kind": "inland-water",
+      "name": "Aydar Ko‘l",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1624,
+      "kind": "inland-water",
+      "name": "Great Bitter Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1625,
+      "kind": "inland-water",
+      "name": "Airag Lake",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1626,
+      "kind": "inland-water",
+      "name": "Qypshaq Kli",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1627,
+      "kind": "inland-water",
+      "name": "Ozero Shalkar",
+      "type": "Alkaline Lake"
+    },
+    {
+      "id": 1628,
+      "kind": "inland-water",
+      "name": "Lake Taupo",
+      "type": "Lake"
+    },
+    {
+      "id": 1629,
+      "kind": "inland-water",
+      "name": "Lake Tekapo",
+      "type": "Lake"
+    },
+    {
+      "id": 1630,
+      "kind": "inland-water",
+      "name": "Lake Ohau",
+      "type": "Lake"
+    },
+    {
+      "id": 1631,
+      "kind": "inland-water",
+      "name": "Lake Te Anau",
+      "type": "Lake"
+    },
+    {
+      "id": 1632,
+      "kind": "inland-water",
+      "name": "Lake Wakatipu",
+      "type": "Lake"
+    },
+    {
+      "id": 1633,
+      "kind": "inland-water",
+      "name": "Lake Pukaki",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1634,
+      "kind": "inland-water",
+      "name": "Lake Manapouri",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1635,
+      "kind": "inland-water",
+      "name": "Lake Te Anau",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1636,
+      "kind": "inland-water",
+      "name": "Lake Wanaka",
+      "type": "Lake"
+    },
+    {
+      "id": 1637,
+      "kind": "inland-water",
+      "name": "Lake Hawea",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1638,
+      "kind": "inland-water",
+      "name": "Lake Rotorua",
+      "type": "Lake"
+    },
+    {
+      "id": 1639,
+      "kind": "inland-water",
+      "name": "Lake Wairarapa",
+      "type": "Lake"
+    },
+    {
+      "id": 1640,
+      "kind": "inland-water",
+      "name": "Lake Benmore",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1641,
+      "kind": "inland-water",
+      "name": "Lake Coleridge",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1642,
+      "kind": "inland-water",
+      "name": "Lake Waikaremoana",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1643,
+      "kind": "inland-water",
+      "name": "Lake Hauroko",
+      "type": "Lake"
+    },
+    {
+      "id": 1644,
+      "kind": "inland-water",
+      "name": "Lake Poteriteri",
+      "type": "Lake"
+    },
+    {
+      "id": 1645,
+      "kind": "inland-water",
+      "name": "Lake Monowai",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1646,
+      "kind": "inland-water",
+      "name": "Lake Rotoroa",
+      "type": "Lake"
+    },
+    {
+      "id": 1647,
+      "kind": "inland-water",
+      "name": "Lake Rotoiti",
+      "type": "Lake"
+    },
+    {
+      "id": 1648,
+      "kind": "inland-water",
+      "name": "Lake Dunstan",
+      "type": "Lake"
+    },
+    {
+      "id": 1649,
+      "kind": "inland-water",
+      "name": "St. Marys River",
+      "type": "Lake"
+    },
+    {
+      "id": 1650,
+      "kind": "inland-water",
+      "name": "Whitefish Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1651,
+      "kind": "inland-water",
+      "name": "South Aral Sea",
+      "type": "Lake"
+    },
+    {
+      "id": 1652,
+      "kind": "inland-water",
+      "name": "Barsakelmes Lake",
+      "type": "Lake"
+    },
+    {
+      "id": 1653,
+      "kind": "inland-water",
+      "name": "North Aral Sea",
+      "type": "Lake"
+    },
+    {
+      "id": 1654,
+      "kind": "inland-water",
+      "name": "Lake Pedder",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1655,
+      "kind": "inland-water",
+      "name": "Lake Gordon",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1656,
+      "kind": "inland-water",
+      "name": "Smallwood Reservoir",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1657,
+      "kind": "inland-water",
+      "name": "Presa Miguel Alemán",
+      "type": "Reservoir"
+    },
+    {
+      "id": 1658,
+      "kind": "inland-water",
+      "name": "Lago Gatun",
+      "type": "Reservoir"
+    }
+  ],
+  "coverage": {
+    "landCells": 345650,
+    "oceanCells": 691150,
+    "namedLandCells": 345650,
+    "namedOceanCells": 691150,
+    "unknownCells": 0
+  },
+  "sources": {
+    "naturalEarth": {
+      "version": "5.1.2",
+      "revision": "f1890d9f152c896d250a77557a5751a93d494776",
+      "scale": "1:10m",
+      "files": [
+        {
+          "filename": "ne_10m_lakes.geojson",
+          "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9"
+        },
+        {
+          "filename": "ne_10m_geography_marine_polys.geojson",
+          "sha256": "53f865e8ffa966cdd402145c82c5cd14ee7ce974cd0eb9a3f59f03a4cfd2d66c"
+        },
+        {
+          "filename": "ne_10m_geography_regions_polys.geojson",
+          "sha256": "b7b26e50ea917d3696aec87f932def2bf5f890f5770e441d59c162c6f4c92a77"
+        },
+        {
+          "filename": "ne_10m_geography_regions_points.geojson",
+          "sha256": "25821b530966e62756faebf53699f12bf73550f8228aa4bbdf3e4132dd7cf806"
+        }
+      ]
+    },
+    "countries": {
+      "package": "world-atlas",
+      "version": "2.0.2",
+      "file": "countries-110m.json"
+    },
+    "surfaceRouting": "public/data/2025/surface-mask.bin"
+  }
+}

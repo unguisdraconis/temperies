@@ -32,7 +32,7 @@ export default function App() {
   const [infoPanel, setInfoPanel] = useState<'about' | 'help' | null>(null);
   const reducedMotion = useReducedMotion();
   if (state.fatalError) return <LoadingScreen error={state.fatalError} />;
-  if (!state.manifest || !state.mask || !state.framePair) return <LoadingScreen />;
+  if (!state.manifest || !state.mask || !state.geography || !state.framePair) return <LoadingScreen />;
 
   const { manifest, framePair } = state;
   const frame = framePair.currentMeta;
@@ -62,6 +62,7 @@ export default function App() {
       {infoPanel === 'about' ? <><blockquote className="about-epigraph" lang="la">temperie blandarum captus aquarum<cite>Ovid, Metamorphoses IV</cite></blockquote>
         <strong id="information-panel-title">{aboutHeading}</strong><p>{manifest.notice}</p>
         <p>Land: <a href="https://cds.climate.copernicus.eu/datasets/derived-era5-single-levels-daily-statistics" target="_blank" rel="noreferrer">{manifest.sources.land.dataset}</a>, {manifest.sources.land.variable}. Ocean: <a href="https://www.ncei.noaa.gov/products/optimum-interpolation-sst" target="_blank" rel="noreferrer">{manifest.sources.ocean.dataset}</a>, {manifest.sources.ocean.variable}.</p>
+        <p>Place names use public-domain <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a> country, island, inland-water, ocean, and sea data, sampled to the same quarter-degree grid.</p>
         <p>The flat view uses the raster's native Plate Carrée projection. Polar screen area is enlarged by the projection; legend percentages remain cosine-of-latitude area weighted.</p></>
         : <><strong id="information-panel-title">How to explore Temperies</strong><ul>
           <li>Switch between the 3D globe and the native Plate Carrée map without changing the selected week or temperature range.</li>
@@ -85,7 +86,7 @@ export default function App() {
       <div className="globe-hint">{state.projectionMode === 'globe' ? <RotateCcw size={15} /> : <Move size={15} />}
         {state.projectionMode === 'globe' ? 'DRAG TO ROTATE · SCROLL TO ZOOM' : 'DRAG TO PAN · SCROLL TO ZOOM'}</div>
       <LayerControl layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
-      {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} pinned={state.tooltipPinned} />}
+      {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} geography={state.geography} pinned={state.tooltipPinned} />}
       {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={() => actions.requestWeek(state.week)}>Retry</button></div>}
     </div>
       <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}

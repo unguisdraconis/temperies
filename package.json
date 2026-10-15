@@ -18,6 +18,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "generate:data": "tsx scripts/generate-data.ts",
+    "acquire:geography": "tsx scripts/geography/acquire.ts",
+    "generate:geography": "tsx scripts/geography/generate.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",

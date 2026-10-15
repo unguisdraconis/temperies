@@ -1,9 +1,11 @@
 import { ANNUAL_SCALE } from '../climate/constants';
 import type { ClimateManifest, DisplayMode, Extrema, FrameLoadState, FramePair, HoveredCell, LegendSelection, ProjectionMode, TemperaturePalette, TemperatureRenderStyle, TemperatureUnit, VectorLayerVisibility } from '../climate/types';
+import type { GeographicIndex } from '../geography/types';
 
 export interface ClimateState {
   manifest: ClimateManifest | null;
   mask: Uint8Array | null;
+  geography: GeographicIndex | null;
   framePair: FramePair | null;
   week: number;
   activeRequestId: number;
@@ -22,14 +24,14 @@ export interface ClimateState {
 }
 
 export const initialClimateState: ClimateState = {
-  manifest: null, mask: null, framePair: null, week: 0, activeRequestId: 0,
+  manifest: null, mask: null, geography: null, framePair: null, week: 0, activeRequestId: 0,
   loadState: { status: 'idle' }, fatalError: null, mode: 'composite', projectionMode: 'globe', renderStyle: 'heatmap', palette: 'diverging', unit: 'C',
   hoveredCell: null, tooltipPinned: false, legendHover: null, legendLocked: null,
   vectorLayers: { countries: true, coastlines: true },
 };
 
 export type ClimateAction =
-  | { type: 'BOOT_READY'; manifest: ClimateManifest; mask: Uint8Array }
+  | { type: 'BOOT_READY'; manifest: ClimateManifest; mask: Uint8Array; geography: GeographicIndex }
   | { type: 'FATAL_ERROR'; message: string }
   | { type: 'FRAME_REQUEST'; week: number; requestId: number }
   | { type: 'FRAME_SUCCESS'; week: number; requestId: number; pair: FramePair }
@@ -69,7 +71,7 @@ function updateTrackedExtreme(selection: LegendSelection | null, pair: FramePair
 
 export function climateReducer(state: ClimateState, action: ClimateAction): ClimateState {
   switch (action.type) {
-    case 'BOOT_READY': return { ...state, manifest: action.manifest, mask: action.mask };
+    case 'BOOT_READY': return { ...state, manifest: action.manifest, mask: action.mask, geography: action.geography };
     case 'FATAL_ERROR': return { ...state, fatalError: action.message, loadState: { status: 'error', message: action.message, recoverable: false } };
     case 'FRAME_REQUEST': return { ...state, activeRequestId: action.requestId, loadState: { status: 'loading', requestedWeek: action.week, retainingFrame: state.framePair !== null } };
     case 'FRAME_SUCCESS':

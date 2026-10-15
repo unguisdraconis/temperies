@@ -36,7 +36,7 @@ export function VectorLayers({ countries, coastlines, projectionMix }: VectorLay
   }, []);
   useEffect(() => () => { geometries.borders.dispose(); geometries.coasts.dispose(); }, [geometries]);
   return <>
-    {countries && <ProjectedLine geometry={geometries.borders} color="#b8d4d2" opacity={0.3} projectionMix={projectionMix} />}
-    {coastlines && <ProjectedLine geometry={geometries.coasts} color="#e3f2ec" opacity={0.68} projectionMix={projectionMix} />}
+    {countries && <ProjectedLine geometry={geometries.borders} color="#d9ebe7" opacity={0.62} projectionMix={projectionMix} />}
+    {coastlines && <ProjectedLine geometry={geometries.coasts} color="#f0f7f5" opacity={0.82} projectionMix={projectionMix} />}
   </>;
 }

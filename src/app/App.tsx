@@ -88,6 +88,8 @@ export default function App() {
       {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} />}
       {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={() => actions.requestWeek(state.week)}>Retry</button></div>}
     </div>
+      <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}
+        hover={state.legendHover} locked={state.legendLocked} onHover={actions.setLegendHover} onLock={actions.setLegendLock} />
       <aside className="control-panel"><ProjectionControl value={state.projectionMode} onChange={actions.setProjectionMode} />
         <DisplayModeControl value={state.mode} onChange={actions.setMode} />
         <PaletteControl value={state.palette} onChange={actions.setPalette} />
@@ -96,8 +98,6 @@ export default function App() {
         <TimelineControl week={state.week} frameCount={manifest.frames.length} loading={transitioning} onWeek={actions.requestWeek} />
         <div className="fact-row"><div><span>GRID</span><strong>{manifest.grid.resolution}°</strong></div><div><span>FRAME</span><strong>{String(state.week + 1).padStart(2, '0')} / {manifest.frames.length}</strong></div><div><span>UNITS</span><UnitControl unit={state.unit} onChange={actions.setUnit} /></div></div>
       </aside></section>
-    <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}
-      hover={state.legendHover} locked={state.legendLocked} onHover={actions.setLegendHover} onLock={actions.setLegendLock} />
     <footer><span><i /> {footerLabel}</span><p>Land: {manifest.sources.land.dataset} · Ocean: {manifest.sources.ocean.dataset} · Local static binaries</p>
       <nav aria-label="Project links"><a href="https://github.com/unguisdraconis/temperies/blob/main/DATA_SOURCES.md" target="_blank" rel="noreferrer">Methodology</a><a href="https://github.com/unguisdraconis/temperies" target="_blank" rel="noreferrer">Source code</a></nav><p>TEMPERIES TELLURIS</p></footer>
   </main>;

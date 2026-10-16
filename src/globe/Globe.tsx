@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState, type ComponentRef } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ComponentRef, type PointerEvent as ReactPointerEvent } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
@@ -6,6 +6,7 @@ import type { DisplayMode, FramePair, HoveredCell, LegendSelection, ProjectionMo
 import { TemperatureSphere } from './TemperatureSphere';
 import { VectorLayers } from './VectorLayers';
 import { advanceProjectionMix, easeProjectionMix, GLOBE_INITIAL_ROTATION, PROJECTION_TRANSITION_SECONDS, projectionTarget } from './projection';
+import { SelectionGestureGuard } from './selectionGesture';
 
 interface Props {
   frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
@@ -15,12 +16,15 @@ interface Props {
 }
 
 type OrbitControlsInstance = ComponentRef<typeof OrbitControls>;
-interface SceneProps extends Props { controlsRef: { current: OrbitControlsInstance | null } }
+interface SceneProps extends Props {
+  controlsRef: { current: OrbitControlsInstance | null };
+  consumeSelectionGesture: (endpointTravel: number) => boolean;
+}
 
 const CAMERA_HOME = new THREE.Vector3(0, 0.18, 2.55);
 const TARGET_HOME = new THREE.Vector3(0, 0, 0);
 
-function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, vectorLayers, reducedMotion, resetEpoch, onHover, onLeave, onSelect, controlsRef }: SceneProps) {
+function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, vectorLayers, reducedMotion, resetEpoch, onHover, onLeave, onSelect, controlsRef, consumeSelectionGesture }: SceneProps) {
   const groupRef = useRef<THREE.Group>(null);
   const initialProjection = useRef(projectionTarget(projectionMode));
   const projectionMix = useRef(initialProjection.current);
@@ -91,16 +95,24 @@ function ProjectionScene({ frames, mask, mode, renderStyle, palette, highlight, 
     0,
   ]}>
     <TemperatureSphere frames={frames} mask={mask} mode={mode} renderStyle={renderStyle} palette={palette} highlight={highlight}
-      projectionMode={projectionMode} projectionMix={projectionMix} onHover={onHover} onLeave={onLeave} onSelect={onSelect} />
+      projectionMode={projectionMode} projectionMix={projectionMix} consumeSelectionGesture={consumeSelectionGesture}
+      onHover={onHover} onLeave={onLeave} onSelect={onSelect} />
     <VectorLayers {...vectorLayers} projectionMix={projectionMix} />
   </group>;
 }
 
 export function Globe(props: Props) {
   const controlsRef = useRef<OrbitControlsInstance>(null);
+  const selectionGesture = useRef(new SelectionGestureGuard());
   const previousProjection = useRef(props.projectionMode);
   const previousResetEpoch = useRef(props.resetEpoch);
   const [controlsLocked, setControlsLocked] = useState(false);
+  const handlePointerDown = useCallback((event: ReactPointerEvent<HTMLDivElement>) => selectionGesture.current.pointerDown(event), []);
+  const handlePointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => selectionGesture.current.pointerMove(event), []);
+  const handlePointerUp = useCallback((event: ReactPointerEvent<HTMLDivElement>) => selectionGesture.current.pointerUp(event), []);
+  const handlePointerCancel = useCallback(() => selectionGesture.current.pointerCancel(), []);
+  const handlePointerLost = useCallback((event: ReactPointerEvent<HTMLDivElement>) => selectionGesture.current.pointerLost(event.pointerId), []);
+  const consumeSelectionGesture = useCallback((endpointTravel: number) => selectionGesture.current.consumeClick(endpointTravel), []);
 
   useEffect(() => {
     const changed = previousProjection.current !== props.projectionMode;
@@ -116,15 +128,20 @@ export function Globe(props: Props) {
     return () => window.clearTimeout(timer);
   }, [props.projectionMode, props.reducedMotion, props.resetEpoch]);
 
-  return <Canvas aria-label={props.projectionMode === 'globe' ? 'Interactive temperature globe' : 'Interactive Plate Carrée temperature map'}
-    fallback={<div className="webgl-error" role="alert">WebGL is unavailable in this browser.</div>}
-    camera={{ position: CAMERA_HOME.toArray(), fov: 39 }} dpr={[1, 1.6]} gl={{ antialias: true, alpha: true }}>
-    <ambientLight intensity={0.6} />
-    {!props.reducedMotion && <Stars radius={8} depth={20} count={900} factor={1.5} saturation={0} fade speed={0.25} />}
-    <ProjectionScene {...props} controlsRef={controlsRef} />
-    <OrbitControls ref={controlsRef} enabled={!controlsLocked} enablePan={props.projectionMode === 'map'} enableRotate={props.projectionMode === 'globe'}
-      screenSpacePanning minDistance={1.45} maxDistance={4.2} rotateSpeed={0.45} zoomSpeed={0.65} dampingFactor={0.06}
-      enableDamping={!props.reducedMotion} autoRotate={props.autoRotate && props.projectionMode === 'globe' && !controlsLocked && !props.reducedMotion}
-      autoRotateSpeed={0.35} onStart={props.onInteraction} />
-  </Canvas>;
+  return <div className="globe-canvas-shell"
+    onPointerDownCapture={handlePointerDown} onPointerMoveCapture={handlePointerMove}
+    onPointerUpCapture={handlePointerUp} onPointerCancelCapture={handlePointerCancel}
+    onPointerLeave={handlePointerLost} onLostPointerCaptureCapture={handlePointerLost}>
+    <Canvas aria-label={props.projectionMode === 'globe' ? 'Interactive temperature globe' : 'Interactive Plate Carrée temperature map'}
+      fallback={<div className="webgl-error" role="alert">WebGL is unavailable in this browser.</div>}
+      camera={{ position: CAMERA_HOME.toArray(), fov: 39 }} dpr={[1, 1.6]} gl={{ antialias: true, alpha: true }}>
+      <ambientLight intensity={0.6} />
+      {!props.reducedMotion && <Stars radius={8} depth={20} count={900} factor={1.5} saturation={0} fade speed={0.25} />}
+      <ProjectionScene {...props} controlsRef={controlsRef} consumeSelectionGesture={consumeSelectionGesture} />
+      <OrbitControls ref={controlsRef} enabled={!controlsLocked} enablePan={props.projectionMode === 'map'} enableRotate={props.projectionMode === 'globe'}
+        screenSpacePanning minDistance={1.45} maxDistance={4.2} rotateSpeed={0.45} zoomSpeed={0.65} dampingFactor={0.06}
+        enableDamping={!props.reducedMotion} autoRotate={props.autoRotate && props.projectionMode === 'globe' && !controlsLocked && !props.reducedMotion}
+        autoRotateSpeed={0.35} onStart={props.onInteraction} />
+    </Canvas>
+  </div>;
 }

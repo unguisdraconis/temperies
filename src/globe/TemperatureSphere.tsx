@@ -8,6 +8,7 @@ import { DisplayTextureCache } from './displayTextureCache';
 import { canonicalGridUniformSize, HEATMAP_GRID_PRESENTATION, heatmapGridActive, replaceTemperatureFieldTexture } from './rendering';
 import { lookupTemperatureAtIndex } from './temperatureLookup';
 import { createProjectionGeometry, type ProjectionMixRef } from './projection';
+import { projectionAllowsSelection } from './selectionGesture';
 import vertexShader from './shaders/temperature.vert.glsl?raw';
 import fragmentShader from './shaders/temperature.frag.glsl?raw';
 
@@ -16,10 +17,11 @@ const displayTextureCache = new DisplayTextureCache();
 interface Props {
   frames: FramePair; mask: Uint8Array; mode: DisplayMode; renderStyle: TemperatureRenderStyle; palette: TemperaturePalette; highlight: LegendSelection | null;
   projectionMode: ProjectionMode; projectionMix: ProjectionMixRef;
+  consumeSelectionGesture: (endpointTravel: number) => boolean;
   onHover: (cell: HoveredCell) => void; onLeave: () => void; onSelect: (cell: HoveredCell) => void;
 }
 
-export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, projectionMix, onHover, onLeave, onSelect }: Props) {
+export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, highlight, projectionMode, projectionMix, consumeSelectionGesture, onHover, onLeave, onSelect }: Props) {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
   const initialRenderStyle = useRef(renderStyle);
   const fieldTexture = useMemo(() => displayTextureCache.get(frames.current, mask, mode), [frames, mask, mode]);
@@ -72,7 +74,9 @@ export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, hi
     const cell = cellAtEvent(event);
     if (cell) onHover(cell);
   };
-  const emitSelection = (event: ThreeEvent<MouseEvent>) => {
+  const emitSelection = (surface: ProjectionMode, event: ThreeEvent<MouseEvent>) => {
+    if (!projectionAllowsSelection(surface, projectionMode, projectionMix.current)) return;
+    if (!consumeSelectionGesture(event.delta)) return;
     const cell = cellAtEvent(event);
     if (cell) onSelect(cell);
   };
@@ -83,12 +87,14 @@ export function TemperatureSphere({ frames, mask, mode, renderStyle, palette, hi
   const handleMapMove = (event: ThreeEvent<PointerEvent>) => {
     if (projectionMode === 'map' && projectionMix.current >= 0.999) emitHover(event);
   };
+  const handleGlobeSelection = (event: ThreeEvent<MouseEvent>) => emitSelection('globe', event);
+  const handleMapSelection = (event: ThreeEvent<MouseEvent>) => emitSelection('map', event);
 
   return <>
-    <mesh geometry={geometry} onPointerMove={handleGlobeMove} onPointerOut={onLeave} onClick={emitSelection}>
+    <mesh geometry={geometry} onPointerMove={handleGlobeMove} onPointerOut={onLeave} onClick={handleGlobeSelection}>
       <shaderMaterial ref={materialRef} uniforms={uniforms} vertexShader={vertexShader} fragmentShader={fragmentShader} glslVersion={THREE.GLSL3} />
     </mesh>
-    {projectionMode === 'map' && <mesh position={[0, 0, 0.012]} onPointerMove={handleMapMove} onPointerOut={onLeave} onClick={emitSelection}>
+    {projectionMode === 'map' && <mesh onPointerMove={handleMapMove} onPointerOut={onLeave} onClick={handleMapSelection}>
       <planeGeometry args={[2, 1]} />
       <meshBasicMaterial transparent opacity={0} depthWrite={false} colorWrite={false} />
     </mesh>}

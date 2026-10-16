@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CalendarDays, CircleHelp, Info, Move, RotateCcw } from 'lucide-react';
 import { useClimateExplorer } from './useClimateExplorer';
 import { Globe } from '../globe/Globe';
@@ -14,6 +14,7 @@ import { PaletteControl } from '../controls/PaletteControl';
 import { formatDateRange } from '../shared/formatting';
 import { TemperiesMark } from '../shared/TemperiesMark';
 import { classifyClimateManifest } from '../climate/dataset';
+import { useIdleReset } from './useIdleReset';
 
 function useReducedMotion(): boolean {
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -31,6 +32,11 @@ export default function App() {
   const { state, actions, highlight } = useClimateExplorer();
   const [infoPanel, setInfoPanel] = useState<'about' | 'help' | null>(null);
   const reducedMotion = useReducedMotion();
+  const resetApplication = useCallback(() => {
+    setInfoPanel(null);
+    actions.resetExplorer();
+  }, [actions]);
+  const idle = useIdleReset({ onReset: resetApplication, reducedMotion });
   if (state.fatalError) return <LoadingScreen error={state.fatalError} />;
   if (!state.manifest || !state.mask || !state.geography || !state.framePair) return <LoadingScreen />;
 
@@ -51,7 +57,7 @@ export default function App() {
   const modeLabel = state.mode === 'composite' ? 'Surface composite' : state.mode === 'air' ? 'Land air temperature' : 'Ocean sea surface';
   const transitioning = state.loadState.status === 'loading' && state.loadState.retainingFrame;
   const loadingWeek = state.loadState.status === 'loading' ? state.loadState.requestedWeek : null;
-  return <main className="app-shell">
+  return <main className={`app-shell idle-${idle.phase}`} data-idle-phase={idle.phase}>
     <header className="topbar"><div className="brand"><span className="brand-mark"><TemperiesMark size={37} /></span><div><strong>TEMPERIES</strong><small>GLOBAL CLIMATE OBSERVATORY</small></div></div>
       <nav aria-label="Primary"><button className="nav-active" aria-current="page">Explorer</button>
         <button className="about-nav" aria-label="About the data" onClick={() => setInfoPanel((panel) => panel === 'about' ? null : 'about')} aria-controls="information-panel" aria-expanded={infoPanel === 'about'}><span>About the data</span><Info className="mobile-nav-icon" size={19} aria-hidden="true" /></button>
@@ -76,7 +82,8 @@ export default function App() {
     </aside>}
     <section className="workspace"><div className="scene-panel"><div className="scene-glow" />
       <Globe frames={framePair} mask={state.mask} mode={state.mode} renderStyle={state.renderStyle} palette={state.palette} highlight={highlight} vectorLayers={state.vectorLayers}
-        projectionMode={state.projectionMode} reducedMotion={reducedMotion} onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} onSelect={actions.toggleCellTooltip} />
+        projectionMode={state.projectionMode} reducedMotion={reducedMotion} resetEpoch={idle.resetEpoch} autoRotate={idle.autoRotate} onInteraction={idle.registerInteraction}
+        onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} onSelect={actions.toggleCellTooltip} />
       {transitioning && loadingWeek !== null && <div className="field-loading-notice" role="status" aria-live="polite">
         <span className="field-loading-spinner" aria-hidden="true" />
         <span><strong>Loading temperature data</strong><small>Preparing week {String(loadingWeek + 1).padStart(2, '0')}</small></span>
@@ -85,7 +92,7 @@ export default function App() {
       <div className="status-pill"><i /> {transitioning ? 'LOADING FIELD' : readyLabel} <span>{manifest.grid.cellCount.toLocaleString()} CELLS</span></div>
       <div className="globe-hint">{state.projectionMode === 'globe' ? <RotateCcw size={15} /> : <Move size={15} />}
         {state.projectionMode === 'globe' ? 'DRAG TO ROTATE · SCROLL TO ZOOM' : 'DRAG TO PAN · SCROLL TO ZOOM'}</div>
-      <LayerControl layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
+      <LayerControl key={idle.resetEpoch} layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
       {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} geography={state.geography} pinned={state.tooltipPinned} />}
       {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={() => actions.requestWeek(state.week)}>Retry</button></div>}
     </div>

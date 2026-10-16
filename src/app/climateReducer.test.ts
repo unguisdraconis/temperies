@@ -90,6 +90,37 @@ describe('climate state transitions', () => {
     expect(climateReducer(pinned, { type: 'SET_HOVERED_CELL', cell: { ...cell, index: 1443 } })).toBe(pinned);
     expect(climateReducer(pinned, { type: 'TOGGLE_CELL_TOOLTIP', cell })).toMatchObject({ hoveredCell: null, tooltipPinned: false });
   });
+  it('restores every explorer setting while preserving loaded data', () => {
+    const customized = {
+      ...initialClimateState,
+      framePair: pair,
+      week: 12,
+      mode: 'sst' as const,
+      projectionMode: 'map' as const,
+      renderStyle: 'smooth' as const,
+      palette: 'sequential' as const,
+      unit: 'F' as const,
+      hoveredCell: cell,
+      tooltipPinned: true,
+      legendLocked: { value: 5, minimum: 4.5, maximum: 5.5, locked: true } satisfies LegendSelection,
+      vectorLayers: { countries: false, coastlines: false },
+    };
+    const reset = climateReducer(customized, { type: 'RESET_EXPLORER' });
+    expect(reset).toMatchObject({
+      week: 0,
+      mode: 'composite',
+      projectionMode: 'globe',
+      renderStyle: 'heatmap',
+      palette: 'diverging',
+      unit: 'C',
+      hoveredCell: null,
+      tooltipPinned: false,
+      legendHover: null,
+      legendLocked: null,
+      vectorLayers: { countries: true, coastlines: true },
+    });
+    expect(reset.framePair).toBe(pair);
+  });
   it('keeps the active frame after a recoverable frame error', () => {
     const state = { ...initialClimateState, framePair: pair, activeRequestId: 2 };
     expect(climateReducer(state, { type: 'FRAME_ERROR', requestId: 2, message: 'network' })).toMatchObject({ framePair: pair, loadState: { status: 'error', recoverable: true } });

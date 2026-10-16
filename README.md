@@ -29,6 +29,7 @@ Temperies is an interactive globe and flat-map explorer for weekly 2025 land-air
   ![Weekly period selector](image-5.png)
 - Show or hide borders and coastlines, switch between native-cell and clean rendering, and display temperatures in Celsius or Fahrenheit.
   ![Borders and coastlines removed](image-6.png)
+- Leave Temperies running as an unattended display: the globe begins with a slow auto-rotation, pauses on interaction, fades its interface after 30 seconds of inactivity, and returns to the default week and view after two minutes before resuming rotation.
 
 ## Scientific scope
 
@@ -45,11 +46,18 @@ The canonical raster is a 1440 × 720 regular latitude–longitude grid with 0.2
 The **View** control changes only the geometry used to display the current field. The loaded temperature textures, surface-routing mask, selected color scale, selected period, display layer, and locked temperature highlight are shared by both views, so switching projections does not request or decode another raster.
 
 - **Globe** is the default view. Drag to rotate it and scroll or pinch to zoom.
+- A slow globe auto-rotation runs on startup and after an unattended reset. Any pointer, touch, wheel, or keyboard interaction stops it.
 - **Map** unfolds the same raster into its native 2:1 Plate Carrée layout. Drag to pan and scroll or pinch to zoom.
 - The temperature surface, borders, and coastlines follow the same GPU-driven morph. Map hover uses the same canonical grid coordinates as globe hover.
 - If the operating system requests reduced motion, Temperies changes views without the animated morph.
 
 The map is valuable for seeing the complete raster at once, but it is not equal-area. Apparent polar size must not be read as geographic area; legend percentages retain their area weighting regardless of the selected view.
+
+### Unattended display behavior
+
+After 30 seconds without meaningful pointer movement, touch, wheel, or keyboard input, Temperies fades the interface chrome while keeping the globe visible. After two minutes it fades the scene, closes open panels and pinned details, restores period 1, the composite globe, native-grid rendering, the default palette and units, visible borders and coastlines, and the home camera, then fades back in with slow auto-rotation enabled. Any interaction wakes the interface and cancels a pending reset. Pointer movement uses a small distance threshold so incidental hover noise does not indefinitely postpone the reset.
+
+When the operating system requests reduced motion, auto-rotation and camera easing are disabled and the unattended reset commits without an animated scene fade.
 
 See [Data sources and methodology](DATA_SOURCES.md) for citations, source terms, processing choices, and interpretation limits. The compact [2025 provenance record](docs/data-provenance-2025.md) preserves validation totals and checksums.
 
@@ -58,7 +66,7 @@ See [Data sources and methodology](DATA_SOURCES.md) for citations, source terms,
 - `src/climate` owns the canonical grid, temperature encoding, runtime manifest validation, explicit little-endian binary parsing, URL construction, frame loading, in-flight deduplication, and five-frame LRU cache.
 - `src/globe` owns React Three Fiber rendering, numeric data textures, the globe-to-Plate-Carrée projection morph, endpoint-specific picking, shader filtering, tooltips, and independent vector overlays.
 - `src/legend` owns the shared selectable palettes, fixed temperature domain, D3 scale and histogram path, pointer inversion, keyboard interaction, and mode-consistent area calculations.
-- `src/app` owns semantic application state and atomic frame transitions. Per-frame rendering values do not flow through React state.
+- `src/app` owns semantic application state, atomic frame transitions, and the tested inactivity lifecycle. Per-frame rendering values do not flow through React state.
 - `src/geography` loads and resolves a compact, grid-aligned offline place-name index generated from Natural Earth and `world-atlas`.
 - `scripts/real_data` owns source acquisition, canonical-grid alignment, weekly aggregation, encoding, and validation.
 - `scripts/geography` owns pinned Natural Earth acquisition, checksum validation, and place-name index generation.
@@ -79,7 +87,7 @@ npm test
 npm run build
 ```
 
-The test suite covers grid edges and seams, projection endpoints, antimeridian vector handling, binary encoding, manifest rejection, raster dimensions, loading failures and stale requests, LRU behavior, texture configuration, shader contracts, CPU temperature lookup, reducer behavior, and legend and view-control interaction. These checks do not constitute a formal accessibility audit or a browser-performance benchmark.
+The test suite covers grid edges and seams, projection endpoints, antimeridian vector handling, binary encoding, manifest rejection, raster dimensions, loading failures and stale requests, LRU behavior, texture configuration, shader contracts, CPU temperature lookup, reducer behavior, the inactivity/reset timer state machine, and legend and view-control interaction. These checks do not constitute a formal accessibility audit or a browser-performance benchmark.
 
 The interface includes visible keyboard focus, a keyboard-operable temperature selector, status and error announcements, accessible control names, and reduced-motion handling. No claim of WCAG conformance is made.
 

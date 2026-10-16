@@ -29,6 +29,11 @@ export function useClimateExplorer() {
   }, []);
   requestWeekRef.current = requestWeek;
 
+  const resetExplorer = useCallback(() => {
+    dispatch({ type: 'RESET_EXPLORER' });
+    requestWeek(0);
+  }, [requestWeek]);
+
   useEffect(() => {
     const controller = new AbortController();
     void loadManifest(dataBaseUrl, fetch, controller.signal).then(async (manifest) => {
@@ -47,6 +52,7 @@ export function useClimateExplorer() {
 
   const actions = useMemo(() => ({
     requestWeek,
+    resetExplorer,
     setMode: (mode: DisplayMode) => dispatch({ type: 'SET_MODE', mode }),
     setProjectionMode: (projectionMode: ProjectionMode) => dispatch({ type: 'SET_PROJECTION_MODE', projectionMode }),
     setRenderStyle: (renderStyle: TemperatureRenderStyle) => dispatch({ type: 'SET_RENDER_STYLE', renderStyle }),
@@ -57,7 +63,7 @@ export function useClimateExplorer() {
     setLegendHover: (selection: LegendSelection | null) => dispatch({ type: 'SET_LEGEND_HOVER', selection }),
     setLegendLock: (selection: LegendSelection | null) => dispatch({ type: 'SET_LEGEND_LOCK', selection }),
     toggleVectorLayer: (layer: keyof VectorLayerVisibility) => dispatch({ type: 'TOGGLE_VECTOR_LAYER', layer }),
-  }), [requestWeek]);
+  }), [requestWeek, resetExplorer]);
 
   return { state, actions, highlight: effectiveLegendSelection(state) };
 }

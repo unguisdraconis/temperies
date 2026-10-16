@@ -45,7 +45,8 @@ export type ClimateAction =
   | { type: 'TOGGLE_CELL_TOOLTIP'; cell: HoveredCell }
   | { type: 'SET_LEGEND_HOVER'; selection: LegendSelection | null }
   | { type: 'SET_LEGEND_LOCK'; selection: LegendSelection | null }
-  | { type: 'TOGGLE_VECTOR_LAYER'; layer: keyof VectorLayerVisibility };
+  | { type: 'TOGGLE_VECTOR_LAYER'; layer: keyof VectorLayerVisibility }
+  | { type: 'RESET_EXPLORER' };
 
 function extremeForMode(extrema: Extrema, mode: DisplayMode): number {
   if (mode === 'air') return extrema.land;
@@ -106,6 +107,20 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
     case 'SET_LEGEND_HOVER': return { ...state, legendHover: action.selection };
     case 'SET_LEGEND_LOCK': return { ...state, legendLocked: action.selection, legendHover: null };
     case 'TOGGLE_VECTOR_LAYER': return { ...state, vectorLayers: { ...state.vectorLayers, [action.layer]: !state.vectorLayers[action.layer] } };
+    case 'RESET_EXPLORER': return {
+      ...state,
+      week: initialClimateState.week,
+      mode: initialClimateState.mode,
+      projectionMode: initialClimateState.projectionMode,
+      renderStyle: initialClimateState.renderStyle,
+      palette: initialClimateState.palette,
+      unit: initialClimateState.unit,
+      hoveredCell: null,
+      tooltipPinned: false,
+      legendHover: null,
+      legendLocked: null,
+      vectorLayers: { ...initialClimateState.vectorLayers },
+    };
   }
 }
 

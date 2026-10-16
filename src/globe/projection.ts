@@ -26,15 +26,34 @@ export function plateCarreePosition(u: number, v: number, scale = 1, elevation =
 }
 
 export function createProjectionGeometry(widthSegments = 192, heightSegments = 96): THREE.SphereGeometry {
-  const geometry = new THREE.SphereGeometry(1, widthSegments, heightSegments);
-  const uv = new Float32Array((widthSegments + 1) * (heightSegments + 1) * 2);
+  const columns = Math.max(3, Math.floor(widthSegments));
+  const rows = Math.max(2, Math.floor(heightSegments));
+  const geometry = new THREE.SphereGeometry(1, columns, rows);
+  const uv = new Float32Array((columns + 1) * (rows + 1) * 2);
   let offset = 0;
-  for (let row = 0; row <= heightSegments; row += 1) {
-    for (let column = 0; column <= widthSegments; column += 1) {
-      uv[offset++] = column / widthSegments;
-      uv[offset++] = 1 - row / heightSegments;
+  for (let row = 0; row <= rows; row += 1) {
+    for (let column = 0; column <= columns; column += 1) {
+      uv[offset++] = column / columns;
+      uv[offset++] = 1 - row / rows;
     }
   }
   geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
+
+  // SphereGeometry omits one degenerate triangle per polar cell. Those gaps
+  // become visible when the duplicated pole vertices unfold into a map, so use
+  // the complete rectangular topology for every latitude band instead.
+  const indices: number[] = [];
+  const rowStride = columns + 1;
+  for (let row = 0; row < rows; row += 1) {
+    for (let column = 0; column < columns; column += 1) {
+      const topLeft = row * rowStride + column;
+      const topRight = topLeft + 1;
+      const bottomLeft = topLeft + rowStride;
+      const bottomRight = bottomLeft + 1;
+      indices.push(topRight, topLeft, bottomRight, topLeft, bottomLeft, bottomRight);
+    }
+  }
+  geometry.setIndex(indices);
+  geometry.boundingSphere = new THREE.Sphere(new THREE.Vector3(), Math.hypot(1, 0.5));
   return geometry;
 }

@@ -14,6 +14,25 @@ describe('globe to Plate Carrée projection', () => {
     expect([uv.getX(uv.count - 1), uv.getY(uv.count - 1)]).toEqual([1, 0]);
     geometry.dispose();
   });
+  it('covers the complete map rectangle, including both polar rows', () => {
+    const widthSegments = 4; const heightSegments = 3;
+    const geometry = createProjectionGeometry(widthSegments, heightSegments);
+    const uv = geometry.getAttribute('uv'); const index = geometry.getIndex();
+    expect(index).not.toBeNull();
+    expect(index!.count).toBe(widthSegments * heightSegments * 6);
+
+    let twiceArea = 0;
+    for (let offset = 0; offset < index!.count; offset += 3) {
+      const a = index!.getX(offset); const b = index!.getX(offset + 1); const c = index!.getX(offset + 2);
+      const signedTwiceArea = (uv.getX(b) - uv.getX(a)) * (uv.getY(c) - uv.getY(a))
+        - (uv.getY(b) - uv.getY(a)) * (uv.getX(c) - uv.getX(a));
+      expect(signedTwiceArea).toBeGreaterThan(0);
+      twiceArea += signedTwiceArea;
+    }
+    expect(twiceArea / 2).toBeCloseTo(1);
+    expect(geometry.boundingSphere?.radius).toBeCloseTo(Math.hypot(1, 0.5));
+    geometry.dispose();
+  });
   it('advances predictably and snaps for reduced motion', () => {
     expect(projectionTarget('globe')).toBe(0); expect(projectionTarget('map')).toBe(1);
     expect(advanceProjectionMix(0, 1, 0.525, false)).toBe(0.5);

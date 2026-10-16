@@ -10,7 +10,9 @@ describe('projected vector geometry', () => {
     expect(geometry.getAttribute('mapPosition').count).toBe(2);
     const map = geometry.getAttribute('mapPosition');
     expect([map.getX(0), map.getY(0)]).toEqual([0, 0]);
-    expect(map.getX(1)).toBeCloseTo(0.505); expect(map.getY(1)).toBeCloseTo(0.2525);
+    expect(map.getX(1)).toBeCloseTo(0.5); expect(map.getY(1)).toBeCloseTo(0.25);
+    expect(map.getZ(0)).toBeCloseTo(0.01); expect(map.getZ(1)).toBeCloseTo(0.01);
+    expect(geometry.boundingSphere?.radius).toBeCloseTo(Math.hypot(1, 0.5, 0.01));
     geometry.dispose();
   });
   it('does not draw a world-spanning line across the Plate Carrée seam', () => {

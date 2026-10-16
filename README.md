@@ -119,6 +119,13 @@ The [real-data pipeline](docs/real-data-pipeline.md) documents a resumable acqui
 
 Each temperature raster contains 1,036,800 little-endian `Uint16` values (2,073,600 bytes). Values use `temperatureC = encoded × 0.01 − 100`; `65534` is reserved and `65535` is missing. The surface-routing mask contains 1,036,800 `Uint8` values, where `0` selects OISST and `1` selects ERA5 air temperature.
 
+The geographic-name index under `public/data/geography` contains one
+little-endian `Uint16` place ID for each canonical grid cell. ID `0` is reserved
+for an unknown location; the checked-in index has no unknown cells. The manifest
+maps the remaining IDs to feature names and types such as country, island, lake,
+ocean, sea, gulf, or strait. This index is descriptive metadata only and does
+not alter temperature values or surface routing.
+
 ## Project role
 
 Temperies was designed and directed by Jeremiah King, including the product concept, interaction decisions, visual direction, climate-data methodology, and validation requirements. Implementation was developed with AI-assisted coding using ChatGPT and Codex. Repository history records the resulting code and documentation but is not, by itself, evidence that every line was independently authored.

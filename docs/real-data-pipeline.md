@@ -16,8 +16,9 @@ ERA5 values are bilinearly sampled from its grid points onto the same canonical
 cell centers. The invariant OISST valid-data footprint is the authoritative
 surface-routing mask: OISST-valid cells use SST, while every other cell uses ERA5
 2 m air temperature. The processor rejects any daily OISST file whose footprint
-differs from the reference mask. Natural Earth remains a vector-overlay source
-and does not decide which climate variable supplies a raster cell.
+differs from the reference mask. Natural Earth supplies vector overlays and the
+offline geographic-name index; it does not decide which climate variable
+supplies a raster cell.
 
 ## One-time setup on Windows
 
@@ -68,6 +69,38 @@ The synthetic folder is intentionally ignored because its 52 weeks are large,
 deterministic fixtures. Run `npm run generate:data` to recreate it in that same
 separate folder after a fresh clone.
 
+## Geographic-name index
+
+The hover and pinned-selection names are built independently from the climate
+acquisition. They are shared by the default, reference, annual-preview, and
+synthetic dataset routes because all routes use the same canonical grid.
+
+```powershell
+npm run acquire:geography
+npm run generate:geography
+```
+
+The acquisition command downloads four Natural Earth v5.1.2 GeoJSON layers
+from a pinned repository revision into the ignored
+`untouched_data/natural-earth` directory. It validates every file against a
+recorded SHA-256 before replacing the local source copy. The generator validates
+those inputs again, combines them with the installed `world-atlas` countries,
+and writes `public/data/geography/manifest.json` plus a 1,036,800-value
+little-endian `Uint16` index.
+
+Each grid value identifies one manifest place record. Inland waters take
+precedence over islands and countries, while islands take precedence over
+countries. Marine polygons select the most specific containing named region;
+conservative neighboring and polygon-bound fallbacks cover source-generalization
+and climate-mask edge cases such as sea ice. The generator reports land, ocean,
+and unknown-cell totals. The checked-in index must report zero unknown cells.
+
+Changing the geography asset does not modify the surface mask or any climate
+raster. After regeneration, run `npm test`, `npm run typecheck`, `npm run lint`,
+and `npm run build`; the geography contract tests validate byte length, ID
+bounds, full coverage, and representative country, island, lake, sea, and ocean
+lookups.
+
 ## Complete 2025 build
 
 ```powershell
@@ -90,4 +123,4 @@ report passes. The separate synthetic archive must exist before promotion.
 See [`DATA_SOURCES.md`](../DATA_SOURCES.md) for source citations, licence links,
 projection details, aggregation semantics, and interpretation limits. The
 checked-in [`data-provenance-2025.md`](data-provenance-2025.md) records compact
-validation totals and hashes for the published dataset.
+validation totals and hashes for the published climate and geographic assets.

@@ -4,13 +4,13 @@ import { geographicPlaceAt } from '../geography/geographicIndex';
 import type { GeographicIndex } from '../geography/types';
 import { formatCoordinate, formatDateRange, formatTemperature } from '../shared/formatting';
 
-interface Props { cell: HoveredCell; mode: DisplayMode; unit: TemperatureUnit; manifest: ClimateManifest; frame: FrameMetadata; geography: GeographicIndex; pinned: boolean }
+interface Props { cell: HoveredCell; mode: DisplayMode; unit: TemperatureUnit; manifest: ClimateManifest; frame: FrameMetadata; geography: GeographicIndex | null; pinned: boolean }
 
 export function GlobeTooltip({ cell, mode, unit, manifest, frame, geography, pinned }: Props) {
   const source = mode === 'sst' ? manifest.sources.ocean : mode === 'air' ? manifest.sources.land : cell.surface === 'land' ? manifest.sources.land : manifest.sources.ocean;
   const variable = mode === 'sst' ? manifest.sources.ocean.variable : mode === 'air' ? manifest.sources.land.variable : source.variable;
   const period = formatDateRange(frame.startDate, frame.endDate);
-  const place = geographicPlaceAt(geography, cell.index);
+  const place = geography ? geographicPlaceAt(geography, cell.index) : null;
   const style: CSSProperties = { left: Math.max(12, Math.min(window.innerWidth - 260, cell.clientX + 18)), top: Math.max(72, Math.min(window.innerHeight - 252, cell.clientY + 18)) };
   return <aside className={`tooltip ${pinned ? 'tooltip-pinned' : ''}`} style={style} aria-live="polite">
     {pinned && <span className="tooltip-state">PINNED · TAP GLOBE TO CLOSE</span>}

@@ -9,7 +9,7 @@ export const POINTER_ACTIVITY_THRESHOLD_PX = 12;
 export type IdlePhase = 'active' | 'chrome-faded' | 'reset-fading' | 'resetting';
 
 interface IdleResetOptions {
-  onReset: () => void;
+  onReset: (signal: AbortSignal) => Promise<boolean>;
   reducedMotion: boolean;
 }
 
@@ -17,12 +17,10 @@ interface IdleResetState {
   autoRotate: boolean;
   phase: IdlePhase;
   registerInteraction: () => void;
-  resetEpoch: number;
 }
 
 export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): IdleResetState {
   const [phase, setPhase] = useState<IdlePhase>('active');
-  const [resetEpoch, setResetEpoch] = useState(0);
   const [autoRotate, setAutoRotate] = useState(() => !reducedMotion);
   const onResetRef = useRef(onReset);
   const interactionRef = useRef<() => void>(() => undefined);
@@ -36,6 +34,9 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
     let commitTimer: number | null = null;
     let settleTimer: number | null = null;
     let pointerAnchor: { x: number; y: number } | null = null;
+    let resetController: AbortController | null = null;
+    let resetRun = 0;
+    let disposed = false;
 
     const clearTimer = (timer: number | null) => {
       if (timer !== null) window.clearTimeout(timer);
@@ -56,11 +57,10 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
       resetTimer = window.setTimeout(beginReset, IDLE_EXPLORER_RESET_MS);
     };
 
-    const completeReset = () => {
-      clearTimers();
-      onResetRef.current();
-      setResetEpoch((value) => value + 1);
-      setAutoRotate(!reducedMotion);
+    const finishReset = (run: number, succeeded: boolean) => {
+      if (disposed || run !== resetRun) return;
+      resetController = null;
+      if (succeeded) setAutoRotate(!reducedMotion);
       if (reducedMotion) {
         setPhase('active');
         scheduleIdleTimers();
@@ -72,6 +72,18 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
         setPhase('active');
         scheduleIdleTimers();
       }, IDLE_RESET_SETTLE_MS);
+    };
+
+    const completeReset = () => {
+      clearTimers();
+      const controller = new AbortController();
+      const run = ++resetRun;
+      resetController = controller;
+      if (!reducedMotion) setPhase('resetting');
+      void Promise.resolve().then(() => onResetRef.current(controller.signal)).then(
+        (succeeded) => finishReset(run, succeeded),
+        () => finishReset(run, false),
+      );
     };
 
     function beginReset() {
@@ -88,6 +100,9 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
     }
 
     const handleInteraction = () => {
+      resetRun += 1;
+      resetController?.abort();
+      resetController = null;
       clearTimers();
       setAutoRotate(false);
       setPhase('active');
@@ -121,6 +136,9 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
     scheduleIdleTimers();
 
     return () => {
+      disposed = true;
+      resetRun += 1;
+      resetController?.abort();
       clearTimers();
       interactionRef.current = () => undefined;
       window.removeEventListener('pointerdown', handlePointerDown, true);
@@ -132,5 +150,5 @@ export function useIdleReset({ onReset, reducedMotion }: IdleResetOptions): Idle
     };
   }, [reducedMotion]);
 
-  return { autoRotate: autoRotate && !reducedMotion, phase, registerInteraction, resetEpoch };
+  return { autoRotate: autoRotate && !reducedMotion, phase, registerInteraction };
 }

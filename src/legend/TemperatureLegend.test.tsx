@@ -66,6 +66,20 @@ describe('TemperatureLegend interaction', () => {
     await user.selectOptions(screen.getByRole('combobox', { name: /highlight band/i }), '5');
     expect(onLock).toHaveBeenLastCalledWith({ value: -47, minimum: -52, maximum: -42, locked: true, trackedExtreme: 'minimum', bandHalfWidthC: 5 });
   });
+  it('restores local band and keyboard state when a successful reset changes its key', async () => {
+    const user = userEvent.setup();
+    const callbacks = { onHover: vi.fn(), onLock: vi.fn() };
+    const { rerender } = render(<TemperatureLegend key={0} {...props} {...callbacks} />);
+    await user.selectOptions(screen.getByRole('combobox', { name: /highlight band/i }), '5');
+    screen.getByRole('slider').focus();
+    await user.keyboard('{ArrowRight}');
+    expect(screen.getByRole('combobox', { name: /highlight band/i })).toHaveValue('5');
+    expect(screen.getByRole('slider')).toHaveAttribute('aria-valuenow', '0.5');
+
+    rerender(<TemperatureLegend key={1} {...props} {...callbacks} />);
+    expect(screen.getByRole('combobox', { name: /highlight band/i })).toHaveValue('0.5');
+    expect(screen.getByRole('slider')).toHaveAttribute('aria-valuenow', '0');
+  });
   it('exposes Fahrenheit slider values and a globe-hover marker', () => {
     render(<TemperatureLegend {...props} unit="F" globeValue={20} onHover={vi.fn()} onLock={vi.fn()} />);
     expect(screen.getByRole('slider')).toHaveAttribute('aria-valuemin', '-112');

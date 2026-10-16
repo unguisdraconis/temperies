@@ -32,13 +32,15 @@ export default function App() {
   const { state, actions, highlight } = useClimateExplorer();
   const [infoPanel, setInfoPanel] = useState<'about' | 'help' | null>(null);
   const reducedMotion = useReducedMotion();
-  const resetApplication = useCallback(() => {
-    setInfoPanel(null);
-    actions.resetExplorer();
+  const resetApplication = useCallback(async (signal: AbortSignal) => {
+    const succeeded = await actions.resetExplorer(signal);
+    if (succeeded) setInfoPanel(null);
+    return succeeded;
   }, [actions]);
   const idle = useIdleReset({ onReset: resetApplication, reducedMotion });
   if (state.fatalError) return <LoadingScreen error={state.fatalError} />;
-  if (!state.manifest || !state.mask || !state.geography || !state.framePair) return <LoadingScreen />;
+  if (state.loadState.status === 'error' && !state.loadState.recoverable) return <LoadingScreen error={state.loadState.message} />;
+  if (!state.manifest || !state.mask || !state.framePair) return <LoadingScreen />;
 
   const { manifest, framePair } = state;
   const frame = framePair.currentMeta;
@@ -82,7 +84,7 @@ export default function App() {
     </aside>}
     <section className="workspace"><div className="scene-panel"><div className="scene-glow" />
       <Globe frames={framePair} mask={state.mask} mode={state.mode} renderStyle={state.renderStyle} palette={state.palette} highlight={highlight} vectorLayers={state.vectorLayers}
-        projectionMode={state.projectionMode} reducedMotion={reducedMotion} resetEpoch={idle.resetEpoch} autoRotate={idle.autoRotate} onInteraction={idle.registerInteraction}
+        projectionMode={state.projectionMode} reducedMotion={reducedMotion} resetEpoch={state.resetEpoch} autoRotate={idle.autoRotate} onInteraction={idle.registerInteraction}
         onHover={actions.setHoveredCell} onLeave={() => actions.setHoveredCell(null)} onSelect={actions.toggleCellTooltip} />
       {transitioning && loadingWeek !== null && <div className="field-loading-notice" role="status" aria-live="polite">
         <span className="field-loading-spinner" aria-hidden="true" />
@@ -92,11 +94,11 @@ export default function App() {
       <div className="status-pill"><i /> {transitioning ? 'LOADING FIELD' : readyLabel} <span>{manifest.grid.cellCount.toLocaleString()} CELLS</span></div>
       <div className="globe-hint">{state.projectionMode === 'globe' ? <RotateCcw size={15} /> : <Move size={15} />}
         {state.projectionMode === 'globe' ? 'DRAG TO ROTATE · SCROLL TO ZOOM' : 'DRAG TO PAN · SCROLL TO ZOOM'}</div>
-      <LayerControl key={idle.resetEpoch} layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
+      <LayerControl key={state.resetEpoch} layers={state.vectorLayers} onToggle={actions.toggleVectorLayer} />
       {state.hoveredCell && <GlobeTooltip cell={state.hoveredCell} mode={state.mode} unit={state.unit} manifest={manifest} frame={frame} geography={state.geography} pinned={state.tooltipPinned} />}
-      {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={() => actions.requestWeek(state.week)}>Retry</button></div>}
+      {state.loadState.status === 'error' && state.loadState.recoverable && <div className="recoverable-error" role="alert">{state.loadState.message}<button onClick={actions.retryLoad}>Retry</button></div>}
     </div>
-      <TemperatureLegend histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}
+      <TemperatureLegend key={state.resetEpoch} histograms={frame.histograms} minimums={frame.minimums} maximums={frame.maximums} mode={state.mode} unit={state.unit} palette={state.palette} globeValue={state.hoveredCell?.temperatureC ?? null}
         hover={state.legendHover} locked={state.legendLocked} onHover={actions.setLegendHover} onLock={actions.setLegendLock} />
       <aside className="control-panel"><ProjectionControl value={state.projectionMode} onChange={actions.setProjectionMode} />
         <DisplayModeControl value={state.mode} onChange={actions.setMode} />

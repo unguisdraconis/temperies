@@ -8,6 +8,7 @@ export interface ClimateState {
   geography: GeographicIndex | null;
   framePair: FramePair | null;
   week: number;
+  resetEpoch: number;
   activeRequestId: number;
   loadState: FrameLoadState;
   fatalError: string | null;
@@ -24,18 +25,21 @@ export interface ClimateState {
 }
 
 export const initialClimateState: ClimateState = {
-  manifest: null, mask: null, geography: null, framePair: null, week: 0, activeRequestId: 0,
+  manifest: null, mask: null, geography: null, framePair: null, week: 0, resetEpoch: 0, activeRequestId: 0,
   loadState: { status: 'idle' }, fatalError: null, mode: 'composite', projectionMode: 'globe', renderStyle: 'heatmap', palette: 'diverging', unit: 'C',
   hoveredCell: null, tooltipPinned: false, legendHover: null, legendLocked: null,
   vectorLayers: { countries: true, coastlines: true },
 };
 
 export type ClimateAction =
-  | { type: 'BOOT_READY'; manifest: ClimateManifest; mask: Uint8Array; geography: GeographicIndex }
+  | { type: 'BOOT_READY'; manifest: ClimateManifest; mask: Uint8Array }
+  | { type: 'GEOGRAPHY_READY'; geography: GeographicIndex }
   | { type: 'FATAL_ERROR'; message: string }
   | { type: 'FRAME_REQUEST'; week: number; requestId: number }
   | { type: 'FRAME_SUCCESS'; week: number; requestId: number; pair: FramePair }
   | { type: 'FRAME_ERROR'; requestId: number; message: string }
+  | { type: 'FRAME_CANCEL'; requestId: number; replacementRequestId: number }
+  | { type: 'RESET_SUCCESS'; requestId: number; pair: FramePair }
   | { type: 'SET_MODE'; mode: DisplayMode }
   | { type: 'SET_PROJECTION_MODE'; projectionMode: ProjectionMode }
   | { type: 'SET_RENDER_STYLE'; renderStyle: TemperatureRenderStyle }
@@ -45,8 +49,7 @@ export type ClimateAction =
   | { type: 'TOGGLE_CELL_TOOLTIP'; cell: HoveredCell }
   | { type: 'SET_LEGEND_HOVER'; selection: LegendSelection | null }
   | { type: 'SET_LEGEND_LOCK'; selection: LegendSelection | null }
-  | { type: 'TOGGLE_VECTOR_LAYER'; layer: keyof VectorLayerVisibility }
-  | { type: 'RESET_EXPLORER' };
+  | { type: 'TOGGLE_VECTOR_LAYER'; layer: keyof VectorLayerVisibility };
 
 function extremeForMode(extrema: Extrema, mode: DisplayMode): number {
   if (mode === 'air') return extrema.land;
@@ -72,7 +75,8 @@ function updateTrackedExtreme(selection: LegendSelection | null, pair: FramePair
 
 export function climateReducer(state: ClimateState, action: ClimateAction): ClimateState {
   switch (action.type) {
-    case 'BOOT_READY': return { ...state, manifest: action.manifest, mask: action.mask, geography: action.geography };
+    case 'BOOT_READY': return { ...state, manifest: action.manifest, mask: action.mask };
+    case 'GEOGRAPHY_READY': return { ...state, geography: action.geography };
     case 'FATAL_ERROR': return { ...state, fatalError: action.message, loadState: { status: 'error', message: action.message, recoverable: false } };
     case 'FRAME_REQUEST': return { ...state, activeRequestId: action.requestId, loadState: { status: 'loading', requestedWeek: action.week, retainingFrame: state.framePair !== null } };
     case 'FRAME_SUCCESS':
@@ -89,6 +93,32 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
     case 'FRAME_ERROR':
       if (action.requestId !== state.activeRequestId) return state;
       return { ...state, loadState: { status: 'error', message: action.message, recoverable: state.framePair !== null } };
+    case 'FRAME_CANCEL':
+      if (action.requestId !== state.activeRequestId) return state;
+      return {
+        ...state,
+        activeRequestId: action.replacementRequestId,
+        loadState: state.framePair ? { status: 'ready', week: state.week } : { status: 'idle' },
+      };
+    case 'RESET_SUCCESS':
+      if (action.requestId !== state.activeRequestId) return state;
+      return {
+        ...state,
+        framePair: action.pair,
+        week: initialClimateState.week,
+        resetEpoch: state.resetEpoch + 1,
+        loadState: { status: 'ready', week: initialClimateState.week },
+        mode: initialClimateState.mode,
+        projectionMode: initialClimateState.projectionMode,
+        renderStyle: initialClimateState.renderStyle,
+        palette: initialClimateState.palette,
+        unit: initialClimateState.unit,
+        hoveredCell: null,
+        tooltipPinned: false,
+        legendHover: null,
+        legendLocked: null,
+        vectorLayers: { ...initialClimateState.vectorLayers },
+      };
     case 'SET_MODE': return {
       ...state,
       mode: action.mode,
@@ -107,20 +137,6 @@ export function climateReducer(state: ClimateState, action: ClimateAction): Clim
     case 'SET_LEGEND_HOVER': return { ...state, legendHover: action.selection };
     case 'SET_LEGEND_LOCK': return { ...state, legendLocked: action.selection, legendHover: null };
     case 'TOGGLE_VECTOR_LAYER': return { ...state, vectorLayers: { ...state.vectorLayers, [action.layer]: !state.vectorLayers[action.layer] } };
-    case 'RESET_EXPLORER': return {
-      ...state,
-      week: initialClimateState.week,
-      mode: initialClimateState.mode,
-      projectionMode: initialClimateState.projectionMode,
-      renderStyle: initialClimateState.renderStyle,
-      palette: initialClimateState.palette,
-      unit: initialClimateState.unit,
-      hoveredCell: null,
-      tooltipPinned: false,
-      legendHover: null,
-      legendLocked: null,
-      vectorLayers: { ...initialClimateState.vectorLayers },
-    };
   }
 }
 

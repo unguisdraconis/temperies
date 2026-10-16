@@ -133,7 +133,6 @@ export function Globe(props: Props) {
     onPointerUpCapture={handlePointerUp} onPointerCancelCapture={handlePointerCancel}
     onPointerLeave={handlePointerLost} onLostPointerCaptureCapture={handlePointerLost}>
     <Canvas aria-label={props.projectionMode === 'globe' ? 'Interactive temperature globe' : 'Interactive Plate Carrée temperature map'}
-      fallback={<div className="webgl-error" role="alert">WebGL is unavailable in this browser.</div>}
       camera={{ position: CAMERA_HOME.toArray(), fov: 39 }} dpr={[1, 1.6]} gl={{ antialias: true, alpha: true }}>
       <ambientLight intensity={0.6} />
       {!props.reducedMotion && <Stars radius={8} depth={20} count={900} factor={1.5} saturation={0} fade speed={0.25} />}

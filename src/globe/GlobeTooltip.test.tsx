@@ -31,4 +31,11 @@ describe('globe tooltip', () => {
     expect(screen.getByText('Mediterranean Sea')).toBeInTheDocument();
     expect(screen.getByText('PINNED · TAP GLOBE TO CLOSE')).toBeInTheDocument();
   });
+  it('keeps core climate details available while optional geography is unavailable', () => {
+    render(<GlobeTooltip cell={cell} mode="composite" unit="C" manifest={manifest} frame={manifest.frames[0]!} geography={null} pinned={false} />);
+    expect(screen.getByText('21.25 °C')).toBeInTheDocument();
+    expect(screen.getByText('Ocean')).toBeInTheDocument();
+    expect(screen.getByText(manifest.sources.ocean.variable)).toBeInTheDocument();
+    expect(screen.queryByText('Mediterranean Sea')).not.toBeInTheDocument();
+  });
 });

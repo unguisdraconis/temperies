@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { climateReducer, effectiveLegendSelection, initialClimateState } from './climateReducer';
-import type { FramePair, HoveredCell, LegendSelection } from '../climate/types';
+import type { ClimateManifest, FramePair, HoveredCell, LegendSelection } from '../climate/types';
+import type { GeographicIndex } from '../geography/types';
 
 const pair = { current: { id: 'a', air: new Uint16Array(), sst: new Uint16Array() }, next: { id: 'b', air: new Uint16Array(), sst: new Uint16Array() } } as FramePair;
+const resetPair: FramePair = { ...pair, current: { ...pair.current, id: 'reset' }, next: { ...pair.next, id: 'reset' } };
 const cell = { row: 1, column: 2, index: 1442, latitude: 42, longitude: -71, surface: 'land', temperatureC: 12, clientX: 100, clientY: 120, interpolation: 0 } satisfies HoveredCell;
 describe('climate state transitions', () => {
   it('defaults to the diverging palette and switches palettes without changing climate frames', () => {
@@ -75,6 +77,17 @@ describe('climate state transitions', () => {
   it('rejects stale responses', () => {
     const loading = climateReducer(initialClimateState, { type: 'FRAME_REQUEST', week: 8, requestId: 4 });
     expect(climateReducer(loading, { type: 'FRAME_SUCCESS', week: 7, requestId: 3, pair })).toBe(loading);
+    expect(climateReducer(loading, { type: 'RESET_SUCCESS', requestId: 3, pair: resetPair })).toBe(loading);
+  });
+  it('accepts optional geography before or after essential boot data', () => {
+    const manifest = {} as ClimateManifest;
+    const mask = new Uint8Array([1]);
+    const geography = { cells: new Uint16Array([0]), places: [null] } satisfies GeographicIndex;
+    const geographyFirst = climateReducer(initialClimateState, { type: 'GEOGRAPHY_READY', geography });
+    expect(climateReducer(geographyFirst, { type: 'BOOT_READY', manifest, mask }).geography).toBe(geography);
+    const bootFirst = climateReducer(initialClimateState, { type: 'BOOT_READY', manifest, mask });
+    expect(bootFirst.geography).toBeNull();
+    expect(climateReducer(bootFirst, { type: 'GEOGRAPHY_READY', geography }).geography).toBe(geography);
   });
   it('keeps transient and locked selections separate with locked precedence', () => {
     const hover = { value: 1, minimum: 0.5, maximum: 1.5, locked: false } satisfies LegendSelection;
@@ -90,7 +103,7 @@ describe('climate state transitions', () => {
     expect(climateReducer(pinned, { type: 'SET_HOVERED_CELL', cell: { ...cell, index: 1443 } })).toBe(pinned);
     expect(climateReducer(pinned, { type: 'TOGGLE_CELL_TOOLTIP', cell })).toMatchObject({ hoveredCell: null, tooltipPinned: false });
   });
-  it('restores every explorer setting while preserving loaded data', () => {
+  it('keeps the old explorer coherent until reset data is ready, then commits every default atomically', () => {
     const customized = {
       ...initialClimateState,
       framePair: pair,
@@ -105,9 +118,13 @@ describe('climate state transitions', () => {
       legendLocked: { value: 5, minimum: 4.5, maximum: 5.5, locked: true } satisfies LegendSelection,
       vectorLayers: { countries: false, coastlines: false },
     };
-    const reset = climateReducer(customized, { type: 'RESET_EXPLORER' });
+    const loading = climateReducer(customized, { type: 'FRAME_REQUEST', week: 0, requestId: 9 });
+    expect(loading).toMatchObject({ week: 12, mode: 'sst', projectionMode: 'map', resetEpoch: 0 });
+    expect(loading.framePair).toBe(pair);
+    const reset = climateReducer(loading, { type: 'RESET_SUCCESS', requestId: 9, pair: resetPair });
     expect(reset).toMatchObject({
       week: 0,
+      resetEpoch: 1,
       mode: 'composite',
       projectionMode: 'globe',
       renderStyle: 'heatmap',
@@ -119,7 +136,18 @@ describe('climate state transitions', () => {
       legendLocked: null,
       vectorLayers: { countries: true, coastlines: true },
     });
-    expect(reset.framePair).toBe(pair);
+    expect(reset.framePair).toBe(resetPair);
+  });
+  it('preserves the old explorer after a failed or canceled reset request', () => {
+    const customized = { ...initialClimateState, framePair: pair, week: 12, mode: 'sst' as const };
+    const loading = climateReducer(customized, { type: 'FRAME_REQUEST', week: 0, requestId: 9 });
+    const failed = climateReducer(loading, { type: 'FRAME_ERROR', requestId: 9, message: 'network' });
+    expect(failed).toMatchObject({ week: 12, mode: 'sst', resetEpoch: 0, loadState: { status: 'error', recoverable: true } });
+    expect(failed.framePair).toBe(pair);
+    const canceled = climateReducer(loading, { type: 'FRAME_CANCEL', requestId: 9, replacementRequestId: 10 });
+    expect(canceled).toMatchObject({ week: 12, mode: 'sst', resetEpoch: 0, activeRequestId: 10, loadState: { status: 'ready', week: 12 } });
+    expect(canceled.framePair).toBe(pair);
+    expect(climateReducer(canceled, { type: 'RESET_SUCCESS', requestId: 9, pair: resetPair })).toBe(canceled);
   });
   it('keeps the active frame after a recoverable frame error', () => {
     const state = { ...initialClimateState, framePair: pair, activeRequestId: 2 };

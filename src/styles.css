@@ -6,10 +6,10 @@ button { color: inherit; }
 button:focus-visible, input:focus-visible, select:focus-visible, [role="slider"]:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
 button:disabled { opacity: .45; cursor: not-allowed; }
 .app-shell { min-height: 100vh; display: grid; grid-template-rows: 76px minmax(520px, 1fr) 44px; }
-.workspace, .topbar, .control-panel, .legend-card, footer, .scene-title, .status-pill, .globe-hint, .field-loading-notice, .layers-wrap, .tooltip, .recoverable-error { transition: opacity .45s ease; }
-.app-shell.idle-chrome-faded :is(.topbar, .control-panel, .legend-card, footer, .scene-title, .status-pill, .globe-hint, .field-loading-notice, .layers-wrap, .tooltip, .recoverable-error),
-.app-shell.idle-reset-fading :is(.topbar, footer),
-.app-shell.idle-resetting :is(.topbar, footer) { opacity: 0; pointer-events: none; }
+.workspace, .topbar, .control-panel, .legend-card, footer, .scene-title, .status-pill, .globe-hint, .field-loading-notice, .layers-wrap, .tooltip, .recoverable-error, .data-notice { transition: opacity .45s ease; }
+.app-shell.idle-chrome-faded :is(.topbar, .control-panel, .legend-card, footer, .scene-title, .status-pill, .globe-hint, .field-loading-notice, .layers-wrap, .tooltip, .recoverable-error, .data-notice),
+.app-shell.idle-reset-fading :is(.topbar, footer, .data-notice),
+.app-shell.idle-resetting :is(.topbar, footer, .data-notice) { opacity: 0; pointer-events: none; }
 .app-shell.idle-reset-fading .workspace, .app-shell.idle-resetting .workspace { opacity: 0; pointer-events: none; }
 .topbar { padding: 0 4vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: rgba(4, 12, 18, .75); backdrop-filter: blur(18px); z-index: 10; }
 .brand { display: flex; align-items: center; gap: 12px; }.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 50%; filter: drop-shadow(0 0 8px rgba(120,225,192,.14)); }.temperies-mark { display: block; }
@@ -45,7 +45,6 @@ footer { min-height: 44px; padding: 0 4vw; display: flex; align-items: center; j
 .data-notice { position: fixed; z-index: 30; right: 20px; top: 68px; width: min(390px, calc(100vw - 40px)); padding: 20px; background: rgba(5,14,20,.97); border: 1px solid rgba(162,205,196,.23); box-shadow: 0 20px 60px rgba(0,0,0,.45); color: #9fb2b3; font-size: 11px; line-height: 1.6; }.data-notice strong { color: #e9f3ef; }.data-notice button { float: right; border: 0; background: none; font-size: 22px; cursor: pointer; }.data-notice p:last-child { margin-bottom: 0; }.data-notice ul { margin: 14px 0 0; padding-left: 18px; }.data-notice li + li { margin-top: 8px; }
 .about-epigraph { margin: 0 34px 18px 0; padding: 0 0 15px; border-bottom: 1px solid var(--line); color: var(--mint); font: italic 13px/1.55 Georgia, serif; }.about-epigraph cite { display: block; margin-top: 5px; color: #657b80; font: 400 7px DM Mono, monospace; letter-spacing: .12em; text-transform: uppercase; }
 .recoverable-error { position: absolute; z-index: 8; left: 50%; bottom: 68px; transform: translateX(-50%); display: flex; gap: 12px; align-items: center; padding: 10px 14px; background: rgba(56,20,23,.94); border: 1px solid rgba(255,150,150,.3); font-size: 10px; }.recoverable-error button { padding: 5px 8px; }
-.webgl-error { display: grid; place-items: center; min-height: 100%; color: #ffb6b6; }
 .clear-selection { grid-column: 1; grid-row: 2; align-self: start; justify-self: start; padding: 5px 8px; font: 500 7px Consolas, monospace; letter-spacing: .08em; }
 @keyframes pulse { 50% { box-shadow: 0 0 40px rgba(120,225,192,.2); transform: scale(1.05); } }
 @keyframes field-spin { to { transform: rotate(360deg); } }
